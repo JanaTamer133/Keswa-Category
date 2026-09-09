@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+html,
+body {
+    margin: 0;
+}
+
+:root {
+    --primary: #000000;
+    --secondary: #AF8234;
+}
+
+@theme {
+    --color-secondary: var(--secondary);
+}

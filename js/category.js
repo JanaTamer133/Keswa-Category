@@ -26,7 +26,13 @@
 
   let bodyLockCount = 0;
   let desktopSearchLocked = false;
+
   let noticeTimer = null;
+  let mobileMenuCloseTimer = null;
+  let searchCloseTimer = null;
+  let cartCloseTimer = null;
+  let filterCloseTimer = null;
+  let mobileSortCloseTimer = null;
 
   // ============================================================
   // STORAGE
@@ -62,6 +68,7 @@
 
   function lockBody() {
     bodyLockCount += 1;
+
     document.body.style.overflow = "hidden";
   }
 
@@ -82,64 +89,104 @@
   const bottomHeader = $("#bottom-header");
 
   const refs = {
-    // Mobile menu
+    // ----------------------------------------------------------
+    // Mobile Menu
+    // ----------------------------------------------------------
+
     mobileMenu: $("#mobile-menu"),
     openMobileMenu: $("#open-mobile-menu"),
     closeMobileMenu: $("#close-mobile-menu"),
     mobileMenuBackdrop: $("#mobile-menu-backdrop"),
     mobileMenuPanel: $("#mobile-menu-panel"),
 
+    // ----------------------------------------------------------
     // Search
+    // ----------------------------------------------------------
+
     searchButton: $("#header-search-button"),
     searchOverlay: $("#search-overlay"),
     searchPanel: $("#search-panel"),
     closeSearch: $("#close-search"),
     searchInput: $("#header-search-input"),
 
+    // ----------------------------------------------------------
     // Cart
+    // ----------------------------------------------------------
+
     cartButton: $("#header-cart-button"),
     cartOverlay: $("#cart-overlay"),
     cartDrawer: $("#cart-drawer"),
     closeCart: $("#close-cart"),
 
+    // ----------------------------------------------------------
     // Account
+    // ----------------------------------------------------------
+
     accountButton: $("#header-account-button"),
     accountDropdown: $("#account-dropdown"),
 
-    // Filter
+    // ----------------------------------------------------------
+    // Desktop Filter
+    // ----------------------------------------------------------
+
     filterButton: $("#filter-button"),
     filterOverlay: $("#filter-overlay"),
     filterPanel: $("#filter-panel"),
     closeFilter: $("#close-filter"),
     clearFilters: $("#clear-filters"),
 
+    // ----------------------------------------------------------
+    // Mobile Filter / Sort
+    // ----------------------------------------------------------
+
+    mobileFilterButton: $("#mobile-filter-button"),
+    mobileSortButton: $("#mobile-sort-button"),
+
+    // ----------------------------------------------------------
     // Products
+    // ----------------------------------------------------------
+
     productsContainer: $("#products-container"),
     noProductsMessage: $("#no-products-message"),
 
-    // Sort
+    // ----------------------------------------------------------
+    // Desktop Sort
+    // ----------------------------------------------------------
+
     sortButton: $("#sort-button"),
     sortDropdown: $("#sort-dropdown"),
     sortSelected: $("#sort-selected"),
     sortOptions: $$(".sort-option"),
 
+    // ----------------------------------------------------------
     // Views
+    // ----------------------------------------------------------
+
     listView: $("#list-view"),
     gridView: $("#grid-view"),
 
+    // ----------------------------------------------------------
     // Price
+    // ----------------------------------------------------------
+
     priceMin: $("#price-min"),
     priceMax: $("#price-max"),
     priceRangeText: $("#price-range-text"),
     priceRangeTrack: $("#price-range-track"),
 
+    // ----------------------------------------------------------
     // Colors
+    // ----------------------------------------------------------
+
     colorSearch: $("#color-search"),
     colorOptions: $$(".color-option"),
     colorCount: $("#color-count"),
     colorCheckboxes: $$('input[name="color-filter"]'),
 
+    // ----------------------------------------------------------
     // Sizes
+    // ----------------------------------------------------------
+
     sizeSearch: $("#size-search"),
     sizeOptions: $$(".size-option"),
     sizeCount: $("#size-count"),
@@ -294,12 +341,10 @@
 
     const mobileHeader = $(".hamburger > div", headerContent);
 
-    // Top header
     if (topHeader) {
       topHeader.style.display = isMobile ? "none" : "";
     }
 
-    // Desktop content
     [desktopLogo, desktopNavigation, desktopActions].forEach((element) => {
       if (!element) {
         return;
@@ -308,12 +353,6 @@
       element.style.display = isMobile ? "none" : "";
     });
 
-    // IMPORTANT:
-    // Search icon stays visible in both desktop and mobile.
-    // User icon stays visible in both desktop and mobile.
-    // Their actions are controlled separately below.
-
-    // Mobile header
     if (hamburger) {
       hamburger.style.width = isMobile ? "100%" : "";
     }
@@ -337,6 +376,22 @@
     bottomHeader.style.boxShadow = isMobile
       ? "none"
       : "0 1px 3px rgb(0 0 0 / 4%)";
+
+    // ----------------------------------------------------------
+    // Mobile Filter / Sort Bar
+    // ----------------------------------------------------------
+
+    const mobileFilterBar = document.querySelector("#mobile-filter-sort-bar");
+
+    if (mobileFilterBar) {
+      if (isMobile) {
+        mobileFilterBar.classList.remove("hidden");
+        mobileFilterBar.classList.add("flex");
+      } else {
+        mobileFilterBar.classList.add("hidden");
+        mobileFilterBar.classList.remove("flex");
+      }
+    }
   }
 
   window.addEventListener("resize", updateHeader);
@@ -375,6 +430,10 @@
     if (except !== "sort") {
       closeSortDropdown();
     }
+
+    if (except !== "mobile-sort") {
+      closeMobileSort();
+    }
   }
 
   // ============================================================
@@ -382,7 +441,7 @@
   // ============================================================
 
   function openMobileMenu() {
-    if (!refs.mobileMenu) {
+    if (!refs.mobileMenu || !refs.mobileMenuPanel) {
       return;
     }
 
@@ -390,15 +449,27 @@
       return;
     }
 
+    clearTimeout(mobileMenuCloseTimer);
+
     closeAllExcept("mobile");
 
+    refs.mobileMenuPanel.classList.remove("translate-x-0");
+
+    refs.mobileMenuPanel.classList.add("-translate-x-full");
+
     showElement(refs.mobileMenu);
+
+    requestAnimationFrame(() => {
+      refs.mobileMenuPanel.classList.remove("-translate-x-full");
+
+      refs.mobileMenuPanel.classList.add("translate-x-0");
+    });
 
     lockBody();
   }
 
   function closeMobileMenu() {
-    if (!refs.mobileMenu) {
+    if (!refs.mobileMenu || !refs.mobileMenuPanel) {
       return;
     }
 
@@ -406,7 +477,15 @@
       return;
     }
 
-    hideElement(refs.mobileMenu);
+    clearTimeout(mobileMenuCloseTimer);
+
+    refs.mobileMenuPanel.classList.remove("translate-x-0");
+
+    refs.mobileMenuPanel.classList.add("-translate-x-full");
+
+    mobileMenuCloseTimer = setTimeout(() => {
+      hideElement(refs.mobileMenu);
+    }, 300);
 
     unlockBody();
   }
@@ -430,12 +509,10 @@
   // ============================================================
 
   function openSearch() {
-    if (!refs.searchOverlay) {
+    if (!refs.searchOverlay || !refs.searchPanel) {
       return;
     }
 
-    // Responsive:
-    // Search icon stays visible but does nothing.
     if (window.innerWidth < 768) {
       return;
     }
@@ -446,13 +523,24 @@
       return;
     }
 
+    clearTimeout(searchCloseTimer);
+
     closeAllExcept("search");
+
+    refs.searchPanel.classList.remove("translate-y-0");
+
+    refs.searchPanel.classList.add("-translate-y-full");
 
     showElement(refs.searchOverlay);
 
     refs.searchButton?.setAttribute("aria-expanded", "true");
 
-    // Desktop only
+    requestAnimationFrame(() => {
+      refs.searchPanel.classList.remove("-translate-y-full");
+
+      refs.searchPanel.classList.add("translate-y-0");
+    });
+
     lockBody();
 
     desktopSearchLocked = true;
@@ -465,7 +553,7 @@
   }
 
   function closeSearch() {
-    if (!refs.searchOverlay) {
+    if (!refs.searchOverlay || !refs.searchPanel) {
       return;
     }
 
@@ -473,7 +561,15 @@
       return;
     }
 
-    hideElement(refs.searchOverlay);
+    clearTimeout(searchCloseTimer);
+
+    refs.searchPanel.classList.remove("translate-y-0");
+
+    refs.searchPanel.classList.add("-translate-y-full");
+
+    searchCloseTimer = setTimeout(() => {
+      hideElement(refs.searchOverlay);
+    }, 300);
 
     refs.searchButton?.setAttribute("aria-expanded", "false");
 
@@ -484,20 +580,15 @@
     }
   }
 
-  // Header Search
   refs.searchButton?.addEventListener("click", (event) => {
     event.preventDefault();
 
     event.stopPropagation();
 
-    // Mobile / Responsive:
-    // Visible icon but NO action.
     if (window.innerWidth < 768) {
       return;
     }
 
-    // Desktop:
-    // Search works normally.
     openSearch();
   });
 
@@ -545,7 +636,13 @@
 
     const count = getCartCount();
 
+    const mobileCart = document.querySelector(
+      '#mobile-bottom-nav button[aria-label="Cart"]',
+    );
+
     if (!count) {
+      mobileCart?.querySelector(".mobile-cart-count")?.remove();
+
       return;
     }
 
@@ -560,25 +657,19 @@
 
     refs.cartButton.appendChild(badge);
 
-    const mobileCart = document.querySelector(
-      '#mobile-bottom-nav button[aria-label="Cart"]',
-    );
-
     if (mobileCart) {
       mobileCart.querySelector(".mobile-cart-count")?.remove();
 
-      if (count) {
-        mobileCart.classList.add("relative");
+      mobileCart.classList.add("relative");
 
-        const mobileBadge = document.createElement("span");
+      const mobileBadge = document.createElement("span");
 
-        mobileBadge.className =
-          "mobile-cart-count absolute right-[calc(50%-15px)] top-[9px] flex h-4 min-w-4 items-center justify-center rounded-full bg-black px-1 text-[9px] leading-none text-white";
+      mobileBadge.className =
+        "mobile-cart-count absolute right-[calc(50%-15px)] top-[9px] flex h-4 min-w-4 items-center justify-center rounded-full bg-black px-1 text-[9px] leading-none text-white";
 
-        mobileBadge.textContent = String(count);
+      mobileBadge.textContent = String(count);
 
-        mobileCart.appendChild(mobileBadge);
-      }
+      mobileCart.appendChild(mobileBadge);
     }
   }
 
@@ -644,13 +735,19 @@
       return;
     }
 
+    clearTimeout(cartCloseTimer);
+
     closeAllExcept("cart");
+
+    refs.cartDrawer.classList.remove("translate-x-0");
+
+    refs.cartDrawer.classList.add("translate-x-full");
 
     showElement(refs.cartOverlay);
 
-    refs.cartDrawer.classList.remove("translate-x-full");
-
     requestAnimationFrame(() => {
+      refs.cartDrawer.classList.remove("translate-x-full");
+
       refs.cartDrawer.classList.add("translate-x-0");
     });
 
@@ -668,11 +765,15 @@
       return;
     }
 
+    clearTimeout(cartCloseTimer);
+
     refs.cartDrawer.classList.remove("translate-x-0");
 
     refs.cartDrawer.classList.add("translate-x-full");
 
-    hideElement(refs.cartOverlay);
+    cartCloseTimer = setTimeout(() => {
+      hideElement(refs.cartOverlay);
+    }, 300);
 
     unlockBody();
   }
@@ -700,8 +801,6 @@
       return;
     }
 
-    // Only target the Cart Content area.
-    // The Cart Header stays untouched.
     const cartContent = $("#cart-content", refs.cartDrawer);
 
     if (!cartContent) {
@@ -715,7 +814,7 @@
         <div class="mt-32 pb-8 max-md:mt-32">
           <div class="grid place-items-center gap-y-5 text-center">
             <img
-              class="h-[120px] w-[120px] max-md:h-[100px] max-md:w-[100px]"
+              class="h-[150px] w-[150px] max-md:h-[120px] max-md:w-[120px]"
               src="https://keswastore.com/themes/shop/default/build/assets/shopping-cart-placeholder-a8WmYsMY.svg"
               loading="lazy"
               decoding="async"
@@ -747,7 +846,7 @@
         <img
           src="${escapeHtml(item.image)}"
           alt="${escapeHtml(item.name)}"
-          class="h-24 w-20 shrink-0 rounded object-cover bg-zinc-100"
+          class="h-24 w-20 shrink-0 rounded bg-zinc-100 object-cover"
           loading="lazy"
         />
 
@@ -780,7 +879,9 @@
                 −
               </button>
 
-              <span class="flex h-8 min-w-8 items-center justify-center text-sm">
+              <span
+                class="flex h-8 min-w-8 items-center justify-center text-sm"
+              >
                 ${item.quantity}
               </span>
 
@@ -912,21 +1013,15 @@
     }
   }
 
-  // Desktop User icon
-  // Works normally on desktop.
   refs.accountButton?.addEventListener("click", (event) => {
     event.preventDefault();
 
     event.stopPropagation();
 
-    // Responsive:
-    // User icon stays visible but does nothing.
     if (window.innerWidth < 768) {
       return;
     }
 
-    // Desktop:
-    // User dropdown works normally.
     toggleAccount();
   });
 
@@ -947,17 +1042,23 @@
       return;
     }
 
+    clearTimeout(filterCloseTimer);
+
     closeAllExcept("filter");
 
+    refs.filterPanel.classList.remove("translate-x-0");
+
+    refs.filterPanel.classList.add("-translate-x-full");
+
     showElement(refs.filterOverlay);
+
+    refs.filterButton?.setAttribute("aria-expanded", "true");
 
     requestAnimationFrame(() => {
       refs.filterPanel.classList.remove("-translate-x-full");
 
       refs.filterPanel.classList.add("translate-x-0");
     });
-
-    refs.filterButton?.setAttribute("aria-expanded", "true");
 
     lockBody();
   }
@@ -971,13 +1072,17 @@
       return;
     }
 
+    clearTimeout(filterCloseTimer);
+
     refs.filterPanel.classList.remove("translate-x-0");
 
     refs.filterPanel.classList.add("-translate-x-full");
 
-    hideElement(refs.filterOverlay);
-
     refs.filterButton?.setAttribute("aria-expanded", "false");
+
+    filterCloseTimer = setTimeout(() => {
+      hideElement(refs.filterOverlay);
+    }, 500);
 
     unlockBody();
   }
@@ -1149,11 +1254,8 @@
 
     const aliases = {
       beige: ["beige", "baje"],
-
       baje: ["beige", "baje"],
-
       "off-white": ["off-white", "off white"],
-
       "off white": ["off-white", "off white"],
     };
 
@@ -1201,7 +1303,7 @@
   });
 
   // ============================================================
-  // SORT
+  // DESKTOP SORT
   // ============================================================
 
   function closeSortDropdown() {
@@ -1286,6 +1388,236 @@
   });
 
   // ============================================================
+  // MOBILE SORT SHEET
+  // ============================================================
+
+  function createMobileSortSheet() {
+    let overlay = $("#mobile-sort-overlay");
+
+    if (overlay) {
+      return overlay;
+    }
+
+    overlay = document.createElement("div");
+
+    overlay.id = "mobile-sort-overlay";
+
+    overlay.className = "fixed inset-0 z-[1100] hidden bg-black/40 md:hidden";
+
+    overlay.innerHTML = `
+      <div
+        id="mobile-sort-sheet"
+        class="absolute bottom-0 left-0 w-full translate-y-full bg-white transition-transform duration-300 ease-out"
+      >
+        <div
+          class="flex h-[60px] items-center justify-between border-b border-zinc-200 px-4"
+        >
+          <h2 class="text-lg font-medium">
+            Sort
+          </h2>
+
+          <button
+            type="button"
+            id="mobile-sort-close"
+            class="flex h-8 w-8 items-center justify-center text-black"
+            aria-label="Close sort"
+          >
+            <svg class="h-6 w-6">
+              <use href="./assests/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="w-full">
+          <button
+            type="button"
+            data-mobile-sort="a-z"
+            class="mobile-sort-option flex h-[44px] w-full items-center px-4 text-left text-base"
+          >
+            From A-Z
+          </button>
+
+          <button
+            type="button"
+            data-mobile-sort="z-a"
+            class="mobile-sort-option flex h-[44px] w-full items-center px-4 text-left text-base"
+          >
+            From Z-A
+          </button>
+
+          <button
+            type="button"
+            data-mobile-sort="newest-first"
+            class="mobile-sort-option flex h-[44px] w-full items-center px-4 text-left text-base"
+          >
+            Newest First
+          </button>
+
+          <button
+            type="button"
+            data-mobile-sort="oldest-first"
+            class="mobile-sort-option flex h-[44px] w-full items-center px-4 text-left text-base"
+          >
+            Oldest First
+          </button>
+
+          <button
+            type="button"
+            data-mobile-sort="cheapest-first"
+            class="mobile-sort-option flex h-[44px] w-full items-center px-4 text-left text-base"
+          >
+            Cheapest First
+          </button>
+
+          <button
+            type="button"
+            data-mobile-sort="expensive-first"
+            class="mobile-sort-option flex h-[44px] w-full items-center px-4 text-left text-base"
+          >
+            Expensive First
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(overlay);
+
+    const sheet = $("#mobile-sort-sheet", overlay);
+
+    const closeButton = $("#mobile-sort-close", overlay);
+
+    closeButton?.addEventListener("click", closeMobileSort);
+
+    overlay.addEventListener("click", (event) => {
+      if (event.target === overlay) {
+        closeMobileSort();
+      }
+    });
+
+    $$(".mobile-sort-option", overlay).forEach((option) => {
+      option.addEventListener("click", () => {
+        const value = option.dataset.mobileSort;
+
+        if (!value) {
+          return;
+        }
+
+        state.sort = value;
+
+        if (refs.sortSelected) {
+          refs.sortSelected.textContent = option.textContent.trim();
+        }
+
+        updateMobileSortSelection();
+
+        closeMobileSort();
+
+        applyFiltersAndSort();
+      });
+    });
+
+    sheet?.addEventListener("click", (event) => {
+      event.stopPropagation();
+    });
+
+    return overlay;
+  }
+
+  function updateMobileSortSelection() {
+    const overlay = $("#mobile-sort-overlay");
+
+    if (!overlay) {
+      return;
+    }
+
+    $$(".mobile-sort-option", overlay).forEach((option) => {
+      const isActive = option.dataset.mobileSort === state.sort;
+
+      option.classList.toggle("bg-zinc-100", isActive);
+    });
+  }
+
+  function openMobileSort() {
+    if (window.innerWidth >= 768) {
+      return;
+    }
+
+    const overlay = createMobileSortSheet();
+
+    const sheet = $("#mobile-sort-sheet", overlay);
+
+    if (!overlay || !sheet) {
+      return;
+    }
+
+    clearTimeout(mobileSortCloseTimer);
+
+    closeAllExcept("mobile-sort");
+
+    updateMobileSortSelection();
+
+    showElement(overlay);
+
+    requestAnimationFrame(() => {
+      sheet.classList.remove("translate-y-full");
+
+      sheet.classList.add("translate-y-0");
+    });
+
+    lockBody();
+  }
+
+  function closeMobileSort() {
+    const overlay = $("#mobile-sort-overlay");
+
+    const sheet = $("#mobile-sort-sheet");
+
+    if (!overlay || !sheet) {
+      return;
+    }
+
+    if (overlay.classList.contains("hidden")) {
+      return;
+    }
+
+    clearTimeout(mobileSortCloseTimer);
+
+    sheet.classList.remove("translate-y-0");
+
+    sheet.classList.add("translate-y-full");
+
+    mobileSortCloseTimer = setTimeout(() => {
+      hideElement(overlay);
+    }, 300);
+
+    unlockBody();
+  }
+
+  refs.mobileSortButton?.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    event.stopPropagation();
+
+    openMobileSort();
+  });
+
+  // ============================================================
+  // MOBILE FILTER
+  // ============================================================
+
+  refs.mobileFilterButton?.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    event.stopPropagation();
+
+    if (window.innerWidth >= 768) {
+      return;
+    }
+
+    openFilter();
+  });
+
+  // ============================================================
   // SEARCH + RENDER
   // ============================================================
 
@@ -1333,10 +1665,12 @@
         alt="No products available"
         loading="lazy"
         decoding="async"
-        class="h-[120px] w-[120px]"
+        class="h-[170px] w-[170px]"
       />
 
-      <p class="text-xl font-normal text-black max-md:text-base">
+      <p
+        class="text-xl font-normal text-black max-md:text-base"
+      >
         No products available in this category
       </p>
     `;
@@ -1385,6 +1719,14 @@
   }
 
   // ============================================================
+  // SEARCH INPUT
+  // ============================================================
+
+  refs.searchInput?.addEventListener("input", () => {
+    applyFiltersAndSort();
+  });
+
+  // ============================================================
   // GRID / LIST
   // ============================================================
 
@@ -1429,7 +1771,6 @@
 
     actions.className = "list-view-actions mt-4 flex items-center gap-3";
 
-    // Wishlist - الشكل فقط
     const wishlist = document.createElement("button");
 
     wishlist.type = "button";
@@ -1445,7 +1786,6 @@
       </svg>
     `;
 
-    // Add To Cart - الشكل فقط
     const cart = document.createElement("button");
 
     cart.type = "button";
@@ -1456,8 +1796,6 @@
       "flex h-12 items-center justify-center bg-black px-8 text-sm font-medium text-white transition-all hover:bg-zinc-800";
 
     cart.textContent = "Add To Cart";
-
-    // No click event.
 
     actions.append(wishlist, cart);
 
@@ -1595,24 +1933,12 @@
       $$('button[type="button"]', product).forEach((button) => {
         const label = normalize(button.getAttribute("aria-label"));
 
-        // Add To Cart - الشكل فقط
-        // Wishlist - الشكل فقط
-        // Quick View - الشكل فقط
-        //
-        // No click functionality is attached.
-
         void product;
         void button;
         void label;
       });
     });
   }
-
-  // ============================================================
-  // QUICK VIEW
-  // ============================================================
-  // Quick View is intentionally disabled.
-  // The button remains visible as UI only.
 
   // ============================================================
   // CLEAR ALL
@@ -1718,6 +2044,8 @@
     closeAccount();
 
     closeSortDropdown();
+
+    closeMobileSort();
   });
 
   // ============================================================
@@ -1768,28 +2096,90 @@
       'button[aria-label="Account"]',
     );
 
-    // Search:
-    // Visible on responsive but has NO ACTION.
     mobileSearch?.addEventListener("click", (event) => {
       event.preventDefault();
 
       event.stopPropagation();
-
-      return;
     });
 
     mobileCart?.addEventListener("click", () => {
       openCart();
     });
 
-    // Account:
-    // Visible on responsive but has NO ACTION.
     mobileAccount?.addEventListener("click", (event) => {
       event.preventDefault();
 
       event.stopPropagation();
+    });
+  }
 
-      return;
+  // ============================================================
+  // MOBILE FILTER / SORT BAR
+  // ============================================================
+
+  const mobileFilterSortBar = document.getElementById("mobile-filter-sort-bar");
+
+  if (mobileFilterSortBar) {
+    const mobileFilter = document.getElementById("mobile-filter-button");
+
+    const mobileSort = document.getElementById("mobile-sort-button");
+
+    // ----------------------------------------------------------
+    // Force the bar to be FLEX on mobile
+    // ----------------------------------------------------------
+
+    function updateMobileBarVisibility() {
+      const isMobile = window.innerWidth < 768;
+
+      if (isMobile) {
+        // IMPORTANT:
+        // Remove hidden AND add flex.
+        mobileFilterSortBar.classList.remove("hidden");
+
+        mobileFilterSortBar.classList.add("flex");
+      } else {
+        // Desktop:
+        // Hide the mobile bar.
+        mobileFilterSortBar.classList.add("hidden");
+
+        mobileFilterSortBar.classList.remove("flex");
+      }
+    }
+
+    updateMobileBarVisibility();
+
+    window.addEventListener("resize", updateMobileBarVisibility);
+
+    // ----------------------------------------------------------
+    // MOBILE FILTER
+    // ----------------------------------------------------------
+
+    mobileFilter?.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      event.stopPropagation();
+
+      if (window.innerWidth >= 768) {
+        return;
+      }
+
+      openFilter();
+    });
+
+    // ----------------------------------------------------------
+    // MOBILE SORT
+    // ----------------------------------------------------------
+
+    mobileSort?.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      event.stopPropagation();
+
+      if (window.innerWidth >= 768) {
+        return;
+      }
+
+      openMobileSort();
     });
   }
 
@@ -1812,4 +2202,11 @@
   bindProductActions();
 
   applyFiltersAndSort();
+
+  createMobileSortSheet();
+
+  updateMobileSortSelection();
+
+  // Make sure mobile Filter / Sort starts correctly.
+  updateHeader();
 })();

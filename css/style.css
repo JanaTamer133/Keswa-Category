@@ -1,5 +1,8 @@
 /* Hides the 'x' button in Chrome, Edge, and Safari */
 input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+html{
+    font-family: 'Courier New', Courier, monospace;
 }

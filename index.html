@@ -3,16 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shirt</title>
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/output.css" />
+
+    <title>Keswa Store</title>
   </head>
 
-  <body class="min-h-screen font-sans" data-authenticated="false">
+  <body class="font-sans">
     <!---------TOP HEADER--------->
     <header
-      id="top-header"
+      id="topHeader"
       class="top-header hidden h-12 w-full items-center justify-between border-b border-[#e2e2e2] bg-white px-6 md:flex lg:px-16"
     >
       <!-- Social Icons -->
@@ -30,6 +31,7 @@
         >
           <use href="./assests/icons.svg#twitter"></use>
         </svg>
+
         <a href="https://www.instagram.com/keswa.stores">
           <svg
             class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
@@ -37,6 +39,7 @@
             <use href="./assests/icons.svg#instagram"></use>
           </svg>
         </a>
+
         <a href="https://www.tiktok.com/@keswa_wear">
           <svg
             class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
@@ -75,13 +78,13 @@
 
     <!---------BOTTOM HEADER--------->
     <header
-      id="bottom-header"
-      class="bottom-header sticky top-0 z-20 w-full border-b border-[#e2e2e2] bg-white md:border-transparent"
+      id="bottomHeader"
+      class="bottom-header absolute left-0 top-0 z-20 w-full border-b border-transparent bg-transparent md:top-12"
     >
       <div
         class="flex h-[60px] w-full items-center justify-between px-0 md:h-[76px] md:px-8 xl:px-[60px]"
       >
-        <a href="https://keswastore.com/" class="logo hidden md:block">
+        <a href="./index.html" class="logo hidden md:block">
           <img
             src="./img/logo.png"
             class="logo"
@@ -91,7 +94,7 @@
           />
         </a>
 
-        <!---------NavBar--------->
+        <!---------NAVBAR--------->
         <nav
           class="nav hidden grow items-center justify-center gap-5 text-[16px] md:flex"
         >
@@ -109,7 +112,7 @@
           <div class="category group flex h-[46px] items-center">
             <span>
               <a
-                href="index.html"
+                href="Shirts.html"
                 class="relative inline-flex whitespace-nowrap px-1 lg:px-2 after:absolute after:bottom-[-5px] after:left-0.5 after:right-0.5 after:h-[2px] after:origin-left after:scale-x-0 after:bg-[#202124] after:content-[''] after:transition-transform after:duration-[250ms] after:ease-in-out hover:after:scale-x-100"
               >
                 Shirts
@@ -184,7 +187,7 @@
           </div>
         </nav>
 
-        <!---------Right Icons--------->
+        <!---------RIGHT ICONS--------->
         <div class="relative hidden shrink-0 items-center gap-4 md:flex">
           <!-- Search -->
           <button
@@ -226,7 +229,7 @@
               </svg>
             </button>
 
-            <!---------Account Dropdown--------->
+            <!-- Account Dropdown -->
             <div
               id="account-dropdown"
               class="absolute right-0 top-[38px] z-50 hidden w-[300px] rounded-sm border border-zinc-200 bg-white shadow-[0px_10px_40px_rgba(0,0,0,0.08)]"
@@ -262,7 +265,7 @@
           </div>
         </div>
 
-        <!---------Hamburger Menu--------->
+        <!---------HAMBURGER MENU--------->
         <div class="hamburger w-full md:hidden">
           <div class="flex h-full w-full items-center justify-between px-4">
             <img
@@ -275,8 +278,8 @@
 
             <button
               type="button"
-              id="open-mobile-menu"
-              class="flex h-10 w-10 cursor-pointer items-center justify-center p-2 text-2xl leading-none"
+              id="openMobileMenu"
+              class="hamburger flex h-10 w-10 cursor-pointer items-center justify-center p-2 text-2xl leading-none"
               aria-label="Open menu"
             >
               ☰
@@ -285,6 +288,68 @@
         </div>
       </div>
     </header>
+
+    <!-- MOBILE MENU -->
+    <div
+      id="mobileMenu"
+      class="mobile-menu fixed inset-0 z-[1100] bg-white transition-transform duration-300 ease-in-out md:hidden"
+    >
+      <div class="flex h-full flex-col overflow-y-auto">
+        <div
+          class="flex h-[72px] shrink-0 items-center justify-between border-b border-zinc-200 px-4"
+        >
+          <a href="./index.html" aria-label="Keswa home">
+            <img
+              src="./img/logo.png"
+              width="131"
+              height="29"
+              alt="Keswa"
+              class="block h-auto w-[131px]"
+            />
+          </a>
+
+          <button
+            type="button"
+            id="close-mobile-menu"
+            class="close-menu flex h-10 w-10 items-center cursor-pointer justify-center text-3xl font-light leading-none"
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+        </div>
+
+        <div class="border-b border-zinc-200 px-4 py-3">
+          <a
+            href="https://keswastore.com/customer/login"
+            class="flex h-[58px] items-center justify-between rounded-lg border border-zinc-200 px-3 text-base font-medium"
+          >
+            <span class="flex items-center gap-3">
+              <span
+                class="flex h-9 w-9 items-center justify-center rounded-full bg-zinc-100"
+              >
+                <svg class="h-5 w-5 text-zinc-400">
+                  <use href="./assests/icons.svg#account"></use>
+                </svg>
+              </span>
+              Sign up or Login
+            </span>
+
+            <span class="text-3xl font-light">›</span>
+          </a>
+        </div>
+
+        <nav class="flex flex-col px-6 py-4 text-[16px] font-medium">
+          <a href="T-shirt.html" class="py-3">T-Shirt</a>
+          <a href="Shirts.html" class="py-3">Shirt</a>
+          <a href="suit.html" class="py-3">Suit</a>
+          <a href="pants.html" class="py-3">Pants</a>
+          <a href="shoes.html" class="py-3">Shoes</a>
+          <a href="polo.html" class="py-3">Polo</a>
+          <a href="jeans.html" class="py-3">Jeans</a>
+          <a href="Tank-Top.html" class="py-3">Tank-top</a>
+        </nav>
+      </div>
+    </div>
 
     <!---------SEARCH OVERLAY--------->
     <div
@@ -296,7 +361,6 @@
         class="flex h-auto w-full -translate-y-full items-center justify-center bg-white px-4 py-2 transition-transform duration-300 ease-in-out md:h-[25vh] md:px-6 md:py-0"
       >
         <div class="relative w-full max-w-[900px]">
-          <!-- Close Search -->
           <button
             type="button"
             id="close-search"
@@ -308,7 +372,6 @@
             </svg>
           </button>
 
-          <!-- Search Input -->
           <div
             class="flex h-11 w-full items-center rounded-lg bg-zinc-100 px-4 transition-colors duration-200 focus-within:border-black/40"
           >
@@ -333,7 +396,6 @@
         id="cart-drawer"
         class="fixed inset-y-0 right-0 z-[1001] flex w-[500px] translate-x-full flex-col overflow-hidden bg-white transition-transform duration-300 ease-in-out max-md:!w-full"
       >
-        <!-- Cart Header -->
         <div class="relative shrink-0 bg-white px-6 py-5 max-md:px-4">
           <p class="text-xl font-medium max-md:text-lg max-sm:text-base">
             Shopping Cart
@@ -355,7 +417,6 @@
           </button>
         </div>
 
-        <!-- Cart Content -->
         <div
           id="cart-content"
           class="min-h-0 flex-1 overflow-y-auto px-6 py-4 scrollbar-thin max-md:px-4"
@@ -377,1945 +438,518 @@
       </aside>
     </div>
 
-    <!---------FILTER OVERLAY--------->
-    <div id="filter-overlay" class="fixed inset-0 z-[1000] hidden bg-black/40">
-      <aside
-        id="filter-panel"
-        class="fixed inset-y-0 left-0 z-[1001] flex h-full w-[300px] -translate-x-full flex-col bg-white shadow-xl transition-transform duration-300 ease-in-out max-sm:w-full"
-      >
-        <!-- Filter Header -->
-        <div
-          class="flex h-[72px] shrink-0 items-center justify-between border-b border-zinc-200 bg-gray-50 px-6"
-        >
-          <p class="text-lg font-medium">Filters</p>
-
-          <button
-            type="button"
-            id="close-filter"
-            class="flex h-8 w-8 cursor-pointer items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
-            aria-label="Close filters"
-          >
-            <svg class="h-6 w-6">
-              <use href="./assests/icons.svg#close"></use>
-            </svg>
-          </button>
-        </div>
-
-        <!-- Filter Content -->
-        <div class="min-h-0 flex-1 overflow-y-auto px-6 scrollbar-thin">
-          <!-- PRICE -->
-          <section class="border-b border-zinc-200 py-4">
-            <button
-              type="button"
-              class="filter-section-toggle flex w-full items-center justify-between py-1"
-              data-target="price-filter-content"
-              aria-expanded="true"
-            >
-              <span class="text-lg font-medium">Price</span>
-
-              <svg class="filter-arrow h-5 w-5">
-                <use href="./assests/icons.svg#chevron-up"></use>
-              </svg>
-            </button>
-
-            <div id="price-filter-content" class="pt-3">
-              <div
-                class="flex items-center justify-between gap-3 text-sm text-gray-900"
-              >
-                <span>Range:</span>
-
-                <span id="price-range-text" class="font-medium">
-                  0 EGP - 599 EGP
-                </span>
-              </div>
-
-              <div class="mt-6 px-1">
-                <div class="relative h-7">
-                  <div
-                    class="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2 bg-zinc-300"
-                  ></div>
-
-                  <div
-                    id="price-range-track"
-                    class="absolute left-0 top-1/2 h-0.5 -translate-y-1/2 bg-[#202124]"
-                  ></div>
-
-                  <input
-                    id="price-min"
-                    type="range"
-                    min="0"
-                    max="599"
-                    step="1"
-                    value="0"
-                    aria-label="Minimum price"
-                    class="pointer-events-none absolute left-0 top-1/2 z-20 h-7 w-full -translate-y-1/2 appearance-none bg-transparent [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#202124] [&::-moz-range-thumb]:bg-white [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#202124] [&::-webkit-slider-thumb]:bg-white"
-                  />
-
-                  <input
-                    id="price-max"
-                    type="range"
-                    min="0"
-                    max="599"
-                    step="1"
-                    value="599"
-                    aria-label="Maximum price"
-                    class="pointer-events-none absolute left-0 top-1/2 z-20 h-7 w-full -translate-y-1/2 appearance-none bg-transparent [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#202124] [&::-moz-range-thumb]:bg-white [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#202124] [&::-webkit-slider-thumb]:bg-white"
-                  />
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <!-- COLOR -->
-          <section class="border-b border-zinc-200 py-4">
-            <button
-              type="button"
-              class="filter-section-toggle flex w-full items-center justify-between py-1"
-              data-target="color-filter-content"
-              aria-expanded="true"
-            >
-              <span class="text-lg font-medium">Color</span>
-
-              <svg class="filter-arrow h-5 w-5">
-                <use href="./assests/icons.svg#chevron-up"></use>
-              </svg>
-            </button>
-
-            <div id="color-filter-content" class="pt-3">
-              <div class="relative">
-                <svg
-                  class="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-black"
-                  aria-hidden="true"
-                >
-                  <use href="./assests/icons.svg#search"></use>
-                </svg>
-
-                <input
-                  id="color-search"
-                  type="text"
-                  placeholder="Search"
-                  class="block h-11 w-full rounded-none border border-zinc-200 bg-white pl-10 pr-3 text-sm text-gray-900 outline-none placeholder:text-zinc-400 focus:border-zinc-400"
-                />
-              </div>
-
-              <p
-                id="color-count"
-                class="my-2 flex flex-row-reverse text-xs text-gray-600"
-              >
-                Showing 15 of 15 options
-              </p>
-
-              <ul id="color-options" class="pb-2 text-sm text-gray-700">
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Black"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Black
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="White"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      White
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Baje"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Baje
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Mint"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Mint
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Gray"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Gray
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Olive"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Olive
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Brown"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Brown
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Navy"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Navy
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Burgundy"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Burgundy
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Off-White"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Off-White
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="cmaly"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      cmaly
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="cafeh"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      cafeh
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="pink"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      pink
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="baby blue"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      baby blue
-                    </span>
-                  </label>
-                </li>
-
-                <li class="color-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="color-filter"
-                      value="Purple"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      Purple
-                    </span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- SIZE -->
-          <section class="border-b border-zinc-200 py-4">
-            <button
-              type="button"
-              class="filter-section-toggle flex w-full items-center justify-between py-1"
-              data-target="size-filter-content"
-              aria-expanded="true"
-            >
-              <span class="text-lg font-medium">Size</span>
-
-              <svg class="filter-arrow h-5 w-5">
-                <use href="./assests/icons.svg#chevron-up"></use>
-              </svg>
-            </button>
-
-            <div id="size-filter-content" class="pt-3">
-              <div class="relative">
-                <svg
-                  class="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-black"
-                  aria-hidden="true"
-                >
-                  <use href="./assests/icons.svg#search"></use>
-                </svg>
-
-                <input
-                  id="size-search"
-                  type="text"
-                  placeholder="Search"
-                  class="block h-11 w-full rounded-none border border-zinc-200 bg-white pl-10 pr-3 text-sm text-gray-900 outline-none placeholder:text-zinc-400 focus:border-zinc-400"
-                />
-              </div>
-
-              <p
-                id="size-count"
-                class="my-2 flex flex-row-reverse text-xs text-gray-600"
-              >
-                Showing 5 of 5 options
-              </p>
-
-              <ul id="size-options" class="pb-2 text-sm text-gray-700">
-                <li class="size-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="size-filter"
-                      value="M"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      M
-                    </span>
-                  </label>
-                </li>
-
-                <li class="size-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="size-filter"
-                      value="L"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      L
-                    </span>
-                  </label>
-                </li>
-
-                <li class="size-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="size-filter"
-                      value="XL"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      XL
-                    </span>
-                  </label>
-                </li>
-
-                <li class="size-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="size-filter"
-                      value="XXL"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      XXL
-                    </span>
-                  </label>
-                </li>
-
-                <li class="size-option">
-                  <label
-                    class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
-                  >
-                    <input
-                      type="checkbox"
-                      name="size-filter"
-                      value="XXXL"
-                      class="peer sr-only"
-                    />
-
-                    <span
-                      class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
-                    ></span>
-
-                    <span class="w-full text-base text-gray-900 max-sm:text-sm">
-                      XXXL
-                    </span>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
-
-        <!-- Clear All -->
-        <div class="shrink-0 border-t border-zinc-200 bg-white px-6 py-4">
-          <button
-            type="button"
-            id="clear-filters"
-            class="flex h-[47px] w-[121px] items-center justify-center rounded-[2px] bg-[#1B1B1B] px-0 text-sm font-medium text-white transition-colors duration-200 hover:bg-black"
-          >
-            Clear All
-          </button>
-        </div>
-      </aside>
-    </div>
-
-    <!---------Mobile Menu--------->
-    <div id="mobile-menu" class="fixed inset-0 z-100 hidden md:hidden">
-      <div
-        id="mobile-menu-backdrop"
-        class="absolute inset-0 cursor-pointer"
-        aria-label="Close menu"
-      ></div>
-
-      <aside
-        id="mobile-menu-panel"
-        class="mobile-menu-panel relative h-full w-full max-w-[540px] overflow-y-auto bg-white -translate-x-full transition-transform duration-300 ease-in-out"
-      >
-        <div
-          class="menu-header flex h-[70px] items-center justify-between border-b border-[#dddddd] px-4"
-        >
-          <a href="https://keswastore.com/" class="logo">
-            <img
-              src="./img/logo.png"
-              class="logo"
-              width="131"
-              height="29"
-              alt="Logo"
-            />
-          </a>
-
-          <button
-            type="button"
-            id="close-mobile-menu"
-            class="cursor-pointer p-2 text-4xl font-light leading-none"
-            aria-label="Close menu"
-          >
-            ×
-          </button>
-        </div>
-
-        <div
-          class="menu-content flex-1 overflow-auto px-6 scrollbar-thin max-md:px-4"
-        >
-          <div
-            class="auth-bar mt-4 cursor-pointer rounded-lg border border-[#dddddd] bg-zinc-50"
-          >
-            <div class="flex items-center justify-between gap-4 px-2.5 py-2">
-              <div class="flex items-center gap-4">
-                <img
-                  src="./img/sign-log-icon.png"
-                  width="40"
-                  height="40"
-                  alt="Sign up or Login"
-                  class="rounded-full"
-                />
-
-                <span class="text-sm font-medium text-zinc-700">
-                  <a href="#" class="login-link">Sign up or Login</a>
-                </span>
-              </div>
-
-              <svg
-                width="30"
-                height="30"
-                viewBox="0 0 24 24"
-                class="text-black"
-              >
-                <use href="./assests/icons.svg#double-arrow"></use>
-              </svg>
-            </div>
-          </div>
-
-          <div class="-mx-6 mt-4 border-t border-[#dddddd] max-md:-mx-4"></div>
-
-          <div class="menu-category mt-2">
-            <ul class="flex flex-col gap-1 py-2">
-              <li>
-                <a
-                  href="T-shirt.html"
-                  class="block px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  T-Shirt
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="index.html"
-                  class="block px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  Shirts
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="suit.html"
-                  class="block px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  Suit
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="pants.html"
-                  class="block px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  Pants
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="shoes.html"
-                  class="block px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  Shoes
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="polo.html"
-                  class="block px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  Polo
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="jeans.html"
-                  class="block px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  Jeans
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="Tank-Top.html"
-                  class="block px-4 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                >
-                  Tank-Top
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </aside>
-    </div>
-
-    <!---------Hero Section--------->
+    <!---------HERO SECTION--------->
     <section
-      id="main"
-      class="flex h-44 items-center justify-center bg-gradient-to-r from-white via-yellow-100 to-white max-md:h-20"
+      id="hero-slider"
+      class="relative m-auto w-full overflow-hidden"
+      aria-label="Keswa Store Hero Slider"
     >
-      <h1 class="text-4xl font-normal text-black max-md:text-[32px]">Shirt</h1>
+      <div
+        id="hero-slides"
+        class="flex w-full transition-transform duration-700 ease-in-out will-change-transform"
+      >
+        <!-- SLIDE 1 -->
+        <article
+          class="hero-slide relative min-w-full h-[80vh] min-h-0 overflow-hidden bg-[#f5eee8] max-md:h-[90vh] max-md:min-h-0"
+        >
+          <picture class="absolute inset-0 block h-full w-full">
+            <source
+              media="(max-width: 768px)"
+              srcset="
+                storage/theme/15/aRaNkwJ5RfgBbpTVEMKyJ86SJswA9KOxmaPEq0DL.webp
+              "
+            />
+
+            <img
+              src="./img/hero1.png"
+              alt="Half Sleeve Shirt"
+              class="h-full w-full object-cover object-center select-none"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
+
+          <div
+            class="absolute inset-0 z-10 flex flex-col justify-center px-6 md:container md:px-0"
+          >
+            <div class="max-w-[500px]">
+              <h2
+                class="mt-8 hero-content translate-y-8 px-20 text-4xl font-normal leading-[1.1] opacity-0 transition-all duration-700 md:text-7xl"
+              >
+                Over
+                <br />
+                Size
+                <br />
+                Round
+                <br />
+                S.2026
+              </h2>
+
+              <p
+                class="hero-content mt-6 translate-y-8 px-20 text-lg font-medium opacity-0 transition-all delay-100 duration-700 md:text-xl"
+              >
+                Comfort the lasts, Style That Stays
+              </p>
+
+              <a
+                href="./T-shirt.html"
+                class="pointer-events-auto ml-20 mt-10 inline-flex translate-y-0 items-center gap-3 border border-[#1B1B1B] bg-[#1B1B1B] px-8 py-3 text-white opacity-100 transition-all delay-700 duration-700 ease-out"
+              >
+                <span>Over Size Round</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M0 0h20v20H0z" fill="none" />
+                  <path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SLIDE 2 -->
+        <article
+          class="hero-slide relative min-w-full h-[80vh] min-h-0 overflow-hidden bg-[#f5eee8] max-md:h-[90vh] max-md:min-h-0"
+        >
+          <picture class="absolute inset-0 block h-full w-full">
+            <source
+              media="(max-width: 768px)"
+              srcset="
+                storage/theme/15/aRaNkwJ5RfgBbpTVEMKyJ86SJswA9KOxmaPEq0DL.webp
+              "
+            />
+
+            <img
+              src="./img/hero2.png"
+              alt="Half Sleeve Shirt Collection"
+              class="h-full w-full object-cover object-center select-none"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+
+          <div
+            class="absolute inset-0 z-10 flex flex-col justify-center px-6 md:container md:px-0"
+          >
+            <div class="max-w-[500px]">
+              <h2
+                class="hero-content translate-y-8 px-20 text-4xl font-normal leading-[1.1] opacity-0 transition-all duration-700 md:text-7xl"
+              >
+                Half
+                <br />
+                Sleeve
+                <br />
+                Shirt
+              </h2>
+
+              <p
+                class="hero-content mt-6 translate-y-8 px-20 text-lg font-medium opacity-0 transition-all delay-100 duration-700 md:text-xl"
+              >
+                Crisp comfort made for everyday wear
+              </p>
+
+              <a
+                href="./Shirts.html"
+                class="pointer-events-auto ml-20 mt-10 inline-flex translate-y-0 items-center gap-3 border border-[#1B1B1B] bg-[#1B1B1B] px-8 py-3 text-white opacity-100 transition-all delay-700 duration-700 ease-out"
+              >
+                <span>Half Sleeve Shirt</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M0 0h20v20H0z" fill="none" />
+                  <path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- SLIDE 3 -->
+        <article
+          class="hero-slide relative min-w-full h-[80vh] min-h-0 overflow-hidden bg-[#f5eee8] max-md:h-[90vh] max-md:min-h-0"
+        >
+          <picture class="absolute inset-0 block h-full w-full">
+            <source
+              media="(max-width: 768px)"
+              srcset="
+                storage/theme/15/aRaNkwJ5RfgBbpTVEMKyJ86SJswA9KOxmaPEq0DL.webp
+              "
+            />
+
+            <img
+              src="./img/hero3.png"
+              alt="Keswa New Collection"
+              class="h-full w-full object-cover object-center select-none"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+
+          <div
+            class="absolute inset-0 z-10 flex flex-col justify-center px-6 md:container md:px-0"
+          >
+            <div class="max-w-[500px]">
+              <h2
+                class="hero-content translate-y-8 px-20 text-4xl font-normal leading-[1.1] opacity-0 transition-all duration-700 md:text-7xl"
+              >
+                Tank
+                <br />
+                Top
+                <br />
+                S.26
+              </h2>
+
+              <p
+                class="hero-content mt-6 translate-y-8 px-20 text-lg font-medium opacity-0 transition-all delay-100 duration-700 md:text-xl"
+              >
+                Comfort the lasts, Style That Stays
+              </p>
+
+              <a
+                href="./Tank-Top.html"
+                class="pointer-events-auto ml-20 mt-10 inline-flex translate-y-0 items-center gap-3 border border-[#1B1B1B] bg-[#1B1B1B] px-8 py-3 text-white opacity-100 transition-all delay-700 duration-700 ease-out"
+              >
+                <span>Tank Top</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M0 0h20v20H0z" fill="none" />
+                  <path fill="currentColor" d="m6 15l5-5l-5-5l1-2l7 7l-7 7z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- DOTS -->
+      <div
+        id="hero-dots"
+        class="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3"
+      >
+        <button
+          type="button"
+          class="hero-dot flex h-5 w-5 items-center justify-center rounded-full"
+          data-slide="0"
+          aria-label="Go to slide 1"
+          aria-current="true"
+        >
+          <span
+            class="hero-dot-inner h-2 w-2 rounded-full bg-black transition-all duration-300"
+          ></span>
+        </button>
+
+        <button
+          type="button"
+          class="hero-dot flex h-5 w-5 items-center justify-center rounded-full"
+          data-slide="1"
+          aria-label="Go to slide 2"
+          aria-current="false"
+        >
+          <span
+            class="hero-dot-inner h-2 w-2 rounded-full bg-black/30 transition-all duration-300"
+          ></span>
+        </button>
+
+        <button
+          type="button"
+          class="hero-dot flex h-5 w-5 items-center justify-center rounded-full"
+          data-slide="2"
+          aria-label="Go to slide 3"
+          aria-current="false"
+        >
+          <span
+            class="hero-dot-inner h-2 w-2 rounded-full bg-black/30 transition-all duration-300"
+          ></span>
+        </button>
+      </div>
     </section>
 
-    <!---------Product Section--------->
-    <section class="product-section w-full px-[60px] max-lg:px-8 max-md:px-4">
-      <div class="flex items-start gap-10 max-lg:gap-5 md:mt-10">
-        <div class="min-w-0 flex-1">
-          <!---------Toolbar--------->
-          <div class="toolbar hidden w-full items-center md:flex">
-            <!---------Filter Button--------->
-            <div>
-              <button
-                type="button"
-                id="filter-button"
-                class="filter-btn flex h-[40px] cursor-pointer items-center gap-2 rounded-sm border border-zinc-200 bg-white p-3.5 text-sm uppercase transition-all hover:border-gray-900 focus:border-gray-900"
-                aria-expanded="false"
-                aria-controls="filter-panel"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#filter"></use>
-                </svg>
+    <!---------offer bar--------->
+    <div
+      class="offer-bar flex h-14 w-full overflow-hidden bg-[#1B1B1B] text-[#FFFFFF]"
+    >
+      <div
+        class="marquee flex min-w-max items-center whitespace-nowrap font-medium"
+      >
+        <span class="mx-6"> Since 2012 — We Begin the Journey Together. </span>
+        <span class="mx-6"> Since 2012 — We Begin the Journey Together. </span>
+        <span class="mx-6"> Since 2012 — We Begin the Journey Together. </span>
+        <span class="mx-6"> Since 2012 — We Begin the Journey Together. </span>
+        <span class="mx-6"> Since 2012 — We Begin the Journey Together. </span>
+        <span class="mx-6"> Since 2012 — We Begin the Journey Together. </span>
+        <span class="mx-6"> Since 2012 — We Begin the Journey Together. </span>
+        <span class="mx-6"> Since 2012 — We Begin the Journey Together. </span>
+      </div>
+    </div>
 
-                <span class="font-medium"> Filter </span>
-              </button>
-            </div>
-
-            <!---------List & Grid Toggle--------->
-            <div
-              class="ml-13 flex flex-1 items-center justify-center gap-3 max-md:ml-0"
+    <!---------SHOP BY CATEGORIES--------->
+    <section
+      class="Shop-by-category mt-14 px-8 max-md:mt-7 max-md:px-4 max-sm:mt-5"
+    >
+      <div class="relative">
+        <!-- TITLE + ARROWS -->
+        <div class="mb-5 flex items-center gap-5">
+          <div class="flex items-center gap-3 max-md:hidden">
+            <!-- LEFT ARROW -->
+            <button
+              type="button"
+              id="category-prev"
+              class="icon-arrow-left-stylish flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full border border-black bg-white text-xl transition hover:bg-black hover:text-white max-md:hidden"
+              aria-label="Previous categories"
             >
-              <button
-                type="button"
-                id="list-view"
-                class="cursor-pointer text-zinc-400 transition-colors duration-200"
-                aria-label="List view"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
               >
-                <svg class="h-5 w-7">
-                  <use href="./assests/icons.svg#list"></use>
-                </svg>
-              </button>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m11 5l-7 7l7 7m-7-7h16"
+                />
+              </svg>
+            </button>
 
-              <button
-                type="button"
-                id="grid-view"
-                class="cursor-pointer text-black transition-colors duration-200"
-                aria-label="Grid view"
+            <!-- RIGHT ARROW -->
+            <button
+              type="button"
+              id="category-next"
+              class="icon-arrow-right-stylish flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full border border-black bg-white text-xl transition hover:bg-black hover:text-white max-md:hidden"
+              aria-label="Next categories"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
               >
-                <svg class="h-5 w-7">
-                  <use href="./assests/icons.svg#grid"></use>
-                </svg>
-              </button>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 12h16m-7-7l7 7l-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <h2 class="text-lg font-medium uppercase">Shop by categories</h2>
+        </div>
+
+        <!-- CATEGORIES -->
+        <div
+          class="grid grid-cols-[3fr_1fr] gap-4 max-sm:grid-cols-1 max-sm:gap-4"
+        >
+          <!-- CATEGORY CARDS ONLY -->
+          <div
+            id="category-scroll"
+            class="scrollbar-hide flex overflow-x-auto overflow-y-hidden scroll-smooth -ms-3 max-lg:-ms-2 max-sm:-mx-1"
+          >
+            <!-- JEANS -->
+            <div
+              class="w-1/3 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
+            >
+              <div
+                class="grid aspect-[219/263] w-full grid-cols-1 justify-items-center gap-2 font-medium max-lg:gap-1.5 max-md:gap-2.5"
+              >
+                <a
+                  href="./jeans.html"
+                  class="relative w-full overflow-hidden rounded-lg bg-zinc-100"
+                >
+                  <img
+                    src="https://keswastore.com/cache/medium/category/3/QK1iqTjIlfWtMjQCLHuYFNZa6XM57MvpuNSS6FNr.webp"
+                    sizes="(max-width: 640px) 219px, 110px"
+                    width="219"
+                    height="263"
+                    alt="Jeans"
+                    class="aspect-[219/263] h-full w-full rounded-lg object-cover transition-all duration-500 hover:scale-[1.2]"
+                  />
+
+                  <p
+                    class="transition-all duration-300 category-name absolute bottom-4 left-4 max-lg:left-1/2 max-lg:translate-x-[-50%] text-lg text-white max-lg:text-base font-normal max-sm:text-sm inline-flex items-center gap-2"
+                  >
+                    <span class="whitespace-nowrap text-shadow"> Jeans </span>
+
+                    <span class="flex items-center overflow-hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 12h16m-7-7l7 7l-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </p>
+                </a>
+              </div>
             </div>
 
-            <!---------Sort--------->
-            <div class="flex justify-end">
-              <div class="relative w-[145px]">
-                <button
-                  type="button"
-                  id="sort-button"
-                  class="flex h-[40px] w-full items-center justify-between rounded-sm border border-zinc-300 bg-white px-3.5 text-sm transition-all hover:border-gray-900 focus:border-gray-900"
+            <!-- PANTS -->
+            <div
+              class="w-1/3 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
+            >
+              <div
+                class="grid aspect-[219/263] w-full grid-cols-1 justify-items-center gap-2 font-medium max-lg:gap-1.5 max-md:gap-2.5"
+              >
+                <a
+                  href="./pants.html"
+                  class="relative w-full overflow-hidden rounded-lg bg-zinc-100"
                 >
-                  <span id="sort-selected"> Newest First </span>
+                  <img
+                    src="https://keswastore.com/cache/medium/category/5/iguha18QLHBKfoYKx1kWcEdZIyNjM7cvlaFKbDZU.webp"
+                    sizes="(max-width: 640px) 219px, 110px"
+                    width="219"
+                    height="263"
+                    alt="Pants"
+                    class="aspect-[219/263] h-full w-full rounded-lg object-cover transition-all duration-500 hover:scale-[1.2]"
+                  />
 
-                  <svg class="h-5 w-5">
-                    <use href="./assests/icons.svg#chevron-down"></use>
-                  </svg>
-                </button>
+                  <p
+                    class="transition-all duration-300 category-name absolute bottom-4 left-4 max-lg:left-1/2 max-lg:translate-x-[-50%] text-lg text-white max-lg:text-base font-normal max-sm:text-sm inline-flex items-center gap-2"
+                  >
+                    <span class="whitespace-nowrap text-shadow"> Pants </span>
 
-                <!---------Sort Dropdown--------->
-                <div
-                  id="sort-dropdown"
-                  class="absolute right-0 top-[45px] z-30 hidden w-full bg-white py-2 shadow-sm"
+                    <span class="flex items-center overflow-hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 12h16m-7-7l7 7l-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </p>
+                </a>
+              </div>
+            </div>
+
+            <!-- SHIRTS -->
+            <div
+              class="w-1/3 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
+            >
+              <div
+                class="grid aspect-[219/263] w-full grid-cols-1 justify-items-center gap-2 font-medium max-lg:gap-1.5 max-md:gap-2.5"
+              >
+                <a
+                  href="./Shirts.html"
+                  class="relative w-full overflow-hidden rounded-lg bg-zinc-100"
                 >
-                  <button
-                    type="button"
-                    data-value="a-z"
-                    class="sort-option block w-full px-5 py-2 text-left text-sm hover:bg-zinc-50"
-                  >
-                    From A-Z
-                  </button>
+                  <img
+                    src="https://keswastore.com/cache/medium/category/6/rsXeLSssI10R6b73PS7rrf0JIcW2OOKVSTnfp39z.webp"
+                    sizes="(max-width: 640px) 219px, 110px"
+                    width="219"
+                    height="263"
+                    alt="Shirts"
+                    class="aspect-[219/263] h-full w-full rounded-lg object-cover transition-all duration-500 hover:scale-[1.2]"
+                  />
 
-                  <button
-                    type="button"
-                    data-value="z-a"
-                    class="sort-option block w-full px-5 py-2 text-left text-sm hover:bg-zinc-50"
+                  <p
+                    class="transition-all duration-300 category-name absolute bottom-4 left-4 max-lg:left-1/2 max-lg:translate-x-[-50%] text-lg text-white max-lg:text-base font-normal max-sm:text-sm inline-flex items-center gap-2"
                   >
-                    From Z-A
-                  </button>
+                    <span class="whitespace-nowrap text-shadow"> Shirts </span>
 
-                  <button
-                    type="button"
-                    data-value="newest-first"
-                    class="sort-option block w-full px-5 py-2 text-left text-sm hover:bg-zinc-50"
-                  >
-                    Newest First
-                  </button>
-
-                  <button
-                    type="button"
-                    data-value="oldest-first"
-                    class="sort-option block w-full px-5 py-2 text-left text-sm hover:bg-zinc-50"
-                  >
-                    Oldest First
-                  </button>
-
-                  <button
-                    type="button"
-                    data-value="cheapest-first"
-                    class="sort-option block w-full px-5 py-2 text-left text-sm hover:bg-zinc-50"
-                  >
-                    Cheapest First
-                  </button>
-
-                  <button
-                    type="button"
-                    data-value="expensive-first"
-                    class="sort-option block w-full px-5 py-2 text-left text-sm hover:bg-zinc-50"
-                  >
-                    Expensive First
-                  </button>
-                </div>
+                    <span class="flex items-center overflow-hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 12h16m-7-7l7 7l-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </p>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <!---------Products--------->
-      <div
-        id="products-container"
-        class="mt-8 mb-8 grid grid-cols-4 gap-8 max-lg:grid-cols-3 max-sm:grid-cols-2 max-md:gap-x-4"
-      >
-        <!---------Product Card 1--------->
-        <div
-          class="w-full min-w-0"
-          data-price="420"
-          data-color="Black"
-          data-size="M,L,XL"
-        >
-          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
-            <a href="#" aria-label="Striped-Short-Sleeve-Shirt">
-              <img
-                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
-                src="https://keswastore.com/cache/medium/product/2107/zfie7Lym5EpptP2tavsh7doH1tgYtpIB1JI8VvnP.webp"
-                alt="Striped-Short-Sleeve-Shirt"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-
-            <p
-              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
-            >
-              Sale
-            </p>
-
+          <!-- DISCOVER -->
+          <div class="flex min-h-full items-center max-sm:min-h-[180px]">
             <div
-              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+              class="flex h-full w-full flex-col justify-center gap-4 rounded-lg border border-black p-4 lg:gap-4 lg:p-5"
             >
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to cart"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#bag"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to Wishlist"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#wishlist"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Quick View"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#eye"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="grid content-start gap-1 bg-white py-3">
-            <p
-              class="break-all text-base font-medium max-md:mb-1.5 max-sm:text-sm"
-            >
-              Striped-Short-Sleeve-Shirt
-            </p>
-
-            <div
-              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
-            >
-              <p>
-                375
-                <span class="text-[0.75em]"> EGP </span>
+              <p class="text-md font-medium lg:text-3xl">
+                Discover all
+                <br class="max-lg:hidden" />
+                new items
               </p>
 
-              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
-                <del>700</del>
-
-                <span class="text-[0.75em]">
-                  <del>EGP</del>
-                </span>
-              </p>
+              <a
+                href="#"
+                aria-label="Discover all new items"
+                class="flex h-[32px] w-[32px] shrink-0 rotate-[-45deg] cursor-pointer items-center justify-center rounded-full border border-black bg-white text-base transition hover:bg-black hover:text-white lg:h-[46px] lg:w-[46px] lg:text-xl"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 12h16m-7-7l7 7l-7 7"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
-        </div>
-
-        <!---------Product Card 2--------->
-        <div
-          class="w-full min-w-0"
-          data-price="540"
-          data-color="White"
-          data-size="L,XL,XXL"
-        >
-          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
-            <a href="#" aria-label="Crinkle-Short-Sleeve-Shirt">
-              <img
-                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
-                src="https://keswastore.com/cache/medium/product/2042/lazP5zZpvgzRkUGD1HZKyh49KyimpHilLObjuqr1.webp"
-                alt="Crinkle-Short-Sleeve-Shirt"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-
-            <p
-              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
-            >
-              Sale
-            </p>
-
-            <div
-              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
-            >
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to cart"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#bag"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to Wishlist"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#wishlist"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Quick View"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#eye"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="grid content-start gap-1 bg-white py-3">
-            <p class="break-all text-base font-medium max-sm:text-sm">
-              Crinkle-Short-Sleeve-Shirt
-            </p>
-
-            <div
-              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
-            >
-              <p>
-                490
-                <span class="text-[0.75em]"> EGP </span>
-              </p>
-
-              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
-                <del>900</del>
-
-                <span class="text-[0.75em]">
-                  <del>EGP</del>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!---------Product Card 3--------->
-        <div
-          class="w-full min-w-0"
-          data-price="480"
-          data-color="Beige"
-          data-size="M,L,XL"
-        >
-          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
-            <a href="#" aria-label="Half-Sleeve-Shirt-s25">
-              <img
-                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
-                src="https://keswastore.com/cache/medium/product/1883/mUnUXatmvuPfdVPEh0c9gw4NuC5uubIFKz9wAMOp.webp"
-                alt="Half-Sleeve-Shirt-s25"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-
-            <p
-              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
-            >
-              Sale
-            </p>
-
-            <div
-              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
-            >
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to cart"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#bag"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to Wishlist"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#wishlist"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Quick View"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#eye"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="grid content-start gap-1 bg-white py-3">
-            <p class="break-all text-base font-medium max-sm:text-sm">
-              Half-Sleeve-Shirt-s25
-            </p>
-
-            <div
-              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
-            >
-              <p>
-                480
-                <span class="text-[0.75em]"> EGP </span>
-              </p>
-
-              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
-                <del>800</del>
-
-                <span class="text-[0.75em]">
-                  <del>EGP</del>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!---------Product Card 4--------->
-        <div
-          class="w-full min-w-0"
-          data-price="480"
-          data-color="Mint"
-          data-size="M,XL,XXL"
-        >
-          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
-            <a href="#" aria-label="Oxford-Shirt">
-              <img
-                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
-                src="https://keswastore.com/cache/medium/product/1858/PZzBXO1m21ZeKaQ3r9lTuwf1VfxXnuMmtR40v7Qs.webp"
-                alt="Oxford-Shirt"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-
-            <p
-              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
-            >
-              Sale
-            </p>
-
-            <div
-              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
-            >
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to cart"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#bag"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to Wishlist"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#wishlist"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Quick View"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#eye"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="grid content-start gap-1 bg-white py-3">
-            <p class="break-all text-base font-medium max-sm:text-sm">
-              Oxford-Shirt
-            </p>
-
-            <div
-              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
-            >
-              <p>
-                480
-                <span class="text-[0.75em]"> EGP </span>
-              </p>
-
-              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
-                <del>800</del>
-
-                <span class="text-[0.75em]">
-                  <del>EGP</del>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!---------Product Card 5--------->
-        <div
-          class="mb-10 w-full min-w-0"
-          data-price="599"
-          data-color="Grey"
-          data-size="L,XL,XXL,XXXL"
-        >
-          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
-            <a href="#" aria-label="Cotton-Shirt-Relaxed">
-              <img
-                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
-                src="https://keswastore.com/cache/medium/product/1652/tN9Q2m6MIZwbQE9NbQqyPJv0X5BWeMs6wL91y5Nl.webp"
-                alt="Cotton-Shirt-Relaxed"
-                loading="lazy"
-                decoding="async"
-              />
-            </a>
-
-            <p
-              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
-            >
-              Sale
-            </p>
-
-            <div
-              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
-            >
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to cart"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#bag"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Add to Wishlist"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#wishlist"></use>
-                </svg>
-              </button>
-
-              <button
-                type="button"
-                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
-                aria-label="Quick View"
-              >
-                <svg class="h-5 w-5">
-                  <use href="./assests/icons.svg#eye"></use>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <div class="grid content-start gap-1 bg-white py-3">
-            <p class="break-all text-base font-medium max-sm:text-sm">
-              Cotton-Shirt-Relaxed
-            </p>
-
-            <div
-              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
-            >
-              <p>
-                599
-                <span class="text-[0.75em]"> EGP </span>
-              </p>
-
-              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
-                <del>1000</del>
-
-                <span class="text-[0.75em]">
-                  <del>EGP</del>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!---------No Products Message--------->
-        <div
-          id="no-products-message"
-          class="hidden col-span-full flex min-h-[500px] w-full flex-col items-center justify-center gap-5 py-10 text-center"
-        >
-          <img
-            src="https://keswastore.com/themes/shop/default/build/assets/shopping-cart-placeholder-a8WmYsMY.svg"
-            loading="lazy"
-            decoding="async"
-            alt="No products available"
-            class="h-[170px] w-[170px]"
-          />
-
-          <p class="text-xl font-normal text-black max-md:text-base">
-            No products available in this category
-          </p>
         </div>
       </div>
     </section>
 
-    <!---------Footer--------->
-    <footer
-      class="mx-auto w-[92%] border-t border-zinc-200 pb-4 pt-12 max-lg:pb-4 max-lg:pt-10 max-md:py-5"
-    >
-      <!-- DESKTOP FOOTER -->
-      <div
-        class="flex w-full min-w-0 items-start justify-between gap-8 max-md:hidden"
-      >
-        <div class="grid min-w-0 max-w-[300px] gap-5 text-sm">
-          <a href="https://keswastore.com/">
-            <img
-              src="./img/logo.png"
-              class="logo flex min-h-[30px]"
-              width="131"
-              height="29"
-              alt="Logo"
-            />
-          </a>
-
-          <div class="grid gap-2 text-sm text-zinc-600">
-            <p>
-              Address: Benha – Al Ahram District, Amn El-Dawla Street, in front
-              of Al-Fayoumy Street, Egypt.
-            </p>
-
-            <p>
-              Email:
-              <span class="font-medium text-zinc-700">
-                info@keswastore.com
-              </span>
-            </p>
-
-            <p>
-              Phone / WhatsApp:
-              <a
-                href="https://wa.me/201011387451"
-                target="_blank"
-                class="font-medium text-zinc-700 transition-all hover:text-secondary"
-              >
-                +20 101 138 7451
-              </a>
-            </p>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <svg
-              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
-            >
-              <use href="./assests/icons.svg#facebook"></use>
-            </svg>
-
-            <svg
-              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
-            >
-              <use href="./assests/icons.svg#twitter"></use>
-            </svg>
-
-            <svg
-              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
-            >
-              <use href="./assests/icons.svg#instagram"></use>
-            </svg>
-
-            <svg
-              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
-            >
-              <use href="./assests/icons.svg#tiktok"></use>
-            </svg>
-          </div>
-        </div>
-
-        <div class="grid gap-3">
-          <h4 class="text-md font-medium">Help</h4>
-
-          <ul class="grid gap-3 text-sm text-zinc-600">
-            <li>
-              <a
-                href="https://keswastore.com/page/privacy-policy"
-                class="transition-all"
-              >
-                Privacy Policy
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://keswastore.com/page/payment-policy"
-                class="transition-all"
-              >
-                Payment Policy
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://keswastore.com/page/shipping-policy"
-                class="transition-all"
-              >
-                Shipping Policy
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://keswastore.com/page/return-policy"
-                class="transition-all"
-              >
-                Return Policy
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://keswastore.com/page/terms-conditions"
-                class="transition-all"
-              >
-                Terms & Conditions
-              </a>
-            </li>
-
-            <li>
-              <a href="https://keswastore.com/faqs" class="transition-all">
-                FAQs
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="grid min-w-0 gap-3">
-          <h4 class="text-md font-medium">About Us</h4>
-
-          <ul class="grid gap-3 text-sm text-zinc-600">
-            <li>
-              <a href="https://keswastore.com/our-store" class="transition-all">
-                Our Store
-              </a>
-            </li>
-
-            <li>
-              <a
-                href="https://keswastore.com/contact-us"
-                class="transition-all"
-              >
-                Contact Us
-              </a>
-            </li>
-
-            <li>
-              <a href="https://keswastore.com/about-us" class="transition-all">
-                About Us
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="grid min-w-0 max-w-[320px] flex-1 content-start gap-3">
-          <h4 class="text-md max-w-[288px] font-medium">Sign Up for Email</h4>
-
-          <p class="text-xs leading-5 text-zinc-600">
-            Sign up to get first dibs on new arrivals, sales, exclusive content,
-            events and more!
-          </p>
-
-          <form
-            novalidate
-            method="post"
-            action="https://keswastore.com/subscription"
-            class="mt-2.5 w-full"
-          >
-            <input
-              type="hidden"
-              name="_token"
-              autocomplete="off"
-              value="AlLynBVUW450urXA2Y0xiZAsMTc6tsH86NAlhBKO"
-            />
-
-            <div class="relative w-full">
-              <input
-                type="email"
-                name="email"
-                placeholder="email@example.com"
-                class="block h-[50px] w-full max-w-[420px] rounded border border-zinc-200 px-5 pr-28 text-sm font-normal text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400"
-              />
-
-              <button
-                type="submit"
-                class="absolute right-1 top-1/2 h-10 -translate-y-1/2 bg-[#1B1B1B] px-5 py-2.5 text-xs font-medium text-white transition-all hover:bg-zinc-800"
-              >
-                Subscribe
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      <!-- MOBILE FOOTER -->
-      <div class="hidden max-md:block">
-        <div class="grid min-w-0 gap-5 text-sm">
-          <a href="https://keswastore.com/">
-            <img
-              src="./img/logo.png"
-              class="logo flex min-h-[30px]"
-              width="131"
-              height="29"
-              alt="Logo"
-            />
-          </a>
-
-          <div class="grid gap-2 text-sm text-zinc-600">
-            <p>
-              Address: Benha – Al Ahram District, Amn El-Dawla Street, in front
-              of Al-Fayoumy Street, Egypt.
-            </p>
-
-            <p>
-              Email:
-              <span class="font-medium text-zinc-700">
-                info@keswastore.com
-              </span>
-            </p>
-
-            <p>
-              Phone / WhatsApp:
-              <a
-                href="https://wa.me/201011387451"
-                target="_blank"
-                class="font-medium text-zinc-700 transition-all hover:text-secondary"
-              >
-                +20 101 138 7451
-              </a>
-            </p>
-          </div>
-
-          <div class="flex items-center gap-3">
-            <!-- Social Icons -->
-            <a href="https://www.facebook.com/keswa.stores">
-              <svg
-                class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
-              >
-                <use href="./assests/icons.svg#facebook"></use>
-              </svg>
-            </a>
-
-            <svg
-              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
-            >
-              <use href="./assests/icons.svg#twitter"></use>
-            </svg>
-            <a href="https://www.instagram.com/keswa.stores">
-              <svg
-                class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
-              >
-                <use href="./assests/icons.svg#instagram"></use>
-              </svg>
-            </a>
-            <a href="https://www.tiktok.com/@keswa_wear">
-              <svg
-                class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
-              >
-                <use href="./assests/icons.svg#tiktok"></use>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="mt-8">
-          <div class="Help">
-            <button
-              type="button"
-              class="footer-toggle flex w-full items-center justify-between py-5 text-left"
-              data-target="help-links"
-            >
-              <span class="text-sm font-medium"> Help </span>
-
-              <svg
-                class="footer-arrow h-5 w-5 transition-transform duration-300"
-              >
-                <use href="./assests/icons.svg#chevron-down"></use>
-              </svg>
-            </button>
-
-            <ul
-              id="help-links"
-              class="hidden grid gap-5 pb-5 text-sm text-black"
-            >
-              <li>
-                <a
-                  href="https://keswastore.com/page/privacy-policy"
-                  class="transition-all"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://keswastore.com/page/payment-policy"
-                  class="transition-all"
-                >
-                  Payment Policy
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://keswastore.com/page/shipping-policy"
-                  class="transition-all"
-                >
-                  Shipping Policy
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://keswastore.com/page/return-policy"
-                  class="transition-all"
-                >
-                  Return Policy
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://keswastore.com/page/terms-conditions"
-                  class="transition-all"
-                >
-                  Terms & Conditions
-                </a>
-              </li>
-
-              <li>
-                <a href="https://keswastore.com/faqs" class="transition-all">
-                  FAQs
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="Aboutus">
-            <button
-              type="button"
-              class="footer-toggle flex w-full items-center justify-between py-5 text-left"
-              data-target="about-links"
-            >
-              <span class="text-sm font-medium"> About Us </span>
-
-              <svg
-                class="footer-arrow h-5 w-5 transition-transform duration-300"
-              >
-                <use href="./assests/icons.svg#chevron-down"></use>
-              </svg>
-            </button>
-
-            <ul
-              id="about-links"
-              class="hidden grid gap-5 pb-5 text-sm text-black"
-            >
-              <li>
-                <a
-                  href="https://keswastore.com/our-store"
-                  class="transition-all"
-                >
-                  Our Store
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://keswastore.com/contact-us"
-                  class="transition-all"
-                >
-                  Contact Us
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="https://keswastore.com/about-us"
-                  class="transition-all"
-                >
-                  About Us
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="Signup">
-            <button
-              type="button"
-              class="footer-toggle flex w-full items-center justify-between py-5 text-left"
-              data-target="newsletter-content"
-            >
-              <span class="text-sm font-medium"> Sign Up for Email </span>
-
-              <svg
-                class="footer-arrow h-5 w-5 transition-transform duration-300"
-              >
-                <use href="./assests/icons.svg#chevron-down"></use>
-              </svg>
-            </button>
-
-            <div id="newsletter-content" class="hidden pb-5">
-              <p class="mb-4 text-xs leading-5 text-zinc-600">
-                Sign up to get first dibs on new arrivals, sales, exclusive
-                content, events and more!
-              </p>
-
-              <form
-                novalidate
-                method="post"
-                action="https://keswastore.com/subscription"
-                class="w-full"
-              >
-                <input
-                  type="hidden"
-                  name="_token"
-                  autocomplete="off"
-                  value="AlLynBVUW450urXA2Y0xiZAsMTc6tsH86NAlhBKO"
-                />
-
-                <div class="relative w-full">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="email@example.com"
-                    class="block h-[50px] w-full rounded border border-zinc-200 px-4 pr-28 text-sm text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400"
-                  />
-
-                  <button
-                    type="submit"
-                    class="absolute right-1 top-1/2 h-10 -translate-y-1/2 bg-[#1B1B1B] px-4 text-xs font-medium text-white transition-all hover:bg-zinc-800"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="copyright mt-6 px-[2px] max-sm:px-5">
-        <div
-          class="flex flex-wrap items-center justify-between gap-3 border-t border-gray-300 bg-white py-3.5 max-md:flex-col"
-        >
-          <p class="text-sm text-zinc-600 max-md:text-center">
-            © Copyright 2010 - 2026, Keswa Store. All rights reserved.
-          </p>
-
-          <div
-            class="flex items-center gap-2 max-md:flex-1 max-md:justify-center"
-          >
-            <svg class="h-8 w-8 font-bold text-zinc-500">
-              <use href="./assests/icons.svg#paymob"></use>
-            </svg>
-
-            <svg class="h-8 w-8 font-bold text-zinc-500">
-              <use href="./assests/icons.svg#meeza"></use>
-            </svg>
-
-            <svg class="h-8 w-8 font-bold text-zinc-500">
-              <use href="./assests/icons.svg#mastercard"></use>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!---------WhatsApp--------->
-    <div class="whatsapp max-md:mb-[130px]">
-      <a
-        href="https://wa.me/201011387451"
-        target="_blank"
-        class="fixed bottom-[70px] right-4 z-[99] flex h-[50px] w-[50px] items-center justify-center rounded-full bg-black text-white shadow-[0_0_10px_2px_rgba(0,0,0,0.1)] transition-all hover:bg-white hover:text-black max-sm:h-[40px] max-sm:w-[40px]"
-      >
-        <svg class="h-10 w-10 max-sm:h-8 max-sm:w-8">
-          <use href="./assests/icons.svg#whatsapp"></use>
-        </svg>
-      </a>
-    </div>
-
-    <!---------Mobile Bottom Navigation--------->
-    <nav
-      id="mobile-bottom-nav"
-      class="fixed bottom-0 left-0 z-40 flex h-[58px] w-full items-center justify-around border-t border-zinc-200 bg-white md:hidden"
-      aria-label="Mobile navigation"
-    >
-      <!-- Home -->
-      <button
-        type="button"
-        class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
-        aria-label="Home"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-
-          <g
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          >
-            <path
-              d="M21 19v-6.733a4 4 0 0 0-1.245-2.9L13.378 3.31a2 2 0 0 0-2.755 0L4.245 9.367A4 4 0 0 0 3 12.267V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"
-            />
-
-            <path d="M9 15a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6H9z" />
-          </g>
-        </svg>
-      </button>
-
-      <!-- Search -->
-      <button
-        type="button"
-        class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
-        aria-label="Search"
-      >
-        <svg class="h-5 w-5">
-          <use href="./assests/icons.svg#search"></use>
-        </svg>
-      </button>
-
-      <!-- Cart -->
-      <button
-        type="button"
-        class="mobile-bottom-nav-item relative flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
-        aria-label="Cart"
-      >
-        <svg class="h-5 w-5">
-          <use href="./assests/icons.svg#bag"></use>
-        </svg>
-      </button>
-
-      <!-- Wishlist -->
-      <button
-        type="button"
-        class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
-        aria-label="Wishlist"
-        data-mobile-action="wishlist"
-      >
-        <svg class="h-5 w-5">
-          <use href="./assests/icons.svg#wishlist"></use>
-        </svg>
-      </button>
-
-      <!-- Account -->
-      <button
-        type="button"
-        class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
-        aria-label="Account"
-        data-mobile-action="account"
-      >
-        <svg class="h-5 w-5">
-          <use href="./assests/icons.svg#account"></use>
-        </svg>
-      </button>
-    </nav>
-
-    <!-- Mobile filter & sort bar-->
-    <div
-      id="mobile-filter-sort-bar"
-      class="fixed bottom-[68px] left-1/2 z-[50] hidden -translate-x-1/2 items-center rounded-full border border-zinc-200 bg-white px-2 shadow-sm md:hidden"
-    >
-      <!-- Filter -->
-      <button
-        type="button"
-        id="mobile-filter-button"
-        class="flex h-12 min-w-[110px] items-center justify-center gap-2 px-4 text-sm font-medium uppercase text-black"
-        aria-label="Filter"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-5 h-5"
-          viewBox="0 0 24 24"
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path
-            fill="currentColor"
-            d="M20 2H4c-.55 0-1 .45-1 1v2c0 .22.07.43.2.6L9 13.33V21a1 1 0 0 0 1 1c.15 0 .31-.04.45-.11l4-2A1 1 0 0 0 15 19v-5.67l5.8-7.73c.13-.17.2-.38.2-.6V3c0-.55-.45-1-1-1m-1 2.67l-5.8 7.73c-.13.17-.2.38-.2.6v5.38l-2 1V13c0-.22-.07-.43-.2-.6L5 4.67V4h14z"
-          />
-        </svg>
-
-        <span>Filter</span>
-      </button>
-
-      <!-- Divider -->
-      <span class="h-6 w-[1px] shrink-0 bg-zinc-200" aria-hidden="true"></span>
-
-      <!-- Sort -->
-      <button
-        type="button"
-        id="mobile-sort-button"
-        class="flex h-12 min-w-[110px] items-center justify-center gap-2 px-4 text-sm font-medium uppercase text-black"
-        aria-label="Sort"
-      >
-        <svg class="h-5 w-5 shrink-0" aria-hidden="true">
-          <use href="./assests/icons.svg#filter"></use>
-        </svg>
-
-        <span>Sort</span>
-      </button>
-    </div>
-    <script src="./js/category.js"></script>
+    <script src="./js/home.js"></script>
   </body>
 </html>

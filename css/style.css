@@ -1,8 +1,143 @@
-/* Hides the 'x' button in Chrome, Edge, and Safari */
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
 }
 html{
-    font-family: 'Courier New', Courier, monospace;
+    font-family:"arial", sans-serif;
+}
+.mobile-menu {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.mobile-menu.show {
+  transform: translateX(0);
+}
+.search-overlay {
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s;
+}
+.search-overlay.show {
+  visibility: visible;
+  transition: visibility 0s linear 0s;
+}
+.search-panel {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+.search-overlay.show .search-panel {
+  transform: translateY(0);
+}
+.cart-overlay {
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+.cart-overlay.show {
+  visibility: visible;
+}
+.cart-drawer {
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+.cart-overlay.show .cart-drawer {
+  transform: translateX(0);
+}
+.account-dropdown{
+  display: none;
+}
+.account-dropdown.show{
+  display: block;
+}
+.sort-dropdown{
+  display: none;
+}
+.sort-dropdown.show{
+  display: block;
+}
+.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.products-container.list-view .product-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+.products-container.list-view .product-card .img {
+  width: 290px;
+  min-width: 270px;
+  aspect-ratio: 5 / 7;
+}
+.products-container.list-view .product-card > div:last-child {
+  flex: 1;
+  padding-top: 5px;
+}
+.list-view .action-btns {
+  display: none;
+}
+.list-action-btns {
+  display: none;
+}
+.products-container.list-view .list-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+.list-cart-btn {
+  width: 150px;
+  height: 46px;
+  padding: 0 30px;
+  background: #1B1B1B;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.list-cart-btn:hover {
+  background: #222222;
+}
+.list-wishlist-btn {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.list-wishlist-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+}
+.list-wishlist-btn:hover {
+  background: #f1f1f1;
+  transition: background 0.3s ease;
+}
+
+.filter-overlay {
+  visibility: hidden;
+  transition: visibility 0s linear 0.3s;
+}
+.filter-overlay.show {
+  visibility: visible;
+  transition: visibility 0s linear 0s;
+}
+.filter-panel {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.filter-overlay.show .filter-panel {
+  transform: translateX(0);
+}
+.filter-arrow {
+  transition: transform 0.3s ease;
+}
+.filter-arrow.rotate {
+  transform: rotate(180deg);
 }

@@ -164,3 +164,19 @@ html{
 .category-scroll {
     scrollbar-width: none;
 }
+.mobile-sort-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.mobile-sort-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.mobile-sort-panel {
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+.mobile-sort-overlay.show .mobile-sort-panel {
+  transform: translateY(0);
+}

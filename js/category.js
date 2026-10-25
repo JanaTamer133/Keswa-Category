@@ -33,6 +33,11 @@ const clearAllBtn = document.getElementById("clear-all");
 const mobileFilterBtn = document.getElementById("mobile-filter-button");
 const priceTrack = document.getElementById("price-range-track");
 const footerToggles = document.querySelectorAll(".footer-toggle");
+const mobileSortBtn = document.getElementById("mobile-sort-button");
+const mobileSortOverlay = document.getElementById("mobile-sort-overlay");
+const mobileSortPanel = document.getElementById("mobile-sort-panel");
+const closeMobileSort = document.getElementById("close-mobile-sort");
+const mobileSortOptions = document.querySelectorAll(".mobile-sort-option");
 // mobile burger menu
 showBtn.addEventListener("click", () => {
   mobileMenu.classList.add("show");
@@ -275,6 +280,31 @@ sortOptions.forEach((option) => {
     sortDropdown.classList.remove("show");
   });
 });
+// mobile sort sheet
+mobileSortBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  mobileSortOverlay.classList.add("show");
+});
+closeMobileSort.addEventListener("click", (e) => {
+  e.stopPropagation();
+  mobileSortOverlay.classList.remove("show");
+});
+mobileSortPanel.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+mobileSortOverlay.addEventListener("click", () => {
+  mobileSortOverlay.classList.remove("show");
+});
+mobileSortOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    sortProducts(option.dataset.value);
+    mobileSortOptions.forEach((o) => o.classList.remove("bg-zinc-100"));
+    option.classList.add("bg-zinc-100");
+    document.getElementById("sort-selected").textContent =
+      option.textContent.trim();
+    mobileSortOverlay.classList.remove("show");
+  });
+});
 // mobile filter button
 mobileFilterBtn.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -365,14 +395,18 @@ function filterByColor() {
   const selectedColors = Array.from(colorFilters) // convert the collection to an array
     .filter((color) => color.checked) // keep only checked color inputs
     .map((color) => color.value); // get the values of the selected colors
-  if (selectedColors.length === 0) { // check if no colors are selected
+  if (selectedColors.length === 0) {
+    // check if no colors are selected
     renderProducts(); // display all products
     return; // exit the function
   }
-  const filteredProducts = products.filter((product) => { // Filter products based on selected colors
-    const productColors = product.colors.split(",").map((c) => c.trim());// Split the color string into an array, // Remove spaces from each color
-    return selectedColors.some((selectedColor) => // Check if at least one selected color matches
-      productColors.includes(selectedColor), // Check if the product has this color
+  const filteredProducts = products.filter((product) => {
+    // Filter products based on selected colors
+    const productColors = product.colors.split(",").map((c) => c.trim()); // Split the color string into an array, // Remove spaces from each color
+    return selectedColors.some(
+      (
+        selectedColor, // Check if at least one selected color matches
+      ) => productColors.includes(selectedColor), // Check if the product has this color
     );
   });
   renderProducts(filteredProducts);

@@ -2087,6 +2087,79 @@
         <span>Sort</span>
       </button>
     </div>
+    <!---------MOBILE SORT SHEET--------->
+    <div
+      id="mobile-sort-overlay"
+      class="mobile-sort-overlay fixed inset-0 z-[1000] bg-black/40 md:hidden"
+    >
+      <div
+        id="mobile-sort-panel"
+        class="mobile-sort-panel fixed bottom-0 left-0 w-full bg-white"
+      >
+        <!-- Header -->
+        <div
+          class="flex h-[60px] items-center justify-between border-b border-zinc-200 px-4"
+        >
+          <p class="text-lg font-semibold">Sort</p>
+          <button
+            type="button"
+            id="close-mobile-sort"
+            class="flex h-8 w-8 items-center justify-center text-black"
+            aria-label="Close sort"
+          >
+            <svg class="h-6 w-6">
+              <use href="./assests/icons.svg#close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Options -->
+        <div class="pb-2">
+          <button
+            type="button"
+            data-value="a-z"
+            class="mobile-sort-option block w-full px-4 py-3 text-left text-base"
+          >
+            From A-Z
+          </button>
+          <button
+            type="button"
+            data-value="z-a"
+            class="mobile-sort-option block w-full px-4 py-3 text-left text-base"
+          >
+            From Z-A
+          </button>
+          <button
+            type="button"
+            data-value="newest-first"
+            class="mobile-sort-option block w-full bg-zinc-100 px-4 py-3 text-left text-base"
+          >
+            Newest First
+          </button>
+          <button
+            type="button"
+            data-value="oldest-first"
+            class="mobile-sort-option block w-full px-4 py-3 text-left text-base"
+          >
+            Oldest First
+          </button>
+          <button
+            type="button"
+            data-value="cheapest-first"
+            class="mobile-sort-option block w-full px-4 py-3 text-left text-base"
+          >
+            Cheapest First
+          </button>
+          <button
+            type="button"
+            data-value="expensive-first"
+            class="mobile-sort-option block w-full px-4 py-3 text-left text-base"
+          >
+            Expensive First
+          </button>
+        </div>
+      </div>
+    </div>
     <script src="./js/category.js"></script>
   </body>
 </html>

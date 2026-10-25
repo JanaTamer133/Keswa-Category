@@ -32,6 +32,7 @@ const sizeOptions = document.getElementById("size-options");
 const clearAllBtn = document.getElementById("clear-all");
 const mobileFilterBtn = document.getElementById("mobile-filter-button");
 const priceTrack = document.getElementById("price-range-track");
+const footerToggles = document.querySelectorAll(".footer-toggle");
 // mobile burger menu
 showBtn.addEventListener("click", () => {
   mobileMenu.classList.add("show");

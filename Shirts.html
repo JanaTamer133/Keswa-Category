@@ -24,7 +24,6 @@
             <use href="./assests/icons.svg#facebook"></use>
           </svg>
         </a>
-
         <svg
           class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
         >
@@ -53,7 +52,7 @@
         Your journey begins now . Shop now for 40% off.
 
         <a
-          href="#"
+          href="./search.html"
           class="whitespace-nowrap uppercase text-secondary underline"
           role="button"
         >
@@ -243,14 +242,14 @@
 
                   <div class="mt-5 flex gap-3">
                     <a
-                      href="https://keswastore.com/customer/login"
+                      href="./log.sign.html"
                       class="flex h-13 flex-1 items-center justify-center bg-[#1B1B1B] px-4 text-[17px] font-medium text-white transition-colors duration-200 hover:bg-zinc-800"
                     >
                       Sign in
                     </a>
 
                     <a
-                      href="https://keswastore.com/customer/login"
+                      href="./createAccount.html"
                       class="flex h-13 flex-1 items-center justify-center border border-black bg-white px-4 text-[17px] font-medium text-black transition-colors duration-200 hover:bg-zinc-100"
                     >
                       Sign up
@@ -326,7 +325,6 @@
         </div>
       </div>
     </div>
-
     <!---------CART OVERLAY--------->
     <div
       id="cart-overlay"
@@ -341,11 +339,9 @@
           <p class="text-xl font-medium max-md:text-lg max-sm:text-base">
             Shopping Cart
           </p>
-
           <p class="mt-2 text-base font-normal text-black max-md:text-sm">
             Easy exchange within 14 days — Shop with confidence
           </p>
-
           <button
             type="button"
             id="close-cart"
@@ -357,7 +353,6 @@
             </svg>
           </button>
         </div>
-
         <!-- Cart Content -->
         <div
           id="cart-content"
@@ -372,16 +367,17 @@
                 decoding="async"
                 alt="Empty shopping cart"
               />
-
               <p class="text-xl max-md:text-sm">Your cart is empty</p>
             </div>
           </div>
         </div>
       </aside>
     </div>
-
     <!---------FILTER OVERLAY--------->
-    <div id="filter-overlay" class="filter-overlay fixed inset-0 z-[1000] bg-black/40">
+    <div
+      id="filter-overlay"
+      class="filter-overlay fixed inset-0 z-[1000] bg-black/40"
+    >
       <aside
         id="filter-panel"
         class="filter-panel fixed inset-y-0 left-0 z-[1001] flex h-full w-[300px] flex-col bg-white shadow-xl transition-transform duration-300 ease-in-out max-sm:w-full"
@@ -391,7 +387,6 @@
           class="flex h-[72px] shrink-0 items-center justify-between border-b border-zinc-200 bg-gray-50 px-6"
         >
           <p class="text-lg font-medium">Filters</p>
-
           <button
             type="button"
             id="close-filter"
@@ -403,7 +398,6 @@
             </svg>
           </button>
         </div>
-
         <!-- Filter Content -->
         <div class="min-h-0 flex-1 overflow-y-auto px-6 scrollbar-thin">
           <!-- PRICE -->
@@ -415,34 +409,31 @@
               aria-expanded="true"
             >
               <span class="text-lg font-medium">Price</span>
-
               <svg class="filter-arrow h-5 w-5">
                 <use href="./assests/icons.svg#chevron-up"></use>
               </svg>
             </button>
-
             <div id="price-filter-content" class="pt-3">
               <div
                 class="flex items-center justify-between gap-3 text-sm text-gray-900"
               >
                 <span>Range:</span>
-
                 <span id="price-range-text" class="font-medium">
                   0 EGP - 599 EGP
                 </span>
               </div>
-
               <div class="mt-6 px-1">
-                <div class="relative h-7">
+                <div
+                  class="relative mx-auto flex h-20 w-full items-center justify-center p-2"
+                >
                   <div
-                    class="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2 bg-zinc-300"
+                    class="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2"
+                    style="background: #e4e4e7"
                   ></div>
-
                   <div
                     id="price-range-track"
                     class="absolute left-0 top-1/2 h-0.5 -translate-y-1/2 bg-[#202124]"
                   ></div>
-
                   <input
                     id="price-min"
                     type="range"
@@ -453,7 +444,6 @@
                     aria-label="Minimum price"
                     class="pointer-events-none absolute left-0 top-1/2 z-20 h-7 w-full -translate-y-1/2 appearance-none bg-transparent [&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-5 [&::-moz-range-thumb]:w-5 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-2 [&::-moz-range-thumb]:border-[#202124] [&::-moz-range-thumb]:bg-white [&::-webkit-slider-thumb]:pointer-events-auto [&::-webkit-slider-thumb]:h-5 [&::-webkit-slider-thumb]:w-5 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-2 [&::-webkit-slider-thumb]:border-[#202124] [&::-webkit-slider-thumb]:bg-white"
                   />
-
                   <input
                     id="price-max"
                     type="range"
@@ -468,7 +458,6 @@
               </div>
             </div>
           </section>
-
           <!-- COLOR -->
           <section class="border-b border-zinc-200 py-4">
             <button
@@ -478,12 +467,10 @@
               aria-expanded="true"
             >
               <span class="text-lg font-medium">Color</span>
-
               <svg class="filter-arrow h-5 w-5">
                 <use href="./assests/icons.svg#chevron-up"></use>
               </svg>
             </button>
-
             <div id="color-filter-content" class="pt-3">
               <div class="relative">
                 <svg
@@ -492,7 +479,6 @@
                 >
                   <use href="./assests/icons.svg#search"></use>
                 </svg>
-
                 <input
                   id="color-search"
                   type="text"
@@ -500,14 +486,12 @@
                   class="block h-11 w-full rounded-none border border-zinc-200 bg-white pl-10 pr-3 text-sm text-gray-900 outline-none placeholder:text-zinc-400 focus:border-zinc-400"
                 />
               </div>
-
               <p
                 id="color-count"
                 class="my-2 flex flex-row-reverse text-xs text-gray-600"
               >
                 Showing 15 of 15 options
               </p>
-
               <ul id="color-options" class="pb-2 text-sm text-gray-700">
                 <li class="color-option">
                   <label
@@ -519,7 +503,6 @@
                       value="Black"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
@@ -540,17 +523,14 @@
                       value="White"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       White
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -561,17 +541,14 @@
                       value="Baje"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       Baje
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -582,17 +559,14 @@
                       value="Mint"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       Mint
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -603,17 +577,14 @@
                       value="Gray"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       Gray
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -624,17 +595,14 @@
                       value="Olive"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       Olive
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -645,17 +613,14 @@
                       value="Brown"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       Brown
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -666,17 +631,14 @@
                       value="Navy"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       Navy
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -687,17 +649,14 @@
                       value="Burgundy"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       Burgundy
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -705,20 +664,17 @@
                     <input
                       type="checkbox"
                       name="color-filter"
-                      value="Off-White"
+                      value="Off-white"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       Off-White
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -726,20 +682,17 @@
                     <input
                       type="checkbox"
                       name="color-filter"
-                      value="cmaly"
+                      value="Cmaly"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       cmaly
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -747,20 +700,17 @@
                     <input
                       type="checkbox"
                       name="color-filter"
-                      value="cafeh"
+                      value="Cafeh"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       cafeh
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -768,20 +718,17 @@
                     <input
                       type="checkbox"
                       name="color-filter"
-                      value="pink"
+                      value="Pink"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       pink
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -789,20 +736,17 @@
                     <input
                       type="checkbox"
                       name="color-filter"
-                      value="baby blue"
+                      value="Baby blue"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       baby blue
                     </span>
                   </label>
                 </li>
-
                 <li class="color-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -813,11 +757,9 @@
                       value="Purple"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       Purple
                     </span>
@@ -826,7 +768,6 @@
               </ul>
             </div>
           </section>
-
           <!-- SIZE -->
           <section class="border-b border-zinc-200 py-4">
             <button
@@ -836,12 +777,10 @@
               aria-expanded="true"
             >
               <span class="text-lg font-medium">Size</span>
-
               <svg class="filter-arrow h-5 w-5">
                 <use href="./assests/icons.svg#chevron-up"></use>
               </svg>
             </button>
-
             <div id="size-filter-content" class="pt-3">
               <div class="relative">
                 <svg
@@ -850,7 +789,6 @@
                 >
                   <use href="./assests/icons.svg#search"></use>
                 </svg>
-
                 <input
                   id="size-search"
                   type="text"
@@ -858,14 +796,12 @@
                   class="block h-11 w-full rounded-none border border-zinc-200 bg-white pl-10 pr-3 text-sm text-gray-900 outline-none placeholder:text-zinc-400 focus:border-zinc-400"
                 />
               </div>
-
               <p
                 id="size-count"
                 class="my-2 flex flex-row-reverse text-xs text-gray-600"
               >
                 Showing 5 of 5 options
               </p>
-
               <ul id="size-options" class="pb-2 text-sm text-gray-700">
                 <li class="size-option">
                   <label
@@ -877,17 +813,14 @@
                       value="M"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       M
                     </span>
                   </label>
                 </li>
-
                 <li class="size-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -898,17 +831,14 @@
                       value="L"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       L
                     </span>
                   </label>
                 </li>
-
                 <li class="size-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -919,17 +849,14 @@
                       value="XL"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       XL
                     </span>
                   </label>
                 </li>
-
                 <li class="size-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -940,17 +867,14 @@
                       value="XXL"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       XXL
                     </span>
                   </label>
                 </li>
-
                 <li class="size-option">
                   <label
                     class="group flex cursor-pointer select-none items-center gap-x-4 rounded-md px-2 py-2 transition-colors duration-150 hover:bg-zinc-100"
@@ -961,11 +885,9 @@
                       value="XXXL"
                       class="peer sr-only"
                     />
-
                     <span
                       class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#111827] bg-white transition-colors duration-150 peer-focus-visible:ring-2 peer-focus-visible:ring-zinc-300 after:absolute after:left-[5.5px] after:top-[14%] after:hidden after:h-[9px] after:w-[5px] after:rotate-45 after:border-b-[1.5px] after:border-r-[1.5px] after:border-[#111827] after:content-[''] peer-checked:after:block"
                     ></span>
-
                     <span class="w-full text-base text-gray-900 max-sm:text-sm">
                       XXXL
                     </span>
@@ -975,12 +897,11 @@
             </div>
           </section>
         </div>
-
         <!-- Clear All -->
         <div class="shrink-0 border-t border-zinc-200 bg-white px-6 py-4">
           <button
             type="button"
-            id="clear-filters"
+            id="clear-all"
             class="flex h-[47px] w-[121px] items-center justify-center rounded-[2px] bg-[#1B1B1B] px-0 text-sm font-medium text-white transition-colors duration-200 hover:bg-black"
           >
             Clear All
@@ -988,7 +909,6 @@
         </div>
       </aside>
     </div>
-
     <!---------Mobile Menu--------->
     <div id="mobile-menu" class="mobile-menu fixed inset-0 z-100 md:hidden">
       <div
@@ -996,7 +916,6 @@
         class="absolute inset-0 cursor-pointer"
         aria-label="Close menu"
       ></div>
-
       <aside
         id="mobile-menu-panel"
         class="mobile-menu-panel relative h-full w-full max-w-[540px] overflow-y-auto bg-white transition-transform duration-300 ease-in-out"
@@ -1013,7 +932,6 @@
               alt="Logo"
             />
           </a>
-
           <button
             type="button"
             id="close-mobile-menu"
@@ -1023,7 +941,6 @@
             ×
           </button>
         </div>
-
         <div
           class="menu-content flex-1 overflow-auto px-6 scrollbar-thin max-md:px-4"
         >
@@ -1039,12 +956,10 @@
                   alt="Sign up or Login"
                   class="rounded-full"
                 />
-
                 <span class="text-sm font-medium text-zinc-700">
                   <a href="#" class="login-link">Sign up or Login</a>
                 </span>
               </div>
-
               <svg
                 width="30"
                 height="30"
@@ -1055,9 +970,7 @@
               </svg>
             </div>
           </div>
-
           <div class="-mx-6 mt-4 border-t border-[#dddddd] max-md:-mx-4"></div>
-
           <div class="menu-category mt-2">
             <ul class="flex flex-col gap-1 py-2">
               <li>
@@ -1068,7 +981,6 @@
                   T-Shirt
                 </a>
               </li>
-
               <li>
                 <a
                   href="Shirts.html"
@@ -1077,7 +989,6 @@
                   Shirts
                 </a>
               </li>
-
               <li>
                 <a
                   href="suit.html"
@@ -1086,7 +997,6 @@
                   Suit
                 </a>
               </li>
-
               <li>
                 <a
                   href="pants.html"
@@ -1095,7 +1005,6 @@
                   Pants
                 </a>
               </li>
-
               <li>
                 <a
                   href="shoes.html"
@@ -1104,7 +1013,6 @@
                   Shoes
                 </a>
               </li>
-
               <li>
                 <a
                   href="polo.html"
@@ -1113,7 +1021,6 @@
                   Polo
                 </a>
               </li>
-
               <li>
                 <a
                   href="jeans.html"
@@ -1122,7 +1029,6 @@
                   Jeans
                 </a>
               </li>
-
               <li>
                 <a
                   href="Tank-Top.html"
@@ -1136,7 +1042,6 @@
         </div>
       </aside>
     </div>
-
     <!---------Hero Section--------->
     <section
       id="main"
@@ -1144,7 +1049,6 @@
     >
       <h1 class="text-4xl font-normal text-black max-md:text-[32px]">Shirt</h1>
     </section>
-
     <!---------Product Section--------->
     <section class="product-section w-full px-[60px] max-lg:px-8 max-md:px-4">
       <div class="flex items-start gap-10 max-lg:gap-5 md:mt-10">
@@ -1163,11 +1067,9 @@
                 <svg class="h-5 w-5">
                   <use href="./assests/icons.svg#filter"></use>
                 </svg>
-
                 <span class="font-medium"> Filter </span>
               </button>
             </div>
-
             <!---------List & Grid Toggle--------->
             <div
               class="ml-13 flex flex-1 items-center justify-center gap-3 max-md:ml-0"
@@ -1182,7 +1084,6 @@
                   <use href="./assests/icons.svg#list"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 id="grid-view"
@@ -1194,7 +1095,6 @@
                 </svg>
               </button>
             </div>
-
             <!---------Sort--------->
             <div class="flex justify-end">
               <div class="relative w-[150px]">
@@ -1204,12 +1104,10 @@
                   class="flex h-[40px] w-full items-center justify-between rounded-sm border border-zinc-300 bg-white px-3.5 text-sm transition-all hover:border-gray-900 focus:border-gray-900"
                 >
                   <span id="sort-selected"> Newest First </span>
-
                   <svg class="h-5 w-5">
                     <use href="./assests/icons.svg#chevron-down"></use>
                   </svg>
                 </button>
-
                 <!---------Sort Dropdown--------->
                 <div
                   id="sort-dropdown"
@@ -1222,7 +1120,6 @@
                   >
                     From A-Z
                   </button>
-
                   <button
                     type="button"
                     data-value="z-a"
@@ -1230,7 +1127,6 @@
                   >
                     From Z-A
                   </button>
-
                   <button
                     type="button"
                     data-value="newest-first"
@@ -1238,7 +1134,6 @@
                   >
                     Newest First
                   </button>
-
                   <button
                     type="button"
                     data-value="oldest-first"
@@ -1246,7 +1141,6 @@
                   >
                     Oldest First
                   </button>
-
                   <button
                     type="button"
                     data-value="cheapest-first"
@@ -1254,7 +1148,6 @@
                   >
                     Cheapest First
                   </button>
-
                   <button
                     type="button"
                     data-value="expensive-first"
@@ -1268,7 +1161,6 @@
           </div>
         </div>
       </div>
-
       <!-- -------Products------->
       <div
         id="products-container"
@@ -1291,13 +1183,11 @@
                 decoding="async"
               />
             </a>
-
             <p
               class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
             >
               Sale
             </p>
-
             <div
               class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
             >
@@ -1310,7 +1200,6 @@
                   <use href="./assests/icons.svg#bag"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1320,7 +1209,6 @@
                   <use href="./assests/icons.svg#wishlist"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1332,14 +1220,12 @@
               </button>
             </div>
           </div>
-
           <div class="grid content-start gap-1 bg-white py-3">
             <p
               class="break-all text-base font-medium max-md:mb-1.5 max-sm:text-sm"
             >
               Striped-Short-Sleeve-Shirt
             </p>
-
             <div
               class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
             >
@@ -1347,10 +1233,8 @@
                 375
                 <span class="text-[0.75em]"> EGP </span>
               </p>
-
               <p class="text-base font-normal text-gray-400 max-sm:text-xs">
                 <del>700</del>
-
                 <span class="text-[0.75em]">
                   <del>EGP</del>
                 </span>
@@ -1358,7 +1242,6 @@
             </div>
           </div>
         </div>  -->
-
         <!---------Product Card 2--------->
         <!-- <div
           class="w-full min-w-0"
@@ -1376,13 +1259,11 @@
                 decoding="async"
               />
             </a>
-
             <p
               class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
             >
               Sale
             </p>
-
             <div
               class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
             >
@@ -1395,7 +1276,6 @@
                   <use href="./assests/icons.svg#bag"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1405,7 +1285,6 @@
                   <use href="./assests/icons.svg#wishlist"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1417,12 +1296,10 @@
               </button>
             </div>
           </div>
-
           <div class="grid content-start gap-1 bg-white py-3">
             <p class="break-all text-base font-medium max-sm:text-sm">
               Crinkle-Short-Sleeve-Shirt
             </p>
-
             <div
               class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
             >
@@ -1430,10 +1307,8 @@
                 490
                 <span class="text-[0.75em]"> EGP </span>
               </p>
-
               <p class="text-base font-normal text-gray-400 max-sm:text-xs">
                 <del>900</del>
-
                 <span class="text-[0.75em]">
                   <del>EGP</del>
                 </span>
@@ -1441,7 +1316,6 @@
             </div>
           </div>
         </div> -->
-
         <!---------Product Card 3--------->
         <!-- <div
           class="w-full min-w-0"
@@ -1459,13 +1333,11 @@
                 decoding="async"
               />
             </a>
-
             <p
               class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
             >
               Sale
             </p>
-
             <div
               class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
             >
@@ -1478,7 +1350,6 @@
                   <use href="./assests/icons.svg#bag"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1488,7 +1359,6 @@
                   <use href="./assests/icons.svg#wishlist"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1500,12 +1370,10 @@
               </button>
             </div>
           </div>
-
           <div class="grid content-start gap-1 bg-white py-3">
             <p class="break-all text-base font-medium max-sm:text-sm">
               Half-Sleeve-Shirt-s25
             </p>
-
             <div
               class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
             >
@@ -1513,10 +1381,8 @@
                 480
                 <span class="text-[0.75em]"> EGP </span>
               </p>
-
               <p class="text-base font-normal text-gray-400 max-sm:text-xs">
                 <del>800</del>
-
                 <span class="text-[0.75em]">
                   <del>EGP</del>
                 </span>
@@ -1524,7 +1390,6 @@
             </div>
           </div>
         </div> -->
-
         <!---------Product Card 4--------->
         <!-- <div
           class="w-full min-w-0"
@@ -1542,13 +1407,11 @@
                 decoding="async"
               />
             </a>
-
             <p
               class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
             >
               Sale
             </p>
-
             <div
               class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
             >
@@ -1561,7 +1424,6 @@
                   <use href="./assests/icons.svg#bag"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1571,7 +1433,6 @@
                   <use href="./assests/icons.svg#wishlist"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1583,12 +1444,10 @@
               </button>
             </div>
           </div>
-
           <div class="grid content-start gap-1 bg-white py-3">
             <p class="break-all text-base font-medium max-sm:text-sm">
               Oxford-Shirt
             </p>
-
             <div
               class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
             >
@@ -1596,10 +1455,8 @@
                 480
                 <span class="text-[0.75em]"> EGP </span>
               </p>
-
               <p class="text-base font-normal text-gray-400 max-sm:text-xs">
                 <del>800</del>
-
                 <span class="text-[0.75em]">
                   <del>EGP</del>
                 </span>
@@ -1607,12 +1464,11 @@
             </div>
           </div>
         </div> -->
-
         <!---------Product Card 5--------->
         <!-- <div
           class="mb-10 w-full min-w-0"
           data-price="599"
-          data-color="Grey"
+          data-color="Gray"
           data-size="L,XL,XXL,XXXL"
         >
           <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
@@ -1625,13 +1481,11 @@
                 decoding="async"
               />
             </a>
-
             <p
               class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
             >
               Sale
             </p>
-
             <div
               class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
             >
@@ -1644,7 +1498,6 @@
                   <use href="./assests/icons.svg#bag"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1654,7 +1507,6 @@
                   <use href="./assests/icons.svg#wishlist"></use>
                 </svg>
               </button>
-
               <button
                 type="button"
                 class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
@@ -1666,12 +1518,10 @@
               </button>
             </div>
           </div>
-
           <div class="grid content-start gap-1 bg-white py-3">
             <p class="break-all text-base font-medium max-sm:text-sm">
               Cotton-Shirt-Relaxed
             </p>
-
             <div
               class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
             >
@@ -1679,10 +1529,8 @@
                 599
                 <span class="text-[0.75em]"> EGP </span>
               </p>
-
               <p class="text-base font-normal text-gray-400 max-sm:text-xs">
                 <del>1000</del>
-
                 <span class="text-[0.75em]">
                   <del>EGP</del>
                 </span>
@@ -1690,27 +1538,8 @@
             </div>
           </div>
         </div> -->
-
-        <!---------No Products Message--------->
-        <div
-          id="no-products-message"
-          class="hidden col-span-full flex min-h-[500px] w-full flex-col items-center justify-center gap-5 py-10 text-center"
-        >
-          <img
-            src="https://keswastore.com/themes/shop/default/build/assets/shopping-cart-placeholder-a8WmYsMY.svg"
-            loading="lazy"
-            decoding="async"
-            alt="No products available"
-            class="h-[170px] w-[170px]"
-          />
-
-          <p class="text-xl font-normal text-black max-md:text-base">
-            No products available in this category
-          </p>
-        </div>
       </div>
     </section>
-
     <!---------Footer--------->
     <footer
       class="mx-auto w-[92%] border-t border-zinc-200 pb-4 pt-12 max-lg:pb-4 max-lg:pt-10 max-md:py-5"
@@ -1729,20 +1558,17 @@
               alt="Logo"
             />
           </a>
-
           <div class="grid gap-2 text-sm text-zinc-600">
             <p>
               Address: Benha – Al Ahram District, Amn El-Dawla Street, in front
               of Al-Fayoumy Street, Egypt.
             </p>
-
             <p>
               Email:
               <span class="font-medium text-zinc-700">
                 info@keswastore.com
               </span>
             </p>
-
             <p>
               Phone / WhatsApp:
               <a
@@ -1754,26 +1580,22 @@
               </a>
             </p>
           </div>
-
           <div class="flex items-center gap-3">
             <svg
               class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
             >
               <use href="./assests/icons.svg#facebook"></use>
             </svg>
-
             <svg
               class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
             >
               <use href="./assests/icons.svg#twitter"></use>
             </svg>
-
             <svg
               class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
             >
               <use href="./assests/icons.svg#instagram"></use>
             </svg>
-
             <svg
               class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
             >
@@ -1781,10 +1603,8 @@
             </svg>
           </div>
         </div>
-
         <div class="grid gap-3">
           <h4 class="text-md font-medium">Help</h4>
-
           <ul class="grid gap-3 text-sm text-zinc-600">
             <li>
               <a
@@ -1794,7 +1614,6 @@
                 Privacy Policy
               </a>
             </li>
-
             <li>
               <a
                 href="https://keswastore.com/page/payment-policy"
@@ -1803,7 +1622,6 @@
                 Payment Policy
               </a>
             </li>
-
             <li>
               <a
                 href="https://keswastore.com/page/shipping-policy"
@@ -1812,7 +1630,6 @@
                 Shipping Policy
               </a>
             </li>
-
             <li>
               <a
                 href="https://keswastore.com/page/return-policy"
@@ -1821,7 +1638,6 @@
                 Return Policy
               </a>
             </li>
-
             <li>
               <a
                 href="https://keswastore.com/page/terms-conditions"
@@ -1830,7 +1646,6 @@
                 Terms & Conditions
               </a>
             </li>
-
             <li>
               <a href="https://keswastore.com/faqs" class="transition-all">
                 FAQs
@@ -1838,17 +1653,14 @@
             </li>
           </ul>
         </div>
-
         <div class="grid min-w-0 gap-3">
           <h4 class="text-md font-medium">About Us</h4>
-
           <ul class="grid gap-3 text-sm text-zinc-600">
             <li>
               <a href="https://keswastore.com/our-store" class="transition-all">
                 Our Store
               </a>
             </li>
-
             <li>
               <a
                 href="https://keswastore.com/contact-us"
@@ -1857,7 +1669,6 @@
                 Contact Us
               </a>
             </li>
-
             <li>
               <a href="https://keswastore.com/about-us" class="transition-all">
                 About Us
@@ -1865,15 +1676,12 @@
             </li>
           </ul>
         </div>
-
         <div class="grid min-w-0 max-w-[320px] flex-1 content-start gap-3">
           <h4 class="text-md max-w-[288px] font-medium">Sign Up for Email</h4>
-
           <p class="text-xs leading-5 text-zinc-600">
             Sign up to get first dibs on new arrivals, sales, exclusive content,
             events and more!
           </p>
-
           <form
             novalidate
             method="post"
@@ -1886,7 +1694,6 @@
               autocomplete="off"
               value="AlLynBVUW450urXA2Y0xiZAsMTc6tsH86NAlhBKO"
             />
-
             <div class="relative w-full">
               <input
                 type="email"
@@ -1894,7 +1701,6 @@
                 placeholder="email@example.com"
                 class="block h-[50px] w-full max-w-[420px] rounded border border-zinc-200 px-5 pr-28 text-sm font-normal text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400"
               />
-
               <button
                 type="submit"
                 class="absolute right-1 top-1/2 h-10 -translate-y-1/2 bg-[#1B1B1B] px-5 py-2.5 text-xs font-medium text-white transition-all hover:bg-zinc-800"
@@ -1905,7 +1711,6 @@
           </form>
         </div>
       </div>
-
       <!-- MOBILE FOOTER -->
       <div class="hidden max-md:block">
         <div class="grid min-w-0 gap-5 text-sm">
@@ -1918,20 +1723,17 @@
               alt="Logo"
             />
           </a>
-
           <div class="grid gap-2 text-sm text-zinc-600">
             <p>
               Address: Benha – Al Ahram District, Amn El-Dawla Street, in front
               of Al-Fayoumy Street, Egypt.
             </p>
-
             <p>
               Email:
               <span class="font-medium text-zinc-700">
                 info@keswastore.com
               </span>
             </p>
-
             <p>
               Phone / WhatsApp:
               <a
@@ -1943,7 +1745,6 @@
               </a>
             </p>
           </div>
-
           <div class="flex items-center gap-3">
             <!-- Social Icons -->
             <a href="https://www.facebook.com/keswa.stores">
@@ -1953,7 +1754,6 @@
                 <use href="./assests/icons.svg#facebook"></use>
               </svg>
             </a>
-
             <svg
               class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
             >
@@ -1975,7 +1775,6 @@
             </a>
           </div>
         </div>
-
         <div class="mt-8">
           <div class="Help">
             <button
@@ -1984,14 +1783,12 @@
               data-target="help-links"
             >
               <span class="text-sm font-medium"> Help </span>
-
               <svg
                 class="footer-arrow h-5 w-5 transition-transform duration-300"
               >
                 <use href="./assests/icons.svg#chevron-down"></use>
               </svg>
             </button>
-
             <ul
               id="help-links"
               class="hidden grid gap-5 pb-5 text-sm text-black"
@@ -2004,7 +1801,6 @@
                   Privacy Policy
                 </a>
               </li>
-
               <li>
                 <a
                   href="https://keswastore.com/page/payment-policy"
@@ -2013,7 +1809,6 @@
                   Payment Policy
                 </a>
               </li>
-
               <li>
                 <a
                   href="https://keswastore.com/page/shipping-policy"
@@ -2022,7 +1817,6 @@
                   Shipping Policy
                 </a>
               </li>
-
               <li>
                 <a
                   href="https://keswastore.com/page/return-policy"
@@ -2031,7 +1825,6 @@
                   Return Policy
                 </a>
               </li>
-
               <li>
                 <a
                   href="https://keswastore.com/page/terms-conditions"
@@ -2040,7 +1833,6 @@
                   Terms & Conditions
                 </a>
               </li>
-
               <li>
                 <a href="https://keswastore.com/faqs" class="transition-all">
                   FAQs
@@ -2048,7 +1840,6 @@
               </li>
             </ul>
           </div>
-
           <div class="Aboutus">
             <button
               type="button"
@@ -2056,14 +1847,12 @@
               data-target="about-links"
             >
               <span class="text-sm font-medium"> About Us </span>
-
               <svg
                 class="footer-arrow h-5 w-5 transition-transform duration-300"
               >
                 <use href="./assests/icons.svg#chevron-down"></use>
               </svg>
             </button>
-
             <ul
               id="about-links"
               class="hidden grid gap-5 pb-5 text-sm text-black"
@@ -2076,7 +1865,6 @@
                   Our Store
                 </a>
               </li>
-
               <li>
                 <a
                   href="https://keswastore.com/contact-us"
@@ -2085,7 +1873,6 @@
                   Contact Us
                 </a>
               </li>
-
               <li>
                 <a
                   href="https://keswastore.com/about-us"
@@ -2096,7 +1883,6 @@
               </li>
             </ul>
           </div>
-
           <div class="Signup">
             <button
               type="button"
@@ -2104,20 +1890,17 @@
               data-target="newsletter-content"
             >
               <span class="text-sm font-medium"> Sign Up for Email </span>
-
               <svg
                 class="footer-arrow h-5 w-5 transition-transform duration-300"
               >
                 <use href="./assests/icons.svg#chevron-down"></use>
               </svg>
             </button>
-
             <div id="newsletter-content" class="hidden pb-5">
               <p class="mb-4 text-xs leading-5 text-zinc-600">
                 Sign up to get first dibs on new arrivals, sales, exclusive
                 content, events and more!
               </p>
-
               <form
                 novalidate
                 method="post"
@@ -2130,7 +1913,6 @@
                   autocomplete="off"
                   value="AlLynBVUW450urXA2Y0xiZAsMTc6tsH86NAlhBKO"
                 />
-
                 <div class="relative w-full">
                   <input
                     type="email"
@@ -2138,7 +1920,6 @@
                     placeholder="email@example.com"
                     class="block h-[50px] w-full rounded border border-zinc-200 px-4 pr-28 text-sm text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400"
                   />
-
                   <button
                     type="submit"
                     class="absolute right-1 top-1/2 h-10 -translate-y-1/2 bg-[#1B1B1B] px-4 text-xs font-medium text-white transition-all hover:bg-zinc-800"
@@ -2151,7 +1932,6 @@
           </div>
         </div>
       </div>
-
       <div class="copyright mt-6 px-[2px] max-sm:px-5">
         <div
           class="flex flex-wrap items-center justify-between gap-3 border-t border-gray-300 bg-white py-3.5 max-md:flex-col"
@@ -2159,18 +1939,15 @@
           <p class="text-sm text-zinc-600 max-md:text-center">
             © Copyright 2010 - 2026, Keswa Store. All rights reserved.
           </p>
-
           <div
             class="flex items-center gap-2 max-md:flex-1 max-md:justify-center"
           >
             <svg class="h-8 w-8 font-bold text-zinc-500">
               <use href="./assests/icons.svg#paymob"></use>
             </svg>
-
             <svg class="h-8 w-8 font-bold text-zinc-500">
               <use href="./assests/icons.svg#meeza"></use>
             </svg>
-
             <svg class="h-8 w-8 font-bold text-zinc-500">
               <use href="./assests/icons.svg#mastercard"></use>
             </svg>
@@ -2178,20 +1955,18 @@
         </div>
       </div>
     </footer>
-
     <!---------WhatsApp--------->
     <div class="whatsapp max-md:mb-[130px]">
       <a
         href="https://wa.me/201011387451"
         target="_blank"
-        class="fixed bottom-[70px] right-4 z-[99] flex h-[50px] w-[50px] items-center justify-center rounded-full bg-black text-white shadow-[0_0_10px_2px_rgba(0,0,0,0.1)] transition-all hover:bg-white hover:text-black max-sm:h-[40px] max-sm:w-[40px]"
+        class="fixed bottom-[70px] right-4 z-[99] max-md:bottom-[90px] flex h-[50px] w-[50px] items-center justify-center rounded-full bg-black text-white transition-all hover:bg-white hover:text-black max-sm:h-[50px] max-sm:w-[50px]"
       >
-        <svg class="h-10 w-10 max-sm:h-8 max-sm:w-8">
+        <svg class="h-10 w-10 max-sm:h-9 max-sm:w-9">
           <use href="./assests/icons.svg#whatsapp"></use>
         </svg>
       </a>
     </div>
-
     <!---------Mobile Bottom Navigation--------->
     <nav
       id="mobile-bottom-nav"
@@ -2199,35 +1974,34 @@
       aria-label="Mobile navigation"
     >
       <!-- Home -->
-      <button
-        type="button"
-        class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
-        aria-label="Home"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          viewBox="0 0 24 24"
-          fill="none"
+      <a href="./index.html" class="ml-6">
+        <button
+          type="button"
+          class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
+          aria-label="Home"
         >
-          <path d="M0 0h24v24H0z" fill="none" />
-
-          <g
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
             fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
           >
-            <path
-              d="M21 19v-6.733a4 4 0 0 0-1.245-2.9L13.378 3.31a2 2 0 0 0-2.755 0L4.245 9.367A4 4 0 0 0 3 12.267V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"
-            />
-
-            <path d="M9 15a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6H9z" />
-          </g>
-        </svg>
-      </button>
-
+            <path d="M0 0h24v24H0z" fill="none" />
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M21 19v-6.733a4 4 0 0 0-1.245-2.9L13.378 3.31a2 2 0 0 0-2.755 0L4.245 9.367A4 4 0 0 0 3 12.267V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"
+              />
+              <path d="M9 15a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6H9z" />
+            </g>
+          </svg>
+        </button>
+      </a>
       <!-- Search -->
       <button
         type="button"
@@ -2238,18 +2012,16 @@
           <use href="./assests/icons.svg#search"></use>
         </svg>
       </button>
-
       <!-- Cart -->
       <button
         type="button"
-        class="mobile-bottom-nav-item relative flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
+        class="mobile-bottom-nav-item relative flex h-full items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
         aria-label="Cart"
       >
         <svg class="h-5 w-5">
           <use href="./assests/icons.svg#bag"></use>
         </svg>
       </button>
-
       <!-- Wishlist -->
       <button
         type="button"
@@ -2261,24 +2033,24 @@
           <use href="./assests/icons.svg#wishlist"></use>
         </svg>
       </button>
-
       <!-- Account -->
-      <button
-        type="button"
-        class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
-        aria-label="Account"
-        data-mobile-action="account"
-      >
-        <svg class="h-5 w-5">
-          <use href="./assests/icons.svg#account"></use>
-        </svg>
-      </button>
+      <a href="./log.sign.html" class="mr-6">
+        <button
+          type="button"
+          class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
+          aria-label="Account"
+          data-mobile-action="account"
+        >
+          <svg class="h-5 w-5">
+            <use href="./assests/icons.svg#account"></use>
+          </svg>
+        </button>
+      </a>
     </nav>
-
     <!-- Mobile filter & sort bar-->
     <div
       id="mobile-filter-sort-bar"
-      class="fixed bottom-[68px] left-1/2 z-[50] hidden -translate-x-1/2 items-center rounded-full border border-zinc-200 bg-white px-2 shadow-sm md:hidden"
+      class="fixed bottom-[68px] left-1/2 z-[50] flex -translate-x-1/2 items-center rounded-full border border-zinc-200 bg-white px-2 shadow-sm md:hidden"
     >
       <!-- Filter -->
       <button
@@ -2298,13 +2070,10 @@
             d="M20 2H4c-.55 0-1 .45-1 1v2c0 .22.07.43.2.6L9 13.33V21a1 1 0 0 0 1 1c.15 0 .31-.04.45-.11l4-2A1 1 0 0 0 15 19v-5.67l5.8-7.73c.13-.17.2-.38.2-.6V3c0-.55-.45-1-1-1m-1 2.67l-5.8 7.73c-.13.17-.2.38-.2.6v5.38l-2 1V13c0-.22-.07-.43-.2-.6L5 4.67V4h14z"
           />
         </svg>
-
         <span>Filter</span>
       </button>
-
       <!-- Divider -->
       <span class="h-6 w-[1px] shrink-0 bg-zinc-200" aria-hidden="true"></span>
-
       <!-- Sort -->
       <button
         type="button"
@@ -2315,7 +2084,6 @@
         <svg class="h-5 w-5 shrink-0" aria-hidden="true">
           <use href="./assests/icons.svg#filter"></use>
         </svg>
-
         <span>Sort</span>
       </button>
     </div>

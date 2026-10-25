@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Become User</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body class="bg-white font-sans text-black">
+    <section class="mx-auto mt-12 w-full max-w-[1180px] px-5 pt-1">
+      <!-- Logo -->
+      <div class="mb-5 flex justify-center">
+        <a href="./index.html" aria-label="Keswa Home">
+          <img
+            src="./img/logo.png"
+            width="131"
+            height="29"
+            alt="Keswa"
+            class="block h-auto w-[131px]"
+          />
+        </a>
+      </div>
+      <!-- Register Container -->
+      <div
+        class="mx-auto w-full max-w-[870px] border border-zinc-200 px-[90px] py-[60px] max-md:px-8 max-md:py-8 max-sm:border-none max-sm:px-0 max-sm:py-0"
+      >
+        <h1 class="text-4xl font-normal max-md:text-3xl max-sm:text-2xl">
+          Create Account
+        </h1>
+        <p class="mt-4 text-xl text-zinc-500 max-sm:mt-2 max-sm:text-sm">
+          Create an account to get started with Keswa.
+        </p>
+        <!--Form-->
+        <form id="login-form" class="mt-14 max-sm:mt-8" novalidate>
+          <!--First name-->
+          <div class="mb-6">
+            <label for="fname" class="mb-2 block text-base max-sm:text-sm">
+              First Name *
+            </label>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Enter your first name"
+              autocomplete="given-name"
+              required
+              class="h-[58px] w-full rounded border border-zinc-200 px-6 py-4 text-base font-normal text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400 max-md:h-[52px] max-md:px-4 max-md:py-3"
+            />
+            <p id="fname-error" class="mt-1 hidden text-sm text-red-600"></p>
+          </div>
+          <!--Last name-->
+          <div class="mb-6">
+            <label for="lname" class="mb-2 block text-base max-sm:text-sm">
+              Last Name <span>*</span>
+            </label>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Enter your last name"
+              autocomplete="family-name"
+              required
+              class="h-[58px] w-full rounded border border-zinc-200 px-6 py-4 text-base font-normal text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400 max-md:h-[52px] max-md:px-4 max-md:py-3"
+            />
+            <p id="lname-error" class="mt-1 hidden text-sm text-red-600"></p>
+          </div>
+          <!--Email-->
+          <div class="mb-6">
+            <label for="email" class="mb-2 block text-base max-sm:text-sm">
+              Email *
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@example.com"
+              autocomplete="email"
+              required
+              class="h-[58px] w-full rounded border border-zinc-200 px-6 py-4 text-base font-normal text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400 max-md:h-[52px] max-md:px-4 max-md:py-3"
+            />
+            <p id="email-error" class="mt-1 hidden text-sm text-red-600"></p>
+          </div>
+          <!-- Password -->
+          <div class="mb-6">
+            <label for="password" class="mb-2 block text-base max-sm:text-sm">
+              Password *
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              autocomplete="new-password"
+              required
+              class="h-[58px] w-full rounded border border-zinc-200 px-6 py-4 text-base font-normal text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400 max-md:h-[52px] max-md:px-4 max-md:py-3"
+            />
+            <p id="password-error" class="mt-1 hidden text-sm text-red-600"></p>
+          </div>
+          <!-- Confirm Password -->
+          <div class="mb-6">
+            <label
+              for="confirm-password"
+              class="mb-2 block text-base max-sm:text-sm"
+            >
+              Confirm Password <span>*</span>
+            </label>
+            <input
+              type="password"
+              id="confirm-password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              autocomplete="new-password"
+              required
+              class="h-[58px] w-full rounded border border-zinc-200 px-6 py-4 text-base font-normal text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400 max-md:h-[52px] max-md:px-4 max-md:py-3"
+            />
+            <p
+              id="confirm-password-error"
+              class="mt-1 hidden text-sm text-red-600"
+            ></p>
+          </div>
+          <!-- Newsletter Subscription -->
+          <div class="flex items-center gap-2">
+            <label
+              for="subscribe-newsletter"
+              class="flex cursor-pointer select-none items-center gap-2 text-base text-zinc-600"
+            >
+              <input
+                type="checkbox"
+                id="subscribe-newsletter"
+                name="newsletter"
+                class="peer sr-only"
+              />
+              <span
+                class="relative flex h-[18px] w-[18px] shrink-0 items-center justify-center rounded-[4px] border border-[#1B1B1B] bg-white transition-colors peer-focus-visible:ring-2 peer-focus-visible:ring-[#1B1B1B]/30 after:absolute after:left-[5px] after:top-[1px] after:hidden after:h-[10px] after:w-[5px] after:rotate-45 after:border-b-[1px] after:border-r-[1px] after:border-black after:content-[''] peer-checked:after:block"
+              ></span>
+              <span>Subscribe to newsletter</span>
+            </label>
+          </div>
+          <!-- Register Button -->
+          <button
+            type="submit"
+            class="mt-8 flex h-[58px] w-full max-w-[374px] items-center justify-center rounded-sm bg-[#1B1B1B] px-11 text-base font-medium text-white transition-colors duration-200 hover:bg-zinc-800 max-md:h-[52px] max-md:max-w-full"
+          >
+            Register
+          </button>
+        </form>
+        <!-- Sign In -->
+        <p class="mt-5 font-medium text-zinc-500 max-sm:text-sm">
+          Already have an account?
+          <a href="./log.sign.html" class="text-black hover:underline">
+            Sign in
+          </a>
+        </p>
+      </div>
+      <!-- Copyright -->
+      <p class="mb-4 mt-8 text-center text-xs text-zinc-500">
+        © Copyright 2010 - 2026, Keswa Store. All rights reserved.
+      </p>
+    </section>
+    <script src="./js/createAccount.js"></script>
+  </body>
+</html>

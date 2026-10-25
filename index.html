@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/output.css" />
-
     <title>Keswa Store</title>
   </head>
-
-  <body class="font-sans">
-    <!---------TOP HEADER--------->
+  <body>
+    <!---------Top header--------->
     <header
       id="topHeader"
       class="top-header hidden h-12 w-full items-center justify-between border-b border-[#e2e2e2] bg-white px-6 md:flex lg:px-16"
@@ -25,13 +22,11 @@
             <use href="./assests/icons.svg#facebook"></use>
           </svg>
         </a>
-
         <svg
           class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
         >
           <use href="./assests/icons.svg#twitter"></use>
         </svg>
-
         <a href="https://www.instagram.com/keswa.stores">
           <svg
             class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
@@ -39,7 +34,6 @@
             <use href="./assests/icons.svg#instagram"></use>
           </svg>
         </a>
-
         <a href="https://www.tiktok.com/@keswa_wear">
           <svg
             class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
@@ -48,23 +42,20 @@
           </svg>
         </a>
       </div>
-
-      <!-- Promo Text -->
+      <!--Promo Text-->
       <p
         class="promo flex flex-1 items-center justify-center gap-1 whitespace-nowrap py-3 text-xs font-medium"
       >
         Your journey begins now . Shop now for 40% off.
-
         <a
-          href="#"
+          href="./search.html"
           class="whitespace-nowrap uppercase text-secondary underline"
           role="button"
         >
           Shop Now
         </a>
       </p>
-
-      <!-- Contact -->
+      <!--Contact us-->
       <div class="flex flex-1 justify-end">
         <a
           href="https://keswastore.com/contact-us"
@@ -76,15 +67,15 @@
       </div>
     </header>
 
-    <!---------BOTTOM HEADER--------->
+    <!---------Bottom Header--------->
     <header
       id="bottomHeader"
       class="bottom-header absolute left-0 top-0 z-20 w-full border-b border-transparent bg-transparent md:top-12"
     >
       <div
-        class="flex h-[60px] w-full items-center justify-between px-0 md:h-[76px] md:px-8 xl:px-[60px]"
+        class="flex h-[60px] w-full items-center justify-between px-0 md:h-[76px] md:px-8"
       >
-        <a href="./index.html" class="logo hidden md:block">
+        <a href="./index.html" class="logo hidden ml-7 md:block">
           <img
             src="./img/logo.png"
             class="logo"
@@ -93,12 +84,11 @@
             alt="Logo"
           />
         </a>
-
         <!---------NAVBAR--------->
         <nav
           class="nav hidden grow items-center justify-center gap-5 text-[16px] md:flex"
         >
-          <div class="category group flex h-[46px] items-center">
+          <div class="category flex h-[46px] items-center">
             <span>
               <a
                 href="T-shirt.html"
@@ -109,7 +99,7 @@
             </span>
           </div>
 
-          <div class="category group flex h-[46px] items-center">
+          <div class="category flex h-[46px] items-center">
             <span>
               <a
                 href="Shirts.html"
@@ -120,7 +110,7 @@
             </span>
           </div>
 
-          <div class="category group flex h-[46px] items-center">
+          <div class="category flex h-[46px] items-center">
             <span>
               <a
                 href="suit.html"
@@ -130,8 +120,7 @@
               </a>
             </span>
           </div>
-
-          <div class="category group flex h-[46px] items-center">
+          <div class="category flex h-[46px] items-center">
             <span>
               <a
                 href="pants.html"
@@ -141,8 +130,7 @@
               </a>
             </span>
           </div>
-
-          <div class="category group flex h-[46px] items-center">
+          <div class="category flex h-[46px] items-center">
             <span>
               <a
                 href="shoes.html"
@@ -152,8 +140,7 @@
               </a>
             </span>
           </div>
-
-          <div class="category group flex h-[46px] items-center">
+          <div class="category flex h-[46px] items-center">
             <span>
               <a
                 href="polo.html"
@@ -163,8 +150,7 @@
               </a>
             </span>
           </div>
-
-          <div class="category group flex h-[46px] items-center">
+          <div class="category flex h-[46px] items-center">
             <span>
               <a
                 href="jeans.html"
@@ -174,8 +160,7 @@
               </a>
             </span>
           </div>
-
-          <div class="category group flex h-[46px] items-center">
+          <div class="category flex h-[46px] items-center">
             <span>
               <a
                 href="Tank-Top.html"
@@ -187,7 +172,7 @@
           </div>
         </nav>
 
-        <!---------RIGHT ICONS--------->
+        <!---------Right Icons--------->
         <div class="relative hidden shrink-0 items-center gap-4 md:flex">
           <!-- Search -->
           <button
@@ -202,7 +187,7 @@
             </svg>
           </button>
 
-          <!-- Cart -->
+          <!--Cart-->
           <button
             type="button"
             id="header-cart-button"
@@ -214,7 +199,7 @@
             </svg>
           </button>
 
-          <!-- Account -->
+          <!--Account-->
           <div class="relative">
             <button
               type="button"
@@ -232,28 +217,24 @@
             <!-- Account Dropdown -->
             <div
               id="account-dropdown"
-              class="absolute right-0 top-[38px] z-50 hidden w-[300px] rounded-sm border border-zinc-200 bg-white shadow-[0px_10px_40px_rgba(0,0,0,0.08)]"
+              class="account-dropdown absolute right-0 top-[38px] z-50 w-[300px] rounded-sm border border-zinc-200 bg-white shadow-lg"
             >
               <div class="p-5">
                 <div class="grid gap-2">
                   <h3 class="text-lg font-medium text-black">Welcome Guest</h3>
-
                   <p class="text-sm text-zinc-500">
                     Manage Cart, Orders & Wishlist
                   </p>
-
                   <div class="mt-3 border-t border-zinc-200"></div>
-
                   <div class="mt-5 flex gap-3">
                     <a
-                      href="https://keswastore.com/customer/login"
+                      href="./log.sign.html"
                       class="flex h-13 flex-1 items-center justify-center bg-[#1B1B1B] px-4 text-[17px] font-medium text-white transition-colors duration-200 hover:bg-zinc-800"
                     >
                       Sign in
                     </a>
-
                     <a
-                      href="https://keswastore.com/customer/login"
+                      href="./createAccount.html"
                       class="flex h-13 flex-1 items-center justify-center border border-black bg-white px-4 text-[17px] font-medium text-black transition-colors duration-200 hover:bg-zinc-100"
                     >
                       Sign up
@@ -264,8 +245,7 @@
             </div>
           </div>
         </div>
-
-        <!---------HAMBURGER MENU--------->
+        <!---------Hamburger Menu--------->
         <div class="hamburger w-full md:hidden">
           <div class="flex h-full w-full items-center justify-between px-4">
             <img
@@ -273,13 +253,12 @@
               width="131"
               height="29"
               alt="Keswa"
-              class="block h-auto w-[131px]"
+              class="h-auto w-[131px]"
             />
-
             <button
               type="button"
-              id="openMobileMenu"
-              class="hamburger flex h-10 w-10 cursor-pointer items-center justify-center p-2 text-2xl leading-none"
+              id="open-mobile-menu"
+              class="mobile-menu mr-[-30px] flex h-10 w-10 cursor-pointer items-center justify-center p-4 text-2xl leading-none"
               aria-label="Open menu"
             >
               ☰
@@ -288,10 +267,9 @@
         </div>
       </div>
     </header>
-
-    <!-- MOBILE MENU -->
+    <!--Mobile menu-->
     <div
-      id="mobileMenu"
+      id="mobile-menu"
       class="mobile-menu fixed inset-0 z-[1100] bg-white transition-transform duration-300 ease-in-out md:hidden"
     >
       <div class="flex h-full flex-col overflow-y-auto">
@@ -307,7 +285,6 @@
               class="block h-auto w-[131px]"
             />
           </a>
-
           <button
             type="button"
             id="close-mobile-menu"
@@ -317,10 +294,9 @@
             ×
           </button>
         </div>
-
         <div class="border-b border-zinc-200 px-4 py-3">
           <a
-            href="https://keswastore.com/customer/login"
+            href="./log.sign.html"
             class="flex h-[58px] items-center justify-between rounded-lg border border-zinc-200 px-3 text-base font-medium"
           >
             <span class="flex items-center gap-3">
@@ -333,32 +309,29 @@
               </span>
               Sign up or Login
             </span>
-
             <span class="text-3xl font-light">›</span>
           </a>
         </div>
-
-        <nav class="flex flex-col px-6 py-4 text-[16px] font-medium">
-          <a href="T-shirt.html" class="py-3">T-Shirt</a>
-          <a href="Shirts.html" class="py-3">Shirt</a>
-          <a href="suit.html" class="py-3">Suit</a>
-          <a href="pants.html" class="py-3">Pants</a>
-          <a href="shoes.html" class="py-3">Shoes</a>
-          <a href="polo.html" class="py-3">Polo</a>
-          <a href="jeans.html" class="py-3">Jeans</a>
-          <a href="Tank-Top.html" class="py-3">Tank-top</a>
+        <nav class="px-6 py-4 text-[16px] font-medium">
+          <a href="T-shirt.html" class="block py-3">T-Shirt</a>
+          <a href="Shirts.html" class="block py-3">Shirt</a>
+          <a href="suit.html" class="block py-3">Suit</a>
+          <a href="pants.html" class="block py-3">Pants</a>
+          <a href="shoes.html" class="block py-3">Shoes</a>
+          <a href="polo.html" class="block py-3">Polo</a>
+          <a href="jeans.html" class="block py-3">Jeans</a>
+          <a href="Tank-Top.html" class="block py-3">Tank-top</a>
         </nav>
       </div>
     </div>
-
-    <!---------SEARCH OVERLAY--------->
+    <!---------Search Overlay--------->
     <div
       id="search-overlay"
-      class="fixed left-0 right-0 top-[60px] z-[1000] hidden bg-white md:inset-0 md:bg-black/50"
+      class="search-overlay fixed left-0 right-0 top-[60px] z-[1000] bg-white md:inset-0 md:bg-black/50"
     >
       <div
         id="search-panel"
-        class="flex h-auto w-full -translate-y-full items-center justify-center bg-white px-4 py-2 transition-transform duration-300 ease-in-out md:h-[25vh] md:px-6 md:py-0"
+        class="search-panel flex h-auto w-full items-center justify-center bg-white px-4 py-2 transition-transform duration-300 ease-in-out md:h-[25vh] md:px-6 md:py-0"
       >
         <div class="relative w-full max-w-[900px]">
           <button
@@ -371,14 +344,12 @@
               <use href="./assests/icons.svg#close"></use>
             </svg>
           </button>
-
           <div
             class="flex h-11 w-full items-center rounded-lg bg-zinc-100 px-4 transition-colors duration-200 focus-within:border-black/40"
           >
             <svg class="mr-3 h-5 w-5 shrink-0 text-black" aria-hidden="true">
               <use href="./assests/icons.svg#search"></use>
             </svg>
-
             <input
               type="search"
               id="header-search-input"
@@ -389,22 +360,22 @@
         </div>
       </div>
     </div>
-
-    <!---------CART OVERLAY--------->
-    <div id="cart-overlay" class="fixed inset-0 z-[1000] hidden bg-black/40">
+    <!---------Cart Overlay--------->
+    <div
+      id="cart-overlay"
+      class="cart-overlay fixed inset-0 z-[1000] bg-black/40"
+    >
       <aside
         id="cart-drawer"
-        class="fixed inset-y-0 right-0 z-[1001] flex w-[500px] translate-x-full flex-col overflow-hidden bg-white transition-transform duration-300 ease-in-out max-md:!w-full"
+        class="cart-drawer fixed inset-y-0 right-0 z-[1001] flex w-[500px] flex-col overflow-hidden bg-white transition-transform duration-300 ease-in-out max-md:!w-full"
       >
         <div class="relative shrink-0 bg-white px-6 py-5 max-md:px-4">
           <p class="text-xl font-medium max-md:text-lg max-sm:text-base">
             Shopping Cart
           </p>
-
           <p class="mt-2 text-base font-normal text-black max-md:text-sm">
             Easy exchange within 14 days — Shop with confidence
           </p>
-
           <button
             type="button"
             id="close-cart"
@@ -416,7 +387,6 @@
             </svg>
           </button>
         </div>
-
         <div
           id="cart-content"
           class="min-h-0 flex-1 overflow-y-auto px-6 py-4 scrollbar-thin max-md:px-4"
@@ -430,15 +400,13 @@
                 decoding="async"
                 alt="Empty shopping cart"
               />
-
               <p class="text-xl max-md:text-sm">Your cart is empty</p>
             </div>
           </div>
         </div>
       </aside>
     </div>
-
-    <!---------HERO SECTION--------->
+    <!---------Hero Section--------->
     <section
       id="hero-slider"
       class="relative m-auto w-full overflow-hidden"
@@ -452,29 +420,19 @@
         <article
           class="hero-slide relative min-w-full h-[80vh] min-h-0 overflow-hidden bg-[#f5eee8] max-md:h-[90vh] max-md:min-h-0"
         >
-          <picture class="absolute inset-0 block h-full w-full">
-            <source
-              media="(max-width: 768px)"
-              srcset="
-                storage/theme/15/aRaNkwJ5RfgBbpTVEMKyJ86SJswA9KOxmaPEq0DL.webp
-              "
-            />
-
+          <div class="absolute inset-0 block h-full w-full">
             <img
               src="./img/hero1.png"
               alt="Half Sleeve Shirt"
               class="h-full w-full object-cover object-center select-none"
-              fetchpriority="high"
-              decoding="async"
             />
-          </picture>
-
+          </div>
           <div
             class="absolute inset-0 z-10 flex flex-col justify-center px-6 md:container md:px-0"
           >
             <div class="max-w-[500px]">
               <h2
-                class="mt-8 hero-content translate-y-8 px-20 text-4xl font-normal leading-[1.1] opacity-0 transition-all duration-700 md:text-7xl"
+                class="hero-content mt-8 text-4xl font-normal leading-[1.1] md:text-7xl md:px-20"
               >
                 Over
                 <br />
@@ -484,19 +442,16 @@
                 <br />
                 S.2026
               </h2>
-
               <p
-                class="hero-content mt-6 translate-y-8 px-20 text-lg font-medium opacity-0 transition-all delay-100 duration-700 md:text-xl"
+                class="hero-content mt-6 text-lg font-medium md:text-xl md:px-20"
               >
                 Comfort the lasts, Style That Stays
               </p>
-
               <a
-                href="./T-shirt.html"
-                class="pointer-events-auto ml-20 mt-10 inline-flex translate-y-0 items-center gap-3 border border-[#1B1B1B] bg-[#1B1B1B] px-8 py-3 text-white opacity-100 transition-all delay-700 duration-700 ease-out"
+                href="./search.html"
+                class="mt-10 inline-flex items-center gap-3 border border-[#1B1B1B] bg-[#1B1B1B] px-8 py-3 text-white md:mx-20"
               >
                 <span>Over Size Round</span>
-
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -510,34 +465,23 @@
             </div>
           </div>
         </article>
-
         <!-- SLIDE 2 -->
         <article
           class="hero-slide relative min-w-full h-[80vh] min-h-0 overflow-hidden bg-[#f5eee8] max-md:h-[90vh] max-md:min-h-0"
         >
-          <picture class="absolute inset-0 block h-full w-full">
-            <source
-              media="(max-width: 768px)"
-              srcset="
-                storage/theme/15/aRaNkwJ5RfgBbpTVEMKyJ86SJswA9KOxmaPEq0DL.webp
-              "
-            />
-
+          <div class="absolute inset-0 block h-full w-full">
             <img
               src="./img/hero2.png"
               alt="Half Sleeve Shirt Collection"
               class="h-full w-full object-cover object-center select-none"
-              loading="lazy"
-              decoding="async"
             />
-          </picture>
-
+          </div>
           <div
             class="absolute inset-0 z-10 flex flex-col justify-center px-6 md:container md:px-0"
           >
             <div class="max-w-[500px]">
               <h2
-                class="hero-content translate-y-8 px-20 text-4xl font-normal leading-[1.1] opacity-0 transition-all duration-700 md:text-7xl"
+                class="hero-content text-4xl font-normal leading-[1.1] md:text-7xl md:px-20"
               >
                 Half
                 <br />
@@ -545,19 +489,16 @@
                 <br />
                 Shirt
               </h2>
-
               <p
-                class="hero-content mt-6 translate-y-8 px-20 text-lg font-medium opacity-0 transition-all delay-100 duration-700 md:text-xl"
+                class="hero-content mt-6 text-lg font-medium md:text-xl md:px-20"
               >
                 Crisp comfort made for everyday wear
               </p>
-
               <a
                 href="./Shirts.html"
-                class="pointer-events-auto ml-20 mt-10 inline-flex translate-y-0 items-center gap-3 border border-[#1B1B1B] bg-[#1B1B1B] px-8 py-3 text-white opacity-100 transition-all delay-700 duration-700 ease-out"
+                class="mt-10 inline-flex items-center gap-3 border border-[#1B1B1B] bg-[#1B1B1B] px-8 py-3 text-white md:mx-20"
               >
                 <span>Half Sleeve Shirt</span>
-
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -571,34 +512,23 @@
             </div>
           </div>
         </article>
-
         <!-- SLIDE 3 -->
         <article
           class="hero-slide relative min-w-full h-[80vh] min-h-0 overflow-hidden bg-[#f5eee8] max-md:h-[90vh] max-md:min-h-0"
         >
-          <picture class="absolute inset-0 block h-full w-full">
-            <source
-              media="(max-width: 768px)"
-              srcset="
-                storage/theme/15/aRaNkwJ5RfgBbpTVEMKyJ86SJswA9KOxmaPEq0DL.webp
-              "
-            />
-
+          <div class="absolute inset-0 block h-full w-full">
             <img
               src="./img/hero3.png"
               alt="Keswa New Collection"
               class="h-full w-full object-cover object-center select-none"
-              loading="lazy"
-              decoding="async"
             />
-          </picture>
-
+          </div>
           <div
             class="absolute inset-0 z-10 flex flex-col justify-center px-6 md:container md:px-0"
           >
             <div class="max-w-[500px]">
               <h2
-                class="hero-content translate-y-8 px-20 text-4xl font-normal leading-[1.1] opacity-0 transition-all duration-700 md:text-7xl"
+                class="hero-content text-4xl font-normal leading-[1.1] md:text-7xl md:px-20"
               >
                 Tank
                 <br />
@@ -606,19 +536,16 @@
                 <br />
                 S.26
               </h2>
-
               <p
-                class="hero-content mt-6 translate-y-8 px-20 text-lg font-medium opacity-0 transition-all delay-100 duration-700 md:text-xl"
+                class="hero-content mt-6 text-lg font-medium md:text-xl md:px-20"
               >
                 Comfort the lasts, Style That Stays
               </p>
-
               <a
                 href="./Tank-Top.html"
-                class="pointer-events-auto ml-20 mt-10 inline-flex translate-y-0 items-center gap-3 border border-[#1B1B1B] bg-[#1B1B1B] px-8 py-3 text-white opacity-100 transition-all delay-700 duration-700 ease-out"
+                class="mt-10 inline-flex items-center gap-3 border border-[#1B1B1B] bg-[#1B1B1B] px-8 py-3 text-white md:mx-20"
               >
                 <span>Tank Top</span>
-
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="1em"
@@ -633,7 +560,6 @@
           </div>
         </article>
       </div>
-
       <!-- DOTS -->
       <div
         id="hero-dots"
@@ -643,40 +569,31 @@
           type="button"
           class="hero-dot flex h-5 w-5 items-center justify-center rounded-full"
           data-slide="0"
-          aria-label="Go to slide 1"
-          aria-current="true"
         >
           <span
-            class="hero-dot-inner h-2 w-2 rounded-full bg-black transition-all duration-300"
+            class="hero-dot-inner h-2 w-2 rounded-full transition-all duration-300"
           ></span>
         </button>
-
         <button
           type="button"
           class="hero-dot flex h-5 w-5 items-center justify-center rounded-full"
           data-slide="1"
-          aria-label="Go to slide 2"
-          aria-current="false"
         >
           <span
-            class="hero-dot-inner h-2 w-2 rounded-full bg-black/30 transition-all duration-300"
+            class="hero-dot-inner h-2 w-2 rounded-full transition-all duration-300"
           ></span>
         </button>
-
         <button
           type="button"
           class="hero-dot flex h-5 w-5 items-center justify-center rounded-full"
           data-slide="2"
-          aria-label="Go to slide 3"
-          aria-current="false"
         >
           <span
-            class="hero-dot-inner h-2 w-2 rounded-full bg-black/30 transition-all duration-300"
+            class="hero-dot-inner h-2 w-2 rounded-full transition-all duration-300"
           ></span>
         </button>
       </div>
     </section>
-
     <!---------offer bar--------->
     <div
       class="offer-bar flex h-14 w-full overflow-hidden bg-[#1B1B1B] text-[#FFFFFF]"
@@ -694,20 +611,20 @@
         <span class="mx-6"> Since 2012 — We Begin the Journey Together. </span>
       </div>
     </div>
-
-    <!---------SHOP BY CATEGORIES--------->
+    <!---------Shop by category--------->
     <section
       class="Shop-by-category mt-14 px-8 max-md:mt-7 max-md:px-4 max-sm:mt-5"
     >
       <div class="relative">
-        <!-- TITLE + ARROWS -->
+        <!--Title & Arrows-->
         <div class="mb-5 flex items-center gap-5">
+          <!--arrows-->
           <div class="flex items-center gap-3 max-md:hidden">
-            <!-- LEFT ARROW -->
+            <!--Left arrow-->
             <button
               type="button"
-              id="category-prev"
-              class="icon-arrow-left-stylish flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full border border-black bg-white text-xl transition hover:bg-black hover:text-white max-md:hidden"
+              id="category-left-arrow"
+              class="flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full border border-black bg-white text-xl transition hover:bg-black hover:text-white max-md:hidden"
               aria-label="Previous categories"
             >
               <svg
@@ -727,12 +644,11 @@
                 />
               </svg>
             </button>
-
-            <!-- RIGHT ARROW -->
+            <!--Right arrow-->
             <button
               type="button"
-              id="category-next"
-              class="icon-arrow-right-stylish flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full border border-black bg-white text-xl transition hover:bg-black hover:text-white max-md:hidden"
+              id="category-right-arrow"
+              class="flex h-[32px] w-[32px] cursor-pointer items-center justify-center rounded-full border border-black bg-white text-xl transition hover:bg-black hover:text-white max-md:hidden"
               aria-label="Next categories"
             >
               <svg
@@ -753,44 +669,39 @@
               </svg>
             </button>
           </div>
-
           <h2 class="text-lg font-medium uppercase">Shop by categories</h2>
         </div>
-
-        <!-- CATEGORIES -->
+        <!--Categories-->
         <div
-          class="grid grid-cols-[3fr_1fr] gap-4 max-sm:grid-cols-1 max-sm:gap-4"
+          class="relative grid grid-cols-[3fr_1fr] max-sm:grid-cols-1 max-sm:gap-4"
         >
           <!-- CATEGORY CARDS ONLY -->
           <div
             id="category-scroll"
-            class="scrollbar-hide flex overflow-x-auto overflow-y-hidden scroll-smooth -ms-3 max-lg:-ms-2 max-sm:-mx-1"
+            class="category-scroll relative z-0 col-span-2 col-start-1 row-start-1 flex overflow-x-auto overflow-y-hidden scroll-smooth -ms-3 pe-[25%] max-lg:-ms-2 max-sm:col-span-1 max-sm:-mx-1 max-sm:pe-0"
           >
-            <!-- JEANS -->
+            <!--T-Shirts-->
             <div
-              class="w-1/3 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
+              class="category-card w-1/4 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
             >
               <div
                 class="grid aspect-[219/263] w-full grid-cols-1 justify-items-center gap-2 font-medium max-lg:gap-1.5 max-md:gap-2.5"
               >
                 <a
-                  href="./jeans.html"
+                  href="./T-shirt.html"
                   class="relative w-full overflow-hidden rounded-lg bg-zinc-100"
                 >
                   <img
-                    src="https://keswastore.com/cache/medium/category/3/QK1iqTjIlfWtMjQCLHuYFNZa6XM57MvpuNSS6FNr.webp"
-                    sizes="(max-width: 640px) 219px, 110px"
+                    src="https://keswastore.com/cache/medium/product/1563/AHRqD8AG9si6V2JYrhvzWp2ecRTJ0S66Xm3oJrUH.webp"
                     width="219"
                     height="263"
-                    alt="Jeans"
+                    alt="t-shirts"
                     class="aspect-[219/263] h-full w-full rounded-lg object-cover transition-all duration-500 hover:scale-[1.2]"
                   />
-
                   <p
                     class="transition-all duration-300 category-name absolute bottom-4 left-4 max-lg:left-1/2 max-lg:translate-x-[-50%] text-lg text-white max-lg:text-base font-normal max-sm:text-sm inline-flex items-center gap-2"
                   >
-                    <span class="whitespace-nowrap text-shadow"> Jeans </span>
-
+                    <span class="whitespace-nowrap text-shadow">T-Shirt</span>
                     <span class="flex items-center overflow-hidden">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -813,58 +724,9 @@
                 </a>
               </div>
             </div>
-
-            <!-- PANTS -->
+            <!--shirts-->
             <div
-              class="w-1/3 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
-            >
-              <div
-                class="grid aspect-[219/263] w-full grid-cols-1 justify-items-center gap-2 font-medium max-lg:gap-1.5 max-md:gap-2.5"
-              >
-                <a
-                  href="./pants.html"
-                  class="relative w-full overflow-hidden rounded-lg bg-zinc-100"
-                >
-                  <img
-                    src="https://keswastore.com/cache/medium/category/5/iguha18QLHBKfoYKx1kWcEdZIyNjM7cvlaFKbDZU.webp"
-                    sizes="(max-width: 640px) 219px, 110px"
-                    width="219"
-                    height="263"
-                    alt="Pants"
-                    class="aspect-[219/263] h-full w-full rounded-lg object-cover transition-all duration-500 hover:scale-[1.2]"
-                  />
-
-                  <p
-                    class="transition-all duration-300 category-name absolute bottom-4 left-4 max-lg:left-1/2 max-lg:translate-x-[-50%] text-lg text-white max-lg:text-base font-normal max-sm:text-sm inline-flex items-center gap-2"
-                  >
-                    <span class="whitespace-nowrap text-shadow"> Pants </span>
-
-                    <span class="flex items-center overflow-hidden">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="1em"
-                        height="1em"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M0 0h24v24H0z" fill="none" />
-                        <path
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 12h16m-7-7l7 7l-7 7"
-                        />
-                      </svg>
-                    </span>
-                  </p>
-                </a>
-              </div>
-            </div>
-
-            <!-- SHIRTS -->
-            <div
-              class="w-1/3 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
+              class="category-card w-1/4 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
             >
               <div
                 class="grid aspect-[219/263] w-full grid-cols-1 justify-items-center gap-2 font-medium max-lg:gap-1.5 max-md:gap-2.5"
@@ -874,19 +736,152 @@
                   class="relative w-full overflow-hidden rounded-lg bg-zinc-100"
                 >
                   <img
-                    src="https://keswastore.com/cache/medium/category/6/rsXeLSssI10R6b73PS7rrf0JIcW2OOKVSTnfp39z.webp"
+                    src="https://keswastore.com/cache/medium/product/2107/zfie7Lym5EpptP2tavsh7doH1tgYtpIB1JI8VvnP.webp"
                     sizes="(max-width: 640px) 219px, 110px"
                     width="219"
                     height="263"
-                    alt="Shirts"
+                    alt="shirts"
                     class="aspect-[219/263] h-full w-full rounded-lg object-cover transition-all duration-500 hover:scale-[1.2]"
                   />
-
                   <p
                     class="transition-all duration-300 category-name absolute bottom-4 left-4 max-lg:left-1/2 max-lg:translate-x-[-50%] text-lg text-white max-lg:text-base font-normal max-sm:text-sm inline-flex items-center gap-2"
                   >
-                    <span class="whitespace-nowrap text-shadow"> Shirts </span>
-
+                    <span class="whitespace-nowrap text-shadow">Shirts</span>
+                    <span class="flex items-center overflow-hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 12h16m-7-7l7 7l-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </p>
+                </a>
+              </div>
+            </div>
+            <!--shoes-->
+            <div
+              class="category-card w-1/4 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
+            >
+              <div
+                class="grid aspect-[219/263] w-full grid-cols-1 justify-items-center gap-2 font-medium max-lg:gap-1.5 max-md:gap-2.5"
+              >
+                <a
+                  href="./shoes.html"
+                  class="relative w-full overflow-hidden rounded-lg bg-zinc-100"
+                >
+                  <img
+                    src="https://keswastore.com/cache/medium/product/1754/Qx3AwNW7N4Pvw390HxKDrdYRauEVfB2OpEppjv51.webp"
+                    sizes="(max-width: 640px) 219px, 110px"
+                    width="219"
+                    height="263"
+                    alt="shoes"
+                    class="aspect-[219/263] h-full w-full rounded-lg object-cover transition-all duration-500 hover:scale-[1.2]"
+                  />
+                  <p
+                    class="transition-all duration-300 category-name absolute bottom-4 left-4 max-lg:left-1/2 max-lg:translate-x-[-50%] text-lg text-white max-lg:text-base font-normal max-sm:text-sm inline-flex items-center gap-2"
+                  >
+                    <span class="whitespace-nowrap text-shadow"> Shoes </span>
+                    <span class="flex items-center overflow-hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 12h16m-7-7l7 7l-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </p>
+                </a>
+              </div>
+            </div>
+            <!--Jeans-->
+            <div
+              class="category-card w-1/4 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
+            >
+              <div
+                class="grid aspect-[219/263] w-full grid-cols-1 justify-items-center gap-2 font-medium max-lg:gap-1.5 max-md:gap-2.5"
+              >
+                <a
+                  href="./jeans.html"
+                  class="relative w-full overflow-hidden rounded-lg bg-zinc-100"
+                >
+                  <img
+                    src="https://keswastore.com/cache/large/product/1360/wc3eA4F0ywpuLPyTFcUpqdaR6VPad6ZYEeGVfF8H.webp"
+                    sizes="(max-width: 640px) 219px, 110px"
+                    width="219"
+                    height="263"
+                    alt="jeans"
+                    class="aspect-[219/263] h-full w-full rounded-lg object-cover transition-all duration-500 hover:scale-[1.2]"
+                  />
+                  <p
+                    class="transition-all duration-300 category-name absolute bottom-4 left-4 max-lg:left-1/2 max-lg:translate-x-[-50%] text-lg text-white max-lg:text-base font-normal max-sm:text-sm inline-flex items-center gap-2"
+                  >
+                    <span class="whitespace-nowrap text-shadow">Jeans</span>
+                    <span class="flex items-center overflow-hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="1em"
+                        height="1em"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 12h16m-7-7l7 7l-7 7"
+                        />
+                      </svg>
+                    </span>
+                  </p>
+                </a>
+              </div>
+            </div>
+            <!--Pants-->
+            <div
+              class="category-card w-1/4 shrink-0 px-3 max-lg:px-2 max-sm:w-1/2 max-sm:px-1"
+            >
+              <div
+                class="grid aspect-[219/263] w-full grid-cols-1 justify-items-center gap-2 font-medium max-lg:gap-1.5 max-md:gap-2.5"
+              >
+                <a
+                  href="./pants.html"
+                  class="relative w-full overflow-hidden rounded-lg bg-zinc-100"
+                >
+                  <img
+                    src="https://keswastore.com/cache/medium/product/2124/Ms1r2YAMWvUeiWYQtfm3Etf7frWmbiOfdecFG6CI.webp"
+                    sizes="(max-width: 640px) 219px, 110px"
+                    width="219"
+                    height="263"
+                    alt="shoes"
+                    class="aspect-[219/263] h-full w-full rounded-lg object-cover transition-all duration-500 hover:scale-[1.2]"
+                  />
+                  <p
+                    class="transition-all duration-300 category-name absolute bottom-4 left-4 max-lg:left-1/2 max-lg:translate-x-[-50%] text-lg text-white max-lg:text-base font-normal max-sm:text-sm inline-flex items-center gap-2"
+                  >
+                    <span class="whitespace-nowrap text-shadow">Pants</span>
                     <span class="flex items-center overflow-hidden">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -910,20 +905,19 @@
               </div>
             </div>
           </div>
-
-          <!-- DISCOVER -->
-          <div class="flex min-h-full items-center max-sm:min-h-[180px]">
+          <div
+            class="relative z-10 col-start-2 row-start-1 flex min-h-full items-center bg-white ps-4 max-sm:col-start-1 max-sm:row-start-2 max-sm:ps-0 max-sm:min-h-[180px]"
+          >
             <div
-              class="flex h-full w-full flex-col justify-center gap-4 rounded-lg border border-black p-4 lg:gap-4 lg:p-5"
+              class="flex h-full w-full flex-col justify-center gap-4 rounded-lg border border-black bg-white p-4 shadow-lg lg:gap-4 lg:p-5"
             >
               <p class="text-md font-medium lg:text-3xl">
                 Discover all
                 <br class="max-lg:hidden" />
                 new items
               </p>
-
               <a
-                href="#"
+                href="./newProducts.html"
                 aria-label="Discover all new items"
                 class="flex h-[32px] w-[32px] shrink-0 rotate-[-45deg] cursor-pointer items-center justify-center rounded-full border border-black bg-white text-base transition hover:bg-black hover:text-white lg:h-[46px] lg:w-[46px] lg:text-xl"
               >
@@ -949,7 +943,2651 @@
         </div>
       </div>
     </section>
-
+    <section class="best-seller mt-20 px-8 max-sm:mt-7 max-sm:!px-4">
+      <div class="flex flex-col lg:items-center lg:mx-auto">
+        <div class="flex items-center justify-between">
+          <h2
+            class="lg:text-center lg:w-full text-3xl max-md:text-2xl max-sm:text-xl"
+          >
+            Best Seller
+          </h2>
+          <a href="./search.html" class="hidden max-lg:flex">
+            <p
+              class="inline-flex items-center gap-1 whitespace-nowrap text-base max-sm:text-sm"
+            >
+              View All
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                class="shrink-0"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m9 5l7 7l-7 7"
+                />
+              </svg>
+            </p>
+          </a>
+        </div>
+        <p class="lg:mx-auto lg:text-center lg:w-full text-sm mt-2">
+          Inspire and let yourself be inspired, from one unique fashion to
+          another.
+        </p>
+      </div>
+      <div
+        class="mt-10 max-md:mt-5 pb-2.5 max-md:pb-0 grid grid-cols-4 gap-8 max-[879px]:grid-cols-3 max-[650px]:grid-cols-2 max-md:justify-items-center max-md:gap-x-4 px-8 max-sm:px-2"
+      >
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2387/Ygln7HOKarKu0lId3VwncEHz2PnLd2IPBSZnu1uY.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Shirt-Rlxd-msimo</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                425
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>850</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2366/NPilgDjJiTXgCBR20rfWcUmKgkxp19ml0Zt0bygf.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Round-Bas-Roglam</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                275
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>550</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2359/daDGzq8oxlSuyRBZ4Cygv5YDMHvPAkQr6cYcZ7hy.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">
+              Knitted-Round-w26
+            </p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>349 <span class="text-[0.75em]"> EGP </span></p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>700</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2354/L2DAU3pSLMavrcOePaxSNf0lBaCWYGAdXFTfvvOE.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Knitted-Polo-w26</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                375
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>800</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2327/SBlIE2cV0HuoAjGFQpQfj6JeDenGvdMaUaEZ9lhL.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">T-Round-Relaxed</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                350
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>700</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2301/SA9kGG3QuRYMMKZYAGEzyyFfNnhcD8ah7OWnCAKe.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Relaxed-90s-1</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                750
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1000</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2276/D6s82J025KSukVelQOtTzZ3jUNSXY416QiHWYWx0.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Slim-Tee-s-24</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                299
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>600</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2201/Etqyr5QOkYE9B8nPDkYpET9VEFEIwpsyUkF6Fgxx.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">
+              Skater-Baggy-Tie-Dye
+            </p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                850
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1200</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2175/vInYoXjcQ1zQLHsHDI7G6XoWHqUg1yFc9m2DFpLj.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Polo-French</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                349
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>700</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2146/sBoXBhepCO7IcMz4KitPZlvL8uwAfVfSAuWGx899.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Slim-241</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                299
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>600</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2124/Ms1r2YAMWvUeiWYQtfm3Etf7frWmbiOfdecFG6CI.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Gbr-Rlxd-Pant</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                590
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>920</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2107/zfie7Lym5EpptP2tavsh7doH1tgYtpIB1JI8VvnP.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">
+              Striped-Short-Sleeve-Shirt
+            </p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                349
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>700</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        href="./search.html"
+        class="secondary-button mx-auto mt-5 block w-max px-11 border border-1 py-3 text-center text-base max-lg:mt-0 max-lg:hidden max-lg:py-3.5"
+      >
+        View All
+      </a>
+    </section>
+    <section class="New-products mt-20 px-8 max-sm:mt-7 max-sm:!px-4">
+      <div class="flex flex-col lg:items-center lg:mx-auto">
+        <div class="flex items-center justify-between">
+          <h2
+            class="lg:text-center lg:w-full text-3xl max-md:text-2xl max-sm:text-xl"
+          >
+            New Products
+          </h2>
+          <a href="./newProducts.html" class="hidden max-lg:flex">
+            <p
+              class="inline-flex items-center gap-1 whitespace-nowrap text-base max-sm:text-sm"
+            >
+              View All
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                class="shrink-0"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m9 5l7 7l-7 7"
+                />
+              </svg>
+            </p>
+          </a>
+        </div>
+        <p class="lg:mx-auto lg:text-center lg:w-full text-sm mt-2">
+          Inspire and let yourself be inspired, from one unique fashion to
+          another.
+        </p>
+      </div>
+      <div
+        class="mt-10 max-md:mt-5 pb-2.5 max-md:pb-0 grid grid-cols-4 gap-8 max-[879px]:grid-cols-3 max-[650px]:grid-cols-2 max-md:justify-items-center max-md:gap-x-4 px-8 max-sm:px-2"
+      >
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/548/urW7rnj5pYejQoMEuiOcn5TWbzNMyJYVSB7tQI5Q.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">AUTMN-JACKET</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                720
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1200</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/1360/wc3eA4F0ywpuLPyTFcUpqdaR6VPad6ZYEeGVfF8H.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Cargo Pants</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                690
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1100</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/1327/NpO1aW5zD9BL751haPkGta1jnYlDXNqQWICkqN4N.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Clogs</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                690
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1100</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2059/snUUHhazqRLRv8b6Zxn88OaPbchUGYKVDoTX27hF.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">
+              Cordoba-Suede-Loafer
+            </p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                990
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1400</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/1652/tN9Q2m6MIZwbQE9NbQqyPJv0X5BWeMs6wL91y5Nl.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">
+              Cotton-Shirt-Relaxed
+            </p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                499
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1000</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2042/lazP5zZpvgzRkUGD1HZKyh49KyimpHilLObjuqr1.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">
+              Crinkle-Short-Sleeve-Shirt
+            </p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                499
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>900</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/1215/WoPbtMBtoL0zTxhPWJXjH7ITYI4n8vxYtriEtQLL.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Derby Shoes</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                1190
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1800</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2124/Ms1r2YAMWvUeiWYQtfm3Etf7frWmbiOfdecFG6CI.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Gbr-Rlxd-Pant</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                590
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>920</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/1883/mUnUXatmvuPfdVPEh0c9gw4NuC5uubIFKz9wAMOp.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">
+              Half-Sleeve-Shirt-s25
+            </p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                399
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>800</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/2011/q59oGfHrvV4CVlpBACfpDEYzfbWeuiEgdaMIIZxL.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Henley-T-Shirt</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                349
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>700</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/1822/PcvUdgDn1W8j9B5euydzNQyE55zBGH89TDw6Gwmq.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Jeans-Tapered</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                750
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1000</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="w-full min-w-0"
+          data-price="480"
+          data-color="Mint"
+          data-size="M,XL,XXL"
+        >
+          <div class="group relative aspect-[5/7] overflow-hidden rounded-md">
+            <a href="#" aria-label="Oxford-Shirt">
+              <img
+                class="h-full w-full bg-zinc-100 object-cover transition-all duration-500 group-hover:scale-110"
+                src="https://keswastore.com/cache/medium/product/1912/3mh0zwbsnrrqwi4teaSecv6txp2R7fbYjkQvP2sL.webp"
+                alt="Oxford-Shirt"
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+            <p
+              class="absolute top-1.5 inline-block rounded-[44px] bg-secondary px-2.5 text-sm text-white max-sm:rounded-l-none max-sm:rounded-r-xl max-sm:px-2 max-sm:py-0.5 max-sm:text-xs ltr:left-1.5 max-sm:ltr:left-0 rtl:right-5 max-sm:rtl:right-0"
+            >
+              Sale
+            </p>
+            <div
+              class="absolute bottom-2 left-1/2 flex -translate-x-1/2 items-center gap-1.5"
+            >
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to cart"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-100 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Add to Wishlist"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#wishlist"></use>
+                </svg>
+              </button>
+              <button
+                type="button"
+                class="flex h-11 w-11 items-center justify-center rounded-xs bg-white p-2 text-black shadow-sm transition-all delay-200 duration-300 hover:bg-black hover:text-white md:translate-y-[100px] md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 max-md:h-7 max-md:w-7"
+                aria-label="Quick View"
+              >
+                <svg class="h-5 w-5">
+                  <use href="./assests/icons.svg#eye"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid content-start gap-1 bg-white py-3">
+            <p class="text-base font-medium max-sm:text-sm">Jeans-Wide-1</p>
+            <div
+              class="flex flex-wrap items-center gap-x-2.5 gap-y-1.5 text-lg font-medium max-sm:text-sm"
+            >
+              <p>
+                750
+                <span class="text-[0.75em]"> EGP </span>
+              </p>
+              <p class="text-base font-normal text-gray-400 max-sm:text-xs">
+                <del>1000</del>
+                <span class="text-[0.75em]">
+                  <del>EGP</del>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        href="./newProducts.html"
+        class="mx-auto mt-5 block w-max px-11 border border-1 py-3 text-center text-base max-lg:mt-0 max-lg:hidden max-lg:py-3.5"
+      >
+        View All
+      </a>
+    </section>
+    <section
+      class="container mt-20 max-lg:px-8 max-md:mt-8 max-sm:mt-7 max-sm:!px-4"
+    >
+      <h2
+        class="lg:mx-auto lg:text-center lg:w-full text-3xl max-md:text-2xl max-sm:text-xl"
+      >
+        Shop Gram
+      </h2>
+      <p class="lg:mx-auto lg:text-center lg:w-full text-sm mt-2">
+        Inspire and let yourself be inspired, from one unique fashion to
+        another.
+      </p>
+      <div
+        class="grid justify-center items-center content-center grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 mt-6 md:mt-10 px-2 md:px-10 md:ml-7"
+      >
+        <div
+          class="1180:transtion-all group w-full 1180:relative 1180:grid 1180:content-start 1180:overflow-hidden 1180:duration-300"
+        >
+          <div
+            class="relative aspect-square overflow-hidden max-md:max-w-full rounded-md"
+          >
+            <a href="#">
+              <img
+                class="after:content-[' '] aspect-square object-cover w-full h-full relative bg-zinc-100 transition-all duration-500 after:block after:pb-[calc(100%+9px)] group-hover:scale-110"
+                width="195"
+                height="273"
+                alt="Shirt-Rlxd-msimo"
+                src="https://keswastore.com/cache/medium/product/2387/Ygln7HOKarKu0lId3VwncEHz2PnLd2IPBSZnu1uY.webp"
+              />
+              <div
+                class="bg-[#00000033] transition-all duration-300 opacity-0 group-hover:opacity-100 w-full h-full absolute top-0 left-0"
+              ></div>
+            </a>
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 action-items flex items-center gap-2 justify-center"
+            >
+              <button
+                class="border-none bg-white text-black rounded-full hover:bg-black hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 p-2.5 text-sm font-medium max-sm:p-2"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="1180:transtion-all group w-full 1180:relative 1180:grid 1180:content-start 1180:overflow-hidden 1180:duration-300"
+        >
+          <div
+            class="relative aspect-square overflow-hidden max-md:max-w-full rounded-md"
+          >
+            <a href="#">
+              <img
+                class="after:content-[' '] aspect-square object-cover w-full h-full relative bg-zinc-100 transition-all duration-500 after:block after:pb-[calc(100%+9px)] group-hover:scale-110"
+                width="195"
+                height="273"
+                alt="Shirt-Rlxd-msimo"
+                src="https://keswastore.com/cache/medium/product/2366/NPilgDjJiTXgCBR20rfWcUmKgkxp19ml0Zt0bygf.webp"
+              />
+              <div
+                class="bg-[#00000033] transition-all duration-300 opacity-0 group-hover:opacity-100 w-full h-full absolute top-0 left-0"
+              ></div>
+            </a>
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 action-items flex items-center gap-2 justify-center"
+            >
+              <button
+                class="border-none bg-white text-black rounded-full hover:bg-black hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 p-2.5 text-sm font-medium max-sm:p-2"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="1180:transtion-all group w-full 1180:relative 1180:grid 1180:content-start 1180:overflow-hidden 1180:duration-300"
+        >
+          <div
+            class="relative aspect-square overflow-hidden max-md:max-w-full rounded-md"
+          >
+            <a href="#">
+              <img
+                class="after:content-[' '] aspect-square object-cover w-full h-full relative bg-zinc-100 transition-all duration-500 after:block after:pb-[calc(100%+9px)] group-hover:scale-110"
+                width="195"
+                height="273"
+                alt="Shirt-Rlxd-msimo"
+                src="https://keswastore.com/cache/medium/product/2359/daDGzq8oxlSuyRBZ4Cygv5YDMHvPAkQr6cYcZ7hy.webp"
+              />
+              <div
+                class="bg-[#00000033] transition-all duration-300 opacity-0 group-hover:opacity-100 w-full h-full absolute top-0 left-0"
+              ></div>
+            </a>
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 action-items flex items-center gap-2 justify-center"
+            >
+              <button
+                class="border-none bg-white text-black rounded-full hover:bg-black hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 p-2.5 text-sm font-medium max-sm:p-2"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="1180:transtion-all group w-full 1180:relative 1180:grid 1180:content-start 1180:overflow-hidden 1180:duration-300"
+        >
+          <div
+            class="relative aspect-square overflow-hidden max-md:max-w-full rounded-md"
+          >
+            <a href="#">
+              <img
+                class="after:content-[' '] aspect-square object-cover w-full h-full relative bg-zinc-100 transition-all duration-500 after:block after:pb-[calc(100%+9px)] group-hover:scale-110"
+                width="195"
+                height="273"
+                alt="Shirt-Rlxd-msimo"
+                src="https://keswastore.com/cache/medium/product/2354/L2DAU3pSLMavrcOePaxSNf0lBaCWYGAdXFTfvvOE.webp"
+              />
+              <div
+                class="bg-[#00000033] transition-all duration-300 opacity-0 group-hover:opacity-100 w-full h-full absolute top-0 left-0"
+              ></div>
+            </a>
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 action-items flex items-center gap-2 justify-center"
+            >
+              <button
+                class="border-none bg-white text-black rounded-full hover:bg-black hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 p-2.5 text-sm font-medium max-sm:p-2"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="1180:transtion-all group w-full 1180:relative 1180:grid 1180:content-start 1180:overflow-hidden 1180:duration-300"
+        >
+          <div
+            class="relative aspect-square overflow-hidden max-md:max-w-full rounded-md"
+          >
+            <a href="#">
+              <img
+                class="after:content-[' '] aspect-square object-cover w-full h-full relative bg-zinc-100 transition-all duration-500 after:block after:pb-[calc(100%+9px)] group-hover:scale-110"
+                width="195"
+                height="273"
+                alt="Shirt-Rlxd-msimo"
+                src="https://keswastore.com/cache/medium/product/2327/SBlIE2cV0HuoAjGFQpQfj6JeDenGvdMaUaEZ9lhL.webp"
+              />
+              <div
+                class="bg-[#00000033] transition-all duration-300 opacity-0 group-hover:opacity-100 w-full h-full absolute top-0 left-0"
+              ></div>
+            </a>
+            <div
+              class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 action-items flex items-center gap-2 justify-center"
+            >
+              <button
+                class="border-none bg-white text-black rounded-full hover:bg-black hover:text-white transition-all duration-300 opacity-0 group-hover:opacity-100 p-2.5 text-sm font-medium max-sm:p-2"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24">
+                  <use href="./assests/icons.svg#bag"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="trust mb-10 mt-20 max-lg:px-8 max-md:mt-10 max-md:px-5 px-17"
+    >
+      <div class="gap-6 grid grid-cols-2 lg:grid-cols-4 max-md:gap-2.5">
+        <div
+          class="p-3 md:p-5 rounded-md border border-zinc-200 flex flex-wrap items-center justify-center gap-5 bg-white max-md:grid max-md:gap-2.5 max-sm:gap-1"
+        >
+          <span
+            class="icon-truck flex items-center justify-center bg-white text-5xl text-primary max-md:m-auto max-sm:text-4xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="0.75"
+              >
+                <path
+                  stroke-linejoin="round"
+                  stroke-miterlimit="1.5"
+                  d="M8 19a2 2 0 1 0 0-4a2 2 0 0 0 0 4m10 0a2 2 0 1 0 0-4a2 2 0 0 0 0 4"
+                />
+                <path
+                  d="M10.05 17H15V6.6a.6.6 0 0 0-.6-.6H1m4.65 11H3.6a.6.6 0 0 1-.6-.6v-4.9"
+                />
+                <path stroke-linejoin="round" d="M2 9h4" />
+                <path
+                  d="M15 9h5.61a.6.6 0 0 1 .548.356l1.79 4.028a.6.6 0 0 1 .052.243V16.4a.6.6 0 0 1-.6.6h-1.9M15 17h1"
+                />
+              </g>
+            </svg>
+          </span>
+          <div class="grid justify-center gap-2.5 w-full text-center">
+            <p class="font-dmserif text-base font-medium max-sm:text-sm">
+              Shipping
+            </p>
+            <p class="w-full text-sm text-black font-[400] leading-5">
+              We deliver to all governorates and cities across Egypt through
+              reliable partners.
+            </p>
+          </div>
+        </div>
+        <div
+          class="p-3 md:p-5 rounded-md border border-zinc-200 flex flex-wrap items-center justify-center gap-5 bg-white max-md:grid max-md:gap-2.5 max-sm:gap-1"
+        >
+          <span
+            class="icon-truck flex items-center justify-center bg-white text-5xl text-primary max-md:m-auto max-sm:text-4xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path d="M0 0h24v24H0z" fill="none" />
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0.75"
+                d="M7 10h14l-4-4m0 8H3l4 4"
+              />
+            </svg>
+          </span>
+          <div class="grid justify-center gap-2.5 w-full text-center">
+            <p class="font-dmserif text-base font-medium max-sm:text-sm">
+              Easy Exchange
+            </p>
+            <p class="w-full text-sm text-black font-[400] leading-5">
+              Product replacement is available within 14 days under our exchange
+              policy.
+            </p>
+          </div>
+        </div>
+        <div
+          class="p-3 md:p-5 rounded-md border border-zinc-200 flex flex-wrap items-center justify-center gap-5 bg-white max-md:grid max-md:gap-2.5 max-sm:gap-1"
+        >
+          <span
+            class="icon-truck flex items-center justify-center bg-white text-5xl text-primary max-md:m-auto max-sm:text-4xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 48 48"
+            >
+              <path d="M0 0h48v48H0z" fill="none" />
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M43.5 25.27V12.4a4 4 0 0 0-4-4h-31a4 4 0 0 0-4 4v23.2a4 4 0 0 0 4 4h25.265M4.5 15.636h39"
+                stroke-width="1"
+              />
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M37.488 41.6c4.337-1.495 7.428-4.97 7.913-9.394c.19-1.739.065-4.308-.034-5.767a1.22 1.22 0 0 0-1.184-1.135c-1.962-.06-4.242-.388-6.004-2.123a.984.984 0 0 0-1.381 0c-1.763 1.735-4.043 2.062-6.004 2.123a1.22 1.22 0 0 0-1.184 1.135c-.1 1.46-.225 4.028-.034 5.767c.485 4.424 3.576 7.9 7.912 9.394m0 0V22.897"
+                stroke-width="1"
+              />
+            </svg>
+          </span>
+          <div class="grid justify-center gap-2.5 w-full text-center">
+            <p class="font-dmserif text-base font-medium max-sm:text-sm">
+              Secure Payment
+            </p>
+            <p class="w-full text-sm text-black font-[400] leading-5">
+              All payments are processed securely through trusted and encrypted
+              gateways.
+            </p>
+          </div>
+        </div>
+        <div
+          class="p-3 md:p-5 rounded-md border border-zinc-200 flex flex-wrap items-center justify-center gap-5 bg-white max-md:grid max-md:gap-2.5 max-sm:gap-1"
+        >
+          <span
+            class="icon-truck flex items-center justify-center bg-white text-5xl text-primary max-md:m-auto max-sm:text-4xl"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 256 256"
+            >
+              <path d="M0 0h256v256H0z" fill="none" />
+              <path
+                fill="currentColor"
+                d="M223 105.58c-4-4.2-8.2-8.54-10-12.8c-1.65-4-1.73-9.53-1.82-15.41c-.14-9-.29-19.19-6.83-25.74s-16.74-6.69-25.74-6.83c-5.88-.09-11.43-.17-15.41-1.82c-4.26-1.76-8.6-5.93-12.8-9.95c-6.68-6.41-13.59-13-22.42-13s-15.74 6.62-22.42 13c-4.2 4-8.54 8.2-12.8 10c-4 1.65-9.53 1.73-15.41 1.82c-9 .14-19.19.29-25.74 6.83s-6.67 16.69-6.81 25.69c-.09 5.88-.17 11.43-1.82 15.41c-1.76 4.26-5.93 8.6-9.95 12.8c-6.41 6.68-13 13.59-13 22.42s6.62 15.74 13 22.42c4 4.2 8.2 8.54 10 12.8c1.65 4 1.73 9.53 1.82 15.41c.14 9 .29 19.19 6.83 25.74s16.74 6.69 25.74 6.83c5.88.09 11.43.17 15.41 1.82c4.26 1.76 8.6 5.93 12.8 9.95c6.68 6.41 13.59 13 22.42 13s15.74-6.62 22.42-13c4.2-4 8.54-8.2 12.8-10c4-1.65 9.53-1.73 15.41-1.82c9-.14 19.19-.29 25.74-6.83s6.69-16.74 6.83-25.74c.09-5.88.17-11.43 1.82-15.41c1.76-4.26 5.93-8.6 9.95-12.8c6.41-6.68 13-13.59 13-22.42s-6.64-15.69-13.02-22.37m-5.78 39.3c-4.54 4.73-9.24 9.63-11.57 15.28c-2.23 5.39-2.33 12-2.43 18.35c-.12 8.2-.24 16-4.49 20.2s-12 4.37-20.2 4.49c-6.37.1-13 .2-18.35 2.43c-5.65 2.33-10.55 7-15.28 11.57c-5.81 5.55-11.28 10.8-16.9 10.8s-11.09-5.25-16.88-10.8c-4.73-4.54-9.63-9.24-15.28-11.57c-5.39-2.23-12-2.33-18.35-2.43c-8.2-.12-15.95-.24-20.2-4.49s-4.37-12-4.49-20.2c-.1-6.37-.2-13-2.43-18.35c-2.33-5.65-7-10.55-11.57-15.28C33.25 139.09 28 133.62 28 128s5.25-11.09 10.8-16.88c4.54-4.73 9.24-9.63 11.57-15.28c2.23-5.39 2.33-12 2.43-18.35c.12-8.2.24-15.95 4.49-20.2s12-4.37 20.2-4.49c6.37-.1 13-.2 18.35-2.43c5.65-2.33 10.55-7 15.28-11.57C116.91 33.25 122.38 28 128 28s11.09 5.25 16.88 10.8c4.73 4.54 9.63 9.24 15.28 11.57c5.39 2.23 12 2.33 18.35 2.43c8.2.12 16 .24 20.2 4.49s4.37 12 4.49 20.2c.1 6.37.2 13 2.43 18.35c2.33 5.65 7 10.55 11.57 15.28c5.55 5.79 10.8 11.26 10.8 16.88s-5.25 11.09-10.8 16.88Zm-46.37-43.71a4 4 0 0 1 0 5.66l-56 56a4 4 0 0 1-5.66 0l-24-24a4 4 0 0 1 5.66-5.66L112 154.34l53.17-53.17a4 4 0 0 1 5.66 0Z"
+              />
+            </svg>
+          </span>
+          <div class="grid justify-center gap-2.5 w-full text-center">
+            <p class="font-dmserif text-base font-medium max-sm:text-sm">
+              Quality Commitment
+            </p>
+            <p class="w-full text-sm text-black font-[400] leading-5">
+              Each Keswa product is crafted with attention to fit, quality, and
+              long-term everyday wear.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---------Footer--------->
+    <footer
+      class="mx-auto w-[92%] border-t border-zinc-200 pb-4 pt-12 max-lg:pb-4 max-lg:pt-10 max-md:py-5"
+    >
+      <!--Desktop footer-->
+      <div
+        class="flex w-full min-w-0 items-start justify-between gap-8 max-md:hidden"
+      >
+        <div class="grid min-w-0 max-w-[300px] gap-5 text-sm">
+          <a href="./index.html">
+            <img
+              src="./img/logo.png"
+              class="logo flex min-h-[30px]"
+              width="131"
+              height="29"
+              alt="Logo"
+            />
+          </a>
+          <div class="grid gap-2 text-sm text-zinc-600">
+            <p>
+              Address: Benha – Al Ahram District, Amn El-Dawla Street, in front
+              of Al-Fayoumy Street, Egypt.
+            </p>
+            <p>
+              Email:
+              <span class="font-medium text-zinc-700">
+                info@keswastore.com
+              </span>
+            </p>
+            <p>
+              Phone / WhatsApp:
+              <a
+                href="https://wa.me/201011387451"
+                target="_blank"
+                class="font-medium text-zinc-700 transition-all hover:text-secondary"
+              >
+                +20 101 138 7451
+              </a>
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <svg
+              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
+            >
+              <use href="./assests/icons.svg#facebook"></use>
+            </svg>
+            <svg
+              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
+            >
+              <use href="./assests/icons.svg#twitter"></use>
+            </svg>
+            <svg
+              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
+            >
+              <use href="./assests/icons.svg#instagram"></use>
+            </svg>
+            <svg
+              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
+            >
+              <use href="./assests/icons.svg#tiktok"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="grid gap-3">
+          <h4 class="text-md font-medium">Help</h4>
+          <ul class="grid gap-3 text-sm text-zinc-600">
+            <li>
+              <a
+                href="https://keswastore.com/page/privacy-policy"
+                class="transition-all"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://keswastore.com/page/payment-policy"
+                class="transition-all"
+              >
+                Payment Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://keswastore.com/page/shipping-policy"
+                class="transition-all"
+              >
+                Shipping Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://keswastore.com/page/return-policy"
+                class="transition-all"
+              >
+                Return Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://keswastore.com/page/terms-conditions"
+                class="transition-all"
+              >
+                Terms & Conditions
+              </a>
+            </li>
+            <li>
+              <a href="https://keswastore.com/faqs" class="transition-all">
+                FAQs
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="grid min-w-0 gap-3">
+          <h4 class="text-md font-medium">About Us</h4>
+          <ul class="grid gap-3 text-sm text-zinc-600">
+            <li>
+              <a href="https://keswastore.com/our-store" class="transition-all">
+                Our Store
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://keswastore.com/contact-us"
+                class="transition-all"
+              >
+                Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="https://keswastore.com/about-us" class="transition-all">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="grid min-w-0 max-w-[320px] flex-1 content-start gap-3">
+          <h4 class="text-md max-w-[288px] font-medium">Sign Up for Email</h4>
+          <p class="text-xs leading-5 text-zinc-600">
+            Sign up to get first dibs on new arrivals, sales, exclusive content,
+            events and more!
+          </p>
+          <form
+            novalidate
+            method="post"
+            action="https://keswastore.com/subscription"
+            class="mt-2.5 w-full"
+          >
+            <input
+              type="hidden"
+              name="_token"
+              autocomplete="off"
+              value="AlLynBVUW450urXA2Y0xiZAsMTc6tsH86NAlhBKO"
+            />
+            <div class="relative w-full">
+              <input
+                type="email"
+                name="email"
+                placeholder="email@example.com"
+                class="block h-[50px] w-full max-w-[420px] rounded border border-zinc-200 px-5 pr-28 text-sm font-normal text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400"
+              />
+              <button
+                type="submit"
+                class="absolute right-1 top-1/2 h-10 -translate-y-1/2 bg-[#1B1B1B] px-5 py-2.5 text-xs font-medium text-white transition-all hover:bg-zinc-800"
+              >
+                Subscribe
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- MOBILE FOOTER -->
+      <div class="hidden max-md:block">
+        <div class="grid min-w-0 gap-5 text-sm">
+          <a href="./index.html">
+            <img
+              src="./img/logo.png"
+              class="logo flex min-h-[30px]"
+              width="131"
+              height="29"
+              alt="Logo"
+            />
+          </a>
+          <div class="grid gap-2 text-sm text-zinc-600">
+            <p>
+              Address: Benha – Al Ahram District, Amn El-Dawla Street, in front
+              of Al-Fayoumy Street, Egypt.
+            </p>
+            <p>
+              Email:
+              <span class="font-medium text-zinc-700">
+                info@keswastore.com
+              </span>
+            </p>
+            <p>
+              Phone / WhatsApp:
+              <a
+                href="https://wa.me/201011387451"
+                target="_blank"
+                class="font-medium text-zinc-700 transition-all hover:text-secondary"
+              >
+                +20 101 138 7451
+              </a>
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <!-- Social Icons -->
+            <a href="https://www.facebook.com/keswa.stores">
+              <svg
+                class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
+              >
+                <use href="./assests/icons.svg#facebook"></use>
+              </svg>
+            </a>
+            <svg
+              class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
+            >
+              <use href="./assests/icons.svg#twitter"></use>
+            </svg>
+            <a href="https://www.instagram.com/keswa.stores">
+              <svg
+                class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
+              >
+                <use href="./assests/icons.svg#instagram"></use>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@keswa_wear">
+              <svg
+                class="h-7 w-7 rounded-full border border-zinc-500 p-1 transition-all hover:bg-zinc-100"
+              >
+                <use href="./assests/icons.svg#tiktok"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="mt-8">
+          <div class="Help">
+            <button
+              type="button"
+              class="footer-toggle flex w-full items-center justify-between py-5 text-left"
+              data-target="help-links"
+            >
+              <span class="text-sm font-medium">Help</span>
+              <svg
+                class="footer-arrow h-5 w-5 transition-transform duration-300"
+              >
+                <use href="./assests/icons.svg#chevron-down"></use>
+              </svg>
+            </button>
+            <ul
+              id="help-links"
+              class="hidden grid gap-5 pb-5 text-sm text-zinc-600"
+            >
+              <li>
+                <a
+                  href="https://keswastore.com/page/privacy-policy"
+                  class="transition-all"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://keswastore.com/page/payment-policy"
+                  class="transition-all"
+                >
+                  Payment Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://keswastore.com/page/shipping-policy"
+                  class="transition-all"
+                >
+                  Shipping Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://keswastore.com/page/return-policy"
+                  class="transition-all"
+                >
+                  Return Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://keswastore.com/page/terms-conditions"
+                  class="transition-all"
+                >
+                  Terms & Conditions
+                </a>
+              </li>
+              <li>
+                <a href="https://keswastore.com/faqs" class="transition-all">
+                  FAQs
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="Aboutus">
+            <button
+              type="button"
+              class="footer-toggle flex w-full items-center justify-between py-5 text-left"
+              data-target="about-links"
+            >
+              <span class="text-sm font-medium">About Us</span>
+              <svg
+                class="footer-arrow h-5 w-5 transition-transform duration-300"
+              >
+                <use href="./assests/icons.svg#chevron-down"></use>
+              </svg>
+            </button>
+            <ul
+              id="about-links"
+              class="hidden grid gap-5 pb-5 text-sm text-zinc-600"
+            >
+              <li>
+                <a
+                  href="https://keswastore.com/our-store"
+                  class="transition-all"
+                >
+                  Our Store
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://keswastore.com/contact-us"
+                  class="transition-all"
+                >
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://keswastore.com/about-us"
+                  class="transition-all"
+                >
+                  About Us
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="Signup">
+            <button
+              type="button"
+              class="footer-toggle flex w-full items-center justify-between py-5 text-left"
+              data-target="newsletter-content"
+            >
+              <span class="text-sm font-medium">Sign Up for Email</span>
+              <svg
+                class="footer-arrow h-5 w-5 transition-transform duration-300"
+              >
+                <use href="./assests/icons.svg#chevron-down"></use>
+              </svg>
+            </button>
+            <div id="newsletter-content" class="hidden pb-5">
+              <p class="mb-4 text-xs leading-5 text-zinc-600">
+                Sign up to get first dibs on new arrivals, sales, exclusive
+                content, events and more!
+              </p>
+              <form
+                novalidate
+                method="post"
+                action="https://keswastore.com/subscription"
+                class="w-full"
+              >
+                <input
+                  type="hidden"
+                  name="_token"
+                  autocomplete="off"
+                  value="AlLynBVUW450urXA2Y0xiZAsMTc6tsH86NAlhBKO"
+                />
+                <div class="relative w-full">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="email@example.com"
+                    class="block h-[50px] w-full rounded border border-zinc-200 px-4 pr-28 text-sm text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400"
+                  />
+                  <button
+                    type="submit"
+                    class="absolute right-1 top-1/2 h-10 -translate-y-1/2 bg-[#1B1B1B] px-4 text-xs font-medium text-white transition-all hover:bg-zinc-800"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright mt-6 px-[2px] max-sm:px-5">
+        <div
+          class="flex flex-wrap items-center justify-between gap-3 border-t border-gray-300 bg-white py-3.5 max-md:flex-col"
+        >
+          <p class="text-sm text-zinc-600 max-md:text-center">
+            © Copyright 2010 - 2026, Keswa Store. All rights reserved.
+          </p>
+          <div
+            class="flex items-center gap-2 max-md:flex-1 max-md:justify-center"
+          >
+            <svg class="h-8 w-8 font-bold text-zinc-500">
+              <use href="./assests/icons.svg#paymob"></use>
+            </svg>
+            <svg class="h-8 w-8 font-bold text-zinc-500">
+              <use href="./assests/icons.svg#meeza"></use>
+            </svg>
+            <svg class="h-8 w-8 font-bold text-zinc-500">
+              <use href="./assests/icons.svg#mastercard"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!---------WhatsApp--------->
+    <div class="whatsapp max-md:mb-[130px]">
+      <a
+        href="https://wa.me/201011387451"
+        target="_blank"
+        class="fixed bottom-[70px] right-4 z-[99] flex h-[50px] w-[50px] items-center justify-center rounded-full bg-black text-white shadow-lg transition-all hover:bg-white hover:text-black max-sm:h-[40px] max-sm:w-[40px]"
+      >
+        <svg class="h-10 w-10 max-sm:h-8 max-sm:w-8">
+          <use href="./assests/icons.svg#whatsapp"></use>
+        </svg>
+      </a>
+    </div>
+    <!---------Mobile Bottom Navigation--------->
+    <nav
+      id="mobile-bottom-nav"
+      class="fixed bottom-0 left-0 z-40 flex h-[58px] w-full items-center justify-around border-t border-zinc-200 bg-white md:hidden"
+      aria-label="Mobile navigation"
+    >
+      <!-- Home -->
+      <a href="./index.html" class="ml-6">
+        <button
+          type="button"
+          class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
+          aria-label="Home"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
+              <path
+                d="M21 19v-6.733a4 4 0 0 0-1.245-2.9L13.378 3.31a2 2 0 0 0-2.755 0L4.245 9.367A4 4 0 0 0 3 12.267V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2"
+              />
+              <path d="M9 15a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v6H9z" />
+            </g>
+          </svg>
+        </button>
+      </a>
+      <!-- Search -->
+      <button
+        type="button"
+        class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
+        aria-label="Search"
+      >
+        <svg class="h-5 w-5">
+          <use href="./assests/icons.svg#search"></use>
+        </svg>
+      </button>
+      <!-- Cart -->
+      <button
+        type="button"
+        class="mobile-bottom-nav-item relative flex h-full items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
+        aria-label="Cart"
+      >
+        <svg class="h-5 w-5">
+          <use href="./assests/icons.svg#bag"></use>
+        </svg>
+      </button>
+      <!-- Wishlist -->
+      <button
+        type="button"
+        class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
+        aria-label="Wishlist"
+        data-mobile-action="wishlist"
+      >
+        <svg class="h-5 w-5">
+          <use href="./assests/icons.svg#wishlist"></use>
+        </svg>
+      </button>
+      <!-- Account -->
+      <a href="./log.sign.html" class="mr-6">
+        <button
+          type="button"
+          class="mobile-bottom-nav-item flex h-full flex-1 items-center justify-center text-black transition-colors duration-200 hover:text-gray-400"
+          aria-label="Account"
+          data-mobile-action="account"
+        >
+          <svg class="h-5 w-5">
+            <use href="./assests/icons.svg#account"></use>
+          </svg>
+        </button>
+      </a>
+    </nav>
     <script src="./js/home.js"></script>
   </body>
 </html>

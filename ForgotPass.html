@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Login</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body class="bg-white font-sans text-black">
+    <section class="mx-auto w-full max-w-[1180px] px-5 pt-1 mt-12">
+      <!--logo-->
+      <div class="mb-5 flex justify-center">
+        <a href="./index.html" aria-label="Keswa Home">
+          <img
+            src="./img/logo.png"
+            width="131"
+            height="29"
+            alt="Keswa"
+            class="block h-auto w-[131px]"
+          />
+        </a>
+      </div>
+      <!--login container-->
+      <div
+        class="mx-auto w-full max-w-[870px] border border-zinc-200 px-[90px] py-[60px] max-md:px-8 max-md:py-8 max-sm:border-none max-sm:px-0 max-sm:py-0"
+      >
+        <!--H1-->
+        <h1 class="text-4xl font-normal max-md:text-3xl max-sm:text-2xl">
+          Recover Password
+        </h1>
+        <p class="mt-4 text-xl text-zinc-500 max-sm:mt-2 max-sm:text-sm">
+          If you forgot your password, recover it by entering your email address.
+        </p>
+        <!--Form-->
+        <form id="login-form" class="mt-14 max-sm:mt-8" novalidate>
+          <!--Email-->
+          <div class="mb-6">
+            <label for="email" class="mb-2 block text-base max-sm:text-sm">
+              Email *
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@example.com"
+              required
+              class="h-[58px] w-full rounded border border-zinc-200 px-6 py-4 text-base font-normal text-gray-600 outline-none transition-all hover:border-gray-400 focus:border-gray-400 max-md:h-[52px] max-md:px-4 max-md:py-3"
+            />
+            <p id="email-error" class="mt-1 hidden text-sm text-red-600"></p>
+          </div>
+          <!--sign in button-->
+          <button
+            type="submit"
+            class="mt-8 flex h-[58px] w-full max-w-[374px] items-center justify-center rounded-sm bg-[#1B1B1B] px-11 text-base font-medium text-white transition-colors duration-200 hover:bg-zinc-800 max-md:h-[52px] max-md:max-w-full"
+          >
+            Reset Password
+          </button>
+        </form>
+        <!--create account-->
+        <p class="mt-5 font-medium text-zinc-500 max-sm:text-sm">
+          Back to sign in?
+          <a href="./log.sign.html" class="text-black hover:underline">
+            Sign in
+          </a>
+        </p>
+      </div>
+      <!--copyright-->
+      <p class="mb-4 mt-8 text-center text-xs text-zinc-500">
+        © Copyright 2010 - 2026, Keswa Store. All rights reserved.
+      </p>
+    </section>
+    <script src="./js/forgotPass.js"></script>
+  </body>
+</html>

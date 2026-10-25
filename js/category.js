@@ -1,57 +1,61 @@
-let showBtn = document.getElementById("open-mobile-menu");
-let hideBtn = document.getElementById("close-mobile-menu");
-let mobileMenu = document.getElementById("mobile-menu");
-let searchHeaderBtn = document.getElementById("header-search-button");
-let searchOverlay = document.getElementById("search-overlay");
-let searchPanel = document.getElementById("search-panel");
-let closeSearch = document.getElementById("close-search");
-let cartOverlay = document.getElementById("cart-overlay");
-let cartClose = document.getElementById("close-cart");
-let cartHeaderBtn = document.getElementById("header-cart-button");
-let userHeaderBtn = document.getElementById("header-account-button");
-let accountDropdown = document.getElementById("account-dropdown");
-let sortButton = document.getElementById("sort-button");
-let sortDropdown = document.getElementById("sort-dropdown");
-let sortOptions = sortDropdown.querySelectorAll(".sort-option");
-let productContainer = document.getElementById("products-container");
-let listView = document.getElementById("list-view");
-let gridView = document.getElementById("grid-view");
-let filterOverlay = document.getElementById("filter-overlay");
-let filterBtn = document.getElementById("filter-button");
-let filterpanel = document.getElementById("filter-panel");
-let filterClose = document.getElementById("close-filter");
-
+const showBtn = document.getElementById("open-mobile-menu");
+const hideBtn = document.getElementById("close-mobile-menu");
+const mobileMenu = document.getElementById("mobile-menu");
+const searchHeaderBtn = document.getElementById("header-search-button");
+const searchOverlay = document.getElementById("search-overlay");
+const searchPanel = document.getElementById("search-panel");
+const closeSearch = document.getElementById("close-search");
+const cartOverlay = document.getElementById("cart-overlay");
+const cartClose = document.getElementById("close-cart");
+const cartHeaderBtn = document.getElementById("header-cart-button");
+const userHeaderBtn = document.getElementById("header-account-button");
+const accountDropdown = document.getElementById("account-dropdown");
+const sortButton = document.getElementById("sort-button");
+const sortDropdown = document.getElementById("sort-dropdown");
+const sortOptions = sortDropdown.querySelectorAll(".sort-option");
+const productContainer = document.getElementById("products-container");
+const listView = document.getElementById("list-view");
+const gridView = document.getElementById("grid-view");
+const filterBtn = document.getElementById("filter-button");
+const filterOverlay = document.getElementById("filter-overlay");
+const filterpanel = document.getElementById("filter-panel");
+const filterClose = document.getElementById("close-filter");
+const priceMin = document.getElementById("price-min");
+const priceMax = document.getElementById("price-max");
+const priceRangeText = document.getElementById("price-range-text");
+const colorSearch = document.getElementById("color-search");
+const colorOptions = document.getElementById("color-options");
+const colorCount = document.getElementById("color-count");
+const sizeSearch = document.getElementById("size-search");
+const sizeCount = document.getElementById("size-count");
+const sizeOptions = document.getElementById("size-options");
+const clearAllBtn = document.getElementById("clear-all");
+const mobileFilterBtn = document.getElementById("mobile-filter-button");
+const priceTrack = document.getElementById("price-range-track");
+// mobile burger menu
 showBtn.addEventListener("click", () => {
   mobileMenu.classList.add("show");
 });
 hideBtn.addEventListener("click", () => {
   mobileMenu.classList.remove("show");
 });
+// search overlay
 searchHeaderBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   searchOverlay.classList.toggle("show");
 });
-closeSearch.addEventListener("click", (e) => {
-  e.stopPropagation();
-  searchOverlay.classList.remove("show");
-});
-searchHeaderBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
 document.addEventListener("click", () => {
   searchOverlay.classList.remove("show");
 });
+// cart overlay
 cartHeaderBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   cartOverlay.classList.toggle("show");
 });
-cartHeaderBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
 document.addEventListener("click", () => {
   cartOverlay.classList.remove("show");
 });
-
+// account dropdown
 userHeaderBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   accountDropdown.classList.add("show");
@@ -59,24 +63,23 @@ userHeaderBtn.addEventListener("click", (e) => {
 document.addEventListener("click", () => {
   accountDropdown.classList.remove("show");
 });
+// sort dropdown
 sortButton.addEventListener("click", (e) => {
   e.stopPropagation();
   sortDropdown.classList.toggle("show");
 });
-sortDropdown.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
 document.addEventListener("click", () => {
   sortDropdown.classList.remove("show");
 });
+// products
 let products = [
   {
     id: 1,
     name: "Striped-Short-Sleeve-Shirt",
     price: 349,
     oldPrice: 700,
-    sizes: "S,M,L,XL,XXL,XXXL",
-    colors: "White,Black,Baje",
+    sizes: "M,L,XL,XXL",
+    colors: "Baje, Mint, Pink, Baby blue",
     img: "https://keswastore.com/cache/medium/product/2107/zfie7Lym5EpptP2tavsh7doH1tgYtpIB1JI8VvnP.webp",
   },
   {
@@ -84,8 +87,8 @@ let products = [
     name: "Crinkle-Short-Sleeve-Shirt",
     price: 449,
     oldPrice: 900,
-    sizes: "S,M,L,XL,XXL,XXXL",
-    colors: "White,Black,Baje",
+    sizes: "M,L,XL,XXL",
+    colors: "Black",
     img: "https://keswastore.com/cache/medium/product/2042/lazP5zZpvgzRkUGD1HZKyh49KyimpHilLObjuqr1.webp",
   },
   {
@@ -93,8 +96,8 @@ let products = [
     name: "Half-Sleeve-Shirt-s25",
     price: 399,
     oldPrice: 800,
-    sizes: "S,M,L,XL,XXL,XXXL",
-    colors: "White,Black,Baje",
+    sizes: "M,L,XL,XXL",
+    colors: "Black,Baje,Brown,Off-white,Pink,Baby blue",
     img: "https://keswastore.com/cache/medium/product/1883/mUnUXatmvuPfdVPEh0c9gw4NuC5uubIFKz9wAMOp.webp",
   },
   {
@@ -102,8 +105,8 @@ let products = [
     name: "Oxford-Shirt",
     price: 399,
     oldPrice: 800,
-    sizes: "S,M,L,XL,XXL,XXXL",
-    colors: "White,Black,Baje",
+    sizes: "M,L,XL,XXL",
+    colors: "Black,White,Baje,Mint,Olive,Brown",
     img: "https://keswastore.com/cache/medium/product/1858/PZzBXO1m21ZeKaQ3r9lTuwf1VfxXnuMmtR40v7Qs.webp",
   },
   {
@@ -111,8 +114,8 @@ let products = [
     name: "Cotton-Shirt-Relaxed",
     price: 499,
     oldPrice: 1000,
-    sizes: "S,M,L,XL,XXL,XXXL",
-    colors: "White,Black,Baje",
+    sizes: "M,L,XL",
+    colors: "Black,Gray",
     img: "https://keswastore.com/cache/medium/product/1652/tN9Q2m6MIZwbQE9NbQqyPJv0X5BWeMs6wL91y5Nl.webp",
   },
 ];
@@ -204,18 +207,32 @@ productCard.innerHTML = `
     </div>
   </div>
 `;
-function renderProducts() {
+function renderProducts(productsToRender = products) {
   productContainer.innerHTML = "";
-
-  for (let i = 0; i < products.length; i++) {
-    let product = products[i];
+  if (productsToRender.length === 0) {
+    productContainer.innerHTML = `
+      <div class="col-span-full flex min-h-[500px] w-full flex-col items-center justify-center gap-5 py-10 text-center">
+        <img
+          src="https://keswastore.com/themes/shop/default/build/assets/shopping-cart-placeholder-a8WmYsMY.svg"
+          alt="No products available"
+          class="h-[170px] w-[170px]"
+        />
+        <p class="text-xl font-normal text-black max-md:text-base">
+          No products available in this category
+        </p>
+      </div>
+    `;
+    return;
+  }
+  for (let i = 0; i < productsToRender.length; i++) {
+    let product = productsToRender[i];
     let newProduct = productCard.cloneNode(true);
     let name = newProduct.querySelector(".product-title");
     name.textContent = product.name;
     let price = newProduct.querySelector(".text-lg p");
     price.innerHTML = `
       ${product.price}
-      <span class="text-[0.75em]"> EGP </span>
+      <span class="text-[0.75em]">EGP</span>
     `;
     let image = newProduct.querySelector("img");
     image.src = product.img;
@@ -226,33 +243,43 @@ function renderProducts() {
   }
 }
 renderProducts();
+// sort products
+function sortProducts(sortValue) {
+  if (sortValue === "a-z") {
+    products.sort((a, b) => a.name.localeCompare(b.name));
+  }
+  if (sortValue === "z-a") {
+    products.sort((a, b) => b.name.localeCompare(a.name));
+  }
+  if (sortValue === "newest-first") {
+    products.sort((a, b) => a.id - b.id);
+  }
+  if (sortValue === "oldest-first") {
+    products.sort((a, b) => b.id - a.id);
+  }
+  if (sortValue === "cheapest-first") {
+    products.sort((a, b) => a.price - b.price);
+  }
+  if (sortValue === "expensive-first") {
+    products.sort((a, b) => b.price - a.price);
+  }
+  renderProducts();
+}
+// desktop sort
 sortOptions.forEach((option) => {
   option.addEventListener("click", () => {
-    let sortValue = option.dataset.value;
-    if (sortValue === "a-z") {
-      products.sort((a, b) => a.name.localeCompare(b.name));
-    }
-    if (sortValue === "z-a") {
-      products.sort((a, b) => b.name.localeCompare(a.name));
-    }
-    if (sortValue === "newest-first") {
-      products.sort((a, b) => a.id - b.id);
-    }
-    if (sortValue === "oldest-first") {
-      products.sort((a, b) => b.id - a.id);
-    }
-    if (sortValue === "cheapest-first") {
-      products.sort((a, b) => a.price - b.price);
-    }
-    if (sortValue === "expensive-first") {
-      products.sort((a, b) => b.price - a.price);
-    }
+    sortProducts(option.dataset.value);
     document.getElementById("sort-selected").textContent =
       option.textContent.trim();
-    renderProducts();
     sortDropdown.classList.remove("show");
   });
 });
+// mobile filter button
+mobileFilterBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  filterOverlay.classList.add("show");
+});
+// list view and grid view
 listView.addEventListener("click", () => {
   productContainer.classList.add("list-view");
   productContainer.classList.remove("grid-view");
@@ -261,6 +288,7 @@ gridView.addEventListener("click", () => {
   productContainer.classList.add("grid-view");
   productContainer.classList.remove("list-view");
 });
+// filter overlay
 filterBtn.addEventListener("click", (e) => {
   e.stopPropagation();
   filterOverlay.classList.toggle("show");
@@ -269,6 +297,159 @@ filterClose.addEventListener("click", (e) => {
   e.stopPropagation();
   filterOverlay.classList.remove("show");
 });
+filterpanel.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
 document.addEventListener("click", () => {
   filterOverlay.classList.remove("show");
+});
+// price range filter
+function updatePriceUI(changed) {
+  if (Number(priceMin.value) > Number(priceMax.value)) {
+    if (changed === priceMin) priceMin.value = priceMax.value;
+    else priceMax.value = priceMin.value;
+  }
+  const min = Number(priceMin.value);
+  const max = Number(priceMax.value);
+  const total = Number(priceMax.max) - Number(priceMax.min) || 1; //the ||1 bec. if result = 0 it may cause problem as NaN.
+  priceTrack.style.left = ((min - Number(priceMin.min)) / total) * 100 + "%";
+  priceTrack.style.width = ((max - min) / total) * 100 + "%";
+  if (min > Number(priceMax.max) / 2) {
+    priceMin.style.zIndex = 30;
+  } else {
+    priceMin.style.zIndex = 20;
+  }
+  priceRangeText.textContent = `${min} EGP - ${max} EGP`;
+}
+function filterByPrice() {
+  const minPrice = Number(priceMin.value);
+  const maxPrice = Number(priceMax.value);
+  const filteredProducts = products.filter(function (product) {
+    return product.price >= minPrice && product.price <= maxPrice;
+  });
+  renderProducts(filteredProducts);
+}
+// To update value of both min & max
+priceMin.addEventListener("input", () => {
+  updatePriceUI(priceMin);
+  filterByPrice();
+});
+priceMax.addEventListener("input", () => {
+  updatePriceUI(priceMax);
+  filterByPrice();
+});
+updatePriceUI();
+// color search filter
+colorSearch.addEventListener("input", function () {
+  let searchValue = colorSearch.value.toLowerCase().trim();
+  let colorLabels = colorOptions.querySelectorAll("label");
+  let visibleCount = 0;
+  colorLabels.forEach(function (label) {
+    let colorName = label.textContent.toLowerCase().trim();
+    if (colorName.includes(searchValue)) {
+      label.style.display = "";
+      visibleCount++;
+    } else {
+      label.style.display = "none";
+    }
+  });
+  colorCount.textContent = `Showing ${visibleCount} of ${colorLabels.length} options`;
+});
+// color filter
+const colorFilters = document.querySelectorAll('input[name="color-filter"]'); // get all check boxes of colors
+colorFilters.forEach((color) => {
+  color.addEventListener("change", filterByColor); //checked or unchecked
+});
+function filterByColor() {
+  const selectedColors = Array.from(colorFilters) // convert the collection to an array
+    .filter((color) => color.checked) // keep only checked color inputs
+    .map((color) => color.value); // get the values of the selected colors
+  if (selectedColors.length === 0) { // check if no colors are selected
+    renderProducts(); // display all products
+    return; // exit the function
+  }
+  const filteredProducts = products.filter((product) => { // Filter products based on selected colors
+    const productColors = product.colors.split(",").map((c) => c.trim());// Split the color string into an array, // Remove spaces from each color
+    return selectedColors.some((selectedColor) => // Check if at least one selected color matches
+      productColors.includes(selectedColor), // Check if the product has this color
+    );
+  });
+  renderProducts(filteredProducts);
+}
+// size search filter
+sizeSearch.addEventListener("input", function () {
+  let searchValue = sizeSearch.value.toLowerCase().trim();
+  let sizeLabels = sizeOptions.querySelectorAll("label");
+  let visibleCount = 0;
+  sizeLabels.forEach(function (label) {
+    let sizeName = label.textContent.toLowerCase().trim();
+    if (sizeName.includes(searchValue)) {
+      label.style.display = "";
+      visibleCount++;
+    } else {
+      label.style.display = "none";
+    }
+  });
+  sizeCount.textContent = `Showing ${visibleCount} of ${sizeLabels.length} options`;
+});
+// size filter
+const sizeFilters = document.querySelectorAll('input[name="size-filter"]');
+sizeFilters.forEach((size) => {
+  size.addEventListener("change", filterBySize);
+});
+function filterBySize() {
+  const selectedSizes = Array.from(sizeFilters)
+    .filter((size) => size.checked)
+    .map((size) => size.value);
+
+  if (selectedSizes.length === 0) {
+    renderProducts();
+    return;
+  }
+  const filteredProducts = products.filter((product) => {
+    const productSizes = product.sizes.split(",").map((size) => size.trim());
+    return selectedSizes.some((selectedSize) =>
+      productSizes.includes(selectedSize),
+    );
+  });
+  renderProducts(filteredProducts);
+}
+// clear all btn
+clearAllBtn.addEventListener("click", () => {
+  // clear color
+  colorFilters.forEach((color) => {
+    color.checked = false;
+  });
+  // clear size
+  sizeFilters.forEach((size) => {
+    size.checked = false;
+  });
+  // clear searches
+  colorSearch.value = "";
+  sizeSearch.value = "";
+  // reset price
+  priceMin.value = priceMin.min;
+  priceMax.value = priceMax.max;
+  // show all color options
+  colorOptions.querySelectorAll("label").forEach((label) => {
+    label.style.display = "";
+  });
+  // show all size options
+  sizeOptions.querySelectorAll("label").forEach((label) => {
+    label.style.display = "";
+  });
+  // reset counts
+  colorCount.textContent = `Showing ${colorOptions.querySelectorAll("label").length} of ${colorOptions.querySelectorAll("label").length} options`;
+  sizeCount.textContent = `Showing ${sizeOptions.querySelectorAll("label").length} of ${sizeOptions.querySelectorAll("label").length} options`;
+  // reset price text
+  updatePriceUI();
+  // show all products
+  renderProducts();
+});
+// Mobile footer links
+footerToggles.forEach((button) => {
+  button.onclick = () => {
+    document.getElementById(button.dataset.target).classList.toggle("hidden");
+    button.querySelector(".footer-arrow").classList.toggle("rotate-180");
+  };
 });

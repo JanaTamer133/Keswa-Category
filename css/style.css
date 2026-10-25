@@ -2,6 +2,18 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
   appearance: none;
 }
+/* Hide password reveal button in Edge */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Hide password reveal button in some browsers */
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+}
 html{
     font-family:"arial", sans-serif;
 }
@@ -122,22 +134,33 @@ html{
 
 .filter-overlay {
   visibility: hidden;
-  transition: visibility 0s linear 0.3s;
+  transition: 0.3s ease;
 }
 .filter-overlay.show {
   visibility: visible;
-  transition: visibility 0s linear 0s;
+  transition: 0.3s ease;
 }
 .filter-panel {
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transition: 0.3s ease;
 }
 .filter-overlay.show .filter-panel {
   transform: translateX(0);
 }
-.filter-arrow {
-  transition: transform 0.3s ease;
+.offer-bar {
+  overflow: hidden;
 }
-.filter-arrow.rotate {
-  transform: rotate(180deg);
+.marquee {
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.category-scroll {
+    scrollbar-width: none;
 }
